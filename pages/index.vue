@@ -9,14 +9,17 @@ section.container
         | documentation
       a.button--grey( href="https://github.com/nuxt/nuxt.js" target="_blank" )
         | GitHub
+    MainVisual
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import MainVisual from '~/components/MainVisual.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    MainVisual
   }
 }
 </script>
@@ -37,14 +40,16 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  /* color: #35495e; */
+  color: #fff;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
   font-size: 42px;
-  color: #526488;
+  /* color: #526488; */
+  color: #fff;
   word-spacing: 5px;
   padding-bottom: 15px;
 }

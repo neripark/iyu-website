@@ -2,7 +2,7 @@
 section.sec
   p.lead
     | test of background-movie.
-  video.mainVisual(src="~assets/videos/Traffic_disco.mp4", autoplay, loop)
+  video.mainVisual(src="~assets/videos/190306_iyu-webtop-video-FHD.mp4", autoplay, loop)
     //- TODO: posterの設定
 </template>
 

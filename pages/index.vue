@@ -3,12 +3,7 @@ section.container
   div
     logo
     h1.title iyu-website
-    h2.subtitle my glorious nuxt.js project
-    .links
-      a.button--green( href="https://nuxtjs.org/", target="_blank" )
-        | documentation
-      a.button--grey( href="https://github.com/nuxt/nuxt.js" target="_blank" )
-        | GitHub
+    h2.subtitle We are playing the OSAMPO POP music of Shinjuku.
     MainVisual
 </template>
 

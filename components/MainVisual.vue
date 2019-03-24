@@ -1,18 +1,30 @@
 <template lang="pug">
 section.sec
-  p.lead
-    | test of background-movie.
+  h1.iyu-logo
+    img(src="~assets/images/iyu-logo-RGB.svg", alt="iyu-logo")
+    p.lead
+      | test of background-movie.
   video.mainVisual(src="~assets/videos/190306_iyu-webtop-video-FHD.mp4", autoplay, loop)
     //- TODO: posterの設定
 </template>
 
 <style lang="scss" scoped>
+.iyu-logo {
+  width: 495px;
+  text-align: center;
+}
 .sec {
   position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .lead {
   margin-top: 30px;
   color: #fff;
+  font-size: 18px;
 }
 .mainVisual {
   position: fixed;

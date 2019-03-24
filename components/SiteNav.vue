@@ -1,8 +1,8 @@
 <template lang="pug">
 nav.site-nav
-  p.to-top
+  //- p.to-top
     //- a.link-to-top {{ this.domainName }}
-    a.link-to-top iyu.music.jp
+    //- a.link-to-top iyu.music.jp
   ul.anchor-list
     li.anchor-item
       a.anchor(href="#") Profile
@@ -13,7 +13,7 @@ nav.site-nav
     li.anchor-item
       a.anchor(href="#") Gallery
     li.anchor-item
-      a.anchor(href="#") Contract
+      a.anchor(href="#") Contact
 </template>
 
 <script>
@@ -26,7 +26,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
 * {
   color: #fff;
@@ -35,13 +34,13 @@ export default {
   position: sticky;
   z-index: 1;
   top: 0;
-  left: 0;
-  width: 100vw;
-  padding: 20px 30px;
-  background-color: #36afca;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 20px 30px;
+  background-color: #36afca;
 }
 .link-to-top {
   font-size: 24px;
@@ -49,18 +48,39 @@ export default {
 .anchor-list {
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 .anchor-item {
-  // padding: 5px 0 5px;
   &:not(:first-child) {
-    margin-left: 30px;
-    padding-left: 30px;
-    border-left: 1px solid #fff256;
+    margin-left: 50px;
+    padding-left: 50px;
+    border-left: 1px solid #fff;
   }
 }
 .anchor {
   font-size: 20px;
+  position: relative;
+  padding: 0 10px;
+  letter-spacing: 0.2em;
+  // hoverすると現れる横棒
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    z-index: 1;
+    background: #fff256;
+    transition: 0.2s;
+  }
+  &:hover {
+    color: #fff256;
+    &::after {
+      width: 100%;
+    }
+  }
 }
 </style>

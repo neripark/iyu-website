@@ -1,17 +1,7 @@
 <template lang="pug">
 .container
-  site-nav
   nuxt
 </template>
-
-<script>
-import siteNav from '~/components/SiteNav'
-export default {
-  components: {
-    siteNav
-  }
-}
-</script>
 
 <style lang="scss">
 html {
@@ -31,6 +21,7 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 ul {

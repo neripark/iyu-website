@@ -2,8 +2,6 @@
 section.sec
   h1.iyu-logo
     img(src="~assets/images/iyu-logo-RGB.svg", alt="iyu-logo")
-    p.lead
-      | test of background-movie.
   video.mainVisual(src="~assets/videos/190306_iyu-webtop-video-FHD.mp4", autoplay, loop)
     //- TODO: posterの設定
 </template>
@@ -20,11 +18,6 @@ section.sec
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.lead {
-  margin-top: 30px;
-  color: #fff;
-  font-size: 18px;
 }
 .mainVisual {
   position: fixed;

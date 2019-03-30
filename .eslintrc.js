@@ -15,5 +15,8 @@ module.exports = {
     'prettier'
   ],
   // add your custom rules here
-  rules: {}
+  // TODO: consoleコミットを禁止する
+  rules: {
+    "no-console": 1
+  }
 }

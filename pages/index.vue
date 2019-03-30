@@ -2,6 +2,7 @@
 main.container
   MainVisual
   SiteNav
+  Profile
   div.wrap
     p.text dummy text.
     p.text dummy text.
@@ -18,11 +19,13 @@ main.container
 <script>
 import MainVisual from '~/components/MainVisual.vue'
 import SiteNav from '~/components/SiteNav'
+import Profile from '~/components/Profile'
 
 export default {
   components: {
     MainVisual,
-    SiteNav
+    SiteNav,
+    Profile
   }
 }
 </script>

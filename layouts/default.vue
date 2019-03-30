@@ -30,4 +30,7 @@ ul {
 a {
   text-decoration: none;
 }
+img {
+  vertical-align: bottom;
+}
 </style>

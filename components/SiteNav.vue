@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     scrollHandler() {
-      this.isNavWindowTop = this.$el.getBoundingClientRect().top <= 0
+      this.isNavWindowTop = window.pageYOffset > 50
     }
   }
 }
@@ -46,7 +46,7 @@ export default {
   width: 100%;
   padding: 20px 30px;
   background: rgba(0, 0, 0, 0.4);
-  transition: 0.4s;
+  transition: 1s;
   &.is-fixed {
     background-color: #36afca;
   }

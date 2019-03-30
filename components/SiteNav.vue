@@ -1,8 +1,8 @@
 <template lang="pug">
-nav.site-nav
-  //- p.to-top
-    //- a.link-to-top {{ this.domainName }}
-    //- a.link-to-top iyu.music.jp
+nav.site-nav(
+  v-scroll='scrollHandler'
+  :class="{'is-fixed': isNavWindowTop}"
+)
   ul.anchor-list
     li.anchor-item
       a.anchor(href="#") Profile
@@ -20,7 +20,12 @@ nav.site-nav
 export default {
   data() {
     return {
-      domainName: location.host
+      isNavWindowTop: false
+    }
+  },
+  methods: {
+    scrollHandler() {
+      this.isNavWindowTop = this.$el.getBoundingClientRect().top <= 0
     }
   }
 }
@@ -40,7 +45,11 @@ export default {
   align-items: center;
   width: 100%;
   padding: 20px 30px;
-  background-color: #36afca;
+  background: rgba(0, 0, 0, 0.4);
+  transition: 0.4s;
+  &.is-fixed {
+    background-color: #36afca;
+  }
 }
 .link-to-top {
   font-size: 24px;

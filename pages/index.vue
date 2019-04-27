@@ -1,10 +1,10 @@
 <template lang="pug">
 main.container
-  MainVisual
-  FloatingInfo
-  SiteNav
-  Profile
-  MusicVideo
+  main-visual
+  floating-info
+  site-nav
+  profile
+  music-video
   div.wrap
     p.text dummy text.
     p.text dummy text.

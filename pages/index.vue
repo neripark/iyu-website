@@ -3,6 +3,7 @@ main.container
   MainVisual
   SiteNav
   Profile
+  MusicVideo
   div.wrap
     p.text dummy text.
     p.text dummy text.
@@ -20,12 +21,14 @@ main.container
 import MainVisual from '~/components/MainVisual.vue'
 import SiteNav from '~/components/SiteNav'
 import Profile from '~/components/Profile'
+import MusicVideo from '~/components/MusicVideo'
 
 export default {
   components: {
     MainVisual,
     SiteNav,
-    Profile
+    Profile,
+    MusicVideo
   }
 }
 </script>

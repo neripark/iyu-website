@@ -44,7 +44,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px 30px;
+  padding: 15px 30px;
   background: rgba(0, 0, 0, 0.4);
   transition: 1s;
   &.is-fixed {
@@ -70,7 +70,7 @@ export default {
 .anchor {
   font-size: 20px;
   position: relative;
-  padding: 0 10px;
+  padding: 0 5px;
   letter-spacing: 0.2em;
   // hoverすると現れる横棒
   &::after {

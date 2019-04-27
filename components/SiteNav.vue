@@ -48,7 +48,7 @@ export default {
   background: rgba(0, 0, 0, 0.4);
   transition: 1s;
   &.is-fixed {
-    background-color: #36afca;
+    background-color: $color-main-blue;
   }
 }
 .link-to-top {
@@ -82,11 +82,11 @@ export default {
     bottom: -3px;
     left: 0;
     z-index: 1;
-    background: #fff256;
+    background: $color-yellow;
     transition: 0.2s;
   }
   &:hover {
-    color: #fff256;
+    color: $color-yellow;
     &::after {
       width: 100%;
     }

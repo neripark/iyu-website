@@ -1,9 +1,9 @@
 <template lang="pug">
 //- todo: 画像の余白調整
 .profile
-  heading(
+  heading.heading-adj(
     text="Profile"
-    color="green"
+    color="blue"
   )
   .wrap-photo
     img.profile-photo(
@@ -43,6 +43,12 @@ export default {
 <style lang="scss" scoped>
 .profile {
   position: relative;
+}
+.heading-adj {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .wrap-photo {
   min-height: 630px;

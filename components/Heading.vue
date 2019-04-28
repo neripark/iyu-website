@@ -14,7 +14,7 @@ export default {
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  color: $color-main-blue;
+  color: $main-blue;
   letter-spacing: 1em;
   text-indent: 1em;
   font-size: 48px;

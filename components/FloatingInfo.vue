@@ -25,7 +25,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  color: #fff;
+  color: $white;
 }
 .wrap {
   width: 300px;

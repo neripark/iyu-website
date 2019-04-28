@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrap {
-  background: #fff;
+  background: $white;
 }
 .text {
   height: 500px;

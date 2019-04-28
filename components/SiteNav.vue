@@ -33,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 * {
-  color: #fff;
+  color: $white;
 }
 .site-nav {
   position: sticky;
@@ -64,7 +64,7 @@ export default {
   &:not(:first-child) {
     margin-left: 50px;
     padding-left: 50px;
-    border-left: 1px solid #fff;
+    border-left: 1px solid $white;
   }
 }
 .anchor {

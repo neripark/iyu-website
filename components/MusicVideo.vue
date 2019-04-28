@@ -1,5 +1,9 @@
 <template lang="pug">
 .music-video
+  heading.heading-adj(
+    text="Music"
+    color="blue"
+  )
   iframe#ytplayer.setasu(
     type="text/html"
     :width="this.width"
@@ -10,9 +14,13 @@
 </template>
 
 <script>
+import Heading from '~/components/Heading.vue'
 const width = 1000
 
 export default {
+  components: {
+    Heading
+  },
   data() {
     return {
       width: width,
@@ -25,9 +33,12 @@ export default {
 <style lang="scss" scoped>
 .music-video {
   width: 100%;
-  padding: 100px;
+  padding-bottom: 100px;
   background-image: url(~assets/images/bg-movie.png);
   background-size: cover;
+}
+.heading-adj {
+  padding: 50px 30px;
 }
 .setasu {
   display: block;

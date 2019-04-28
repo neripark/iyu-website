@@ -10,11 +10,11 @@ main.container
 
 <script>
 import MainVisual from '~/components/MainVisual.vue'
+import FloatingInfo from '~/components/FloatingInfo'
 import SiteNav from '~/components/SiteNav'
 import Profile from '~/components/Profile'
 import MusicVideo from '~/components/MusicVideo'
 import LiveInfo from '~/components/LiveInfo'
-import FloatingInfo from '~/components/FloatingInfo'
 
 export default {
   components: {

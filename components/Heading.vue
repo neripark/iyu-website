@@ -4,7 +4,16 @@ h2.heading(:class="color") {{ text }}
 
 <script>
 export default {
-  props: ['text', 'color']
+  props: {
+    text: {
+      type: String,
+      default: null
+    },
+    color: {
+      type: String,
+      default: 'blue'
+    }
+  }
 }
 </script>
 

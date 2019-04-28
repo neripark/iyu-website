@@ -5,17 +5,18 @@
     color="yellow"
   )
   p.lead
-    | 近日予定しているライブスケジュールです。
-    br
     | チケットのお取置きはこちらのメールフォームかtwitterまでお願い致します。
+  live-cards
 </template>
 
 <script>
 import Heading from '~/components/Heading.vue'
+import LiveCards from '~/components/LiveCards.vue'
 
 export default {
   components: {
-    Heading
+    Heading,
+    LiveCards
   }
 }
 </script>
@@ -24,6 +25,7 @@ export default {
 <style lang="scss" scoped>
 .live-info {
   background: $main-blue;
+  padding-bottom: 50px;
 }
 .heading-adj {
   padding: 30px 0;

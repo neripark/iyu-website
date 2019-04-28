@@ -2,6 +2,7 @@
 ul.live-cards
   live-card(
     v-for="live in liveDetails"
+    :key="live.date"
     :detail="live"
   )
 </template>
@@ -11,13 +12,13 @@ import LiveCard from '~/components/LiveCard.vue'
 import liveArray from '~/assets/js/LiveDetails.js'
 
 export default {
+  components: {
+    LiveCard
+  },
   data() {
     return {
       liveDetails: liveArray
     }
-  },
-  components: {
-    LiveCard
   }
 }
 </script>

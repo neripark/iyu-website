@@ -5,17 +5,6 @@ main.container
   site-nav
   profile
   music-video
-  div.wrap
-    p.text dummy text.
-    p.text dummy text.
-    p.text dummy text.
-    p.text dummy text.
-    p.text dummy text.
-    p.text dummy text.
-    p.text dummy text.
-    p.text dummy text.
-    p.text dummy text.
-    p.text dummy text.
 </template>
 
 <script>
@@ -35,12 +24,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.wrap {
-  background: $white;
-}
-.text {
-  height: 500px;
-}
-</style>

@@ -6,6 +6,7 @@ main.container
   profile
   music-video
   LiveInfo
+  Gallery
 </template>
 
 <script>
@@ -15,6 +16,7 @@ import SiteNav from '~/components/SiteNav'
 import Profile from '~/components/Profile'
 import MusicVideo from '~/components/MusicVideo'
 import LiveInfo from '~/components/LiveInfo'
+import Gallery from '~/components/Gallery'
 
 export default {
   components: {
@@ -23,7 +25,8 @@ export default {
     SiteNav,
     Profile,
     MusicVideo,
-    LiveInfo
+    LiveInfo,
+    Gallery
   }
 }
 </script>

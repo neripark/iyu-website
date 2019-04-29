@@ -1,7 +1,7 @@
 <template lang="pug">
 nav.site-nav(
   v-scroll='scrollHandler'
-  :class="{'is-fixed': isNavWindowTop}"
+  :class="{'is-scroll-start': isNavScrollStart, 'is-window-top': isNavWindowTop}"
 )
   ul.anchor-list
     li.anchor-item
@@ -20,12 +20,15 @@ nav.site-nav(
 export default {
   data() {
     return {
+      isNavScrollStart: false,
       isNavWindowTop: false
     }
   },
   methods: {
     scrollHandler() {
-      this.isNavWindowTop = window.pageYOffset > 50
+      this.isNavScrollStart = window.pageYOffset > 0
+      this.isNavWindowTop =
+        window.pageYOffset > window.innerHeight - this.$el.clientHeight
     }
   }
 }
@@ -36,9 +39,8 @@ export default {
   color: $white;
 }
 .site-nav {
-  position: sticky;
+  position: absolute;
   z-index: 1;
-  top: 0;
   bottom: 0;
   display: flex;
   justify-content: space-between;
@@ -47,8 +49,13 @@ export default {
   padding: 15px 30px;
   background: rgba(0, 0, 0, 0.4);
   transition: 1s;
-  &.is-fixed {
+  &.is-scroll-start {
     background-color: $main-blue;
+  }
+  &.is-window-top {
+    position: fixed;
+    top: 0;
+    bottom: unset;
   }
 }
 .link-to-top {

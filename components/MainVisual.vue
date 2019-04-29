@@ -14,13 +14,14 @@ section.sec
 .sec {
   position: relative;
   width: 100%;
-  height: calc(100vh - 60px); // SiteNavの高さを引く
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .mainVisual {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;

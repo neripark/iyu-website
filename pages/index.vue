@@ -7,6 +7,7 @@ main.container
   music-video
   LiveInfo
   Gallery
+  Contact
 </template>
 
 <script>
@@ -17,6 +18,7 @@ import Profile from '~/components/Profile'
 import MusicVideo from '~/components/MusicVideo'
 import LiveInfo from '~/components/LiveInfo'
 import Gallery from '~/components/Gallery'
+import Contact from '~/components/Contact'
 
 export default {
   components: {
@@ -26,7 +28,8 @@ export default {
     Profile,
     MusicVideo,
     LiveInfo,
-    Gallery
+    Gallery,
+    Contact
   }
 }
 </script>

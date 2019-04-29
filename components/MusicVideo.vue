@@ -8,7 +8,7 @@
     type="text/html"
     :width="this.width"
     :height="this.height"
-    src="http://www.youtube.com/embed/yvqwnUYhksw"
+    src="https://www.youtube.com/embed/yvqwnUYhksw"
     frameborder="0"
   )
 </template>

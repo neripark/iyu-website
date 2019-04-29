@@ -2,7 +2,7 @@
 section.sec
   h1.iyu-logo
     img(src="~assets/images/iyu-logo-RGB.svg", alt="iyu-logo")
-  video.mainVisual(src="~assets/videos/190307_iyu-webtop-videoFHD.mp4", autoplay, loop)
+  video.mainVisual(src="~assets/videos/190429_iyu-webtop-video1280pix.mp4" autoplay loop)
     //- TODO: posterの設定
 </template>
 

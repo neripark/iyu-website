@@ -4,14 +4,24 @@
     text="Gallery"
     color="blue"
   )
+  carousel
+    slide
+      p.test hoge
+    slide
+      p.test fuga
+    slide
+      p.test piyo
 </template>
 
 <script>
 import Heading from '~/components/Heading.vue'
+import { Carousel, Slide } from 'vue-carousel'
 
 export default {
   components: {
-    Heading
+    Heading,
+    Carousel,
+    Slide
   }
 }
 </script>

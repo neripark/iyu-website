@@ -38,10 +38,10 @@ export default {
   background-size: cover;
 }
 .heading-adj {
-  padding: 50px 30px;
+  padding: 30px;
 }
 .setasu {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto 0;
 }
 </style>

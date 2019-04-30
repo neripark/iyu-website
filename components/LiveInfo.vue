@@ -1,5 +1,5 @@
 <template lang="pug">
-.live-info
+.live
   heading.heading-adj(
     text="Live"
     color="yellow"
@@ -21,14 +21,13 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
-.live-info {
+.live {
   background: $main-blue;
   padding-bottom: 50px;
 }
 .heading-adj {
-  padding: 30px 0;
+  padding: 30px;
 }
 .lead {
   color: $white;

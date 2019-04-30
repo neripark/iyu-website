@@ -123,7 +123,7 @@ export default {
   padding-bottom: 50px;
 }
 .heading-adj {
-  padding: 30px 0;
+  padding: 30px;
 }
 .wrap {
   max-width: 400px;

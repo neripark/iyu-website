@@ -26,7 +26,8 @@ export default {
 <style lang="scss" scoped>
 .live-cards {
   max-width: 1000px;
-  margin: 30px auto 0;
+  margin: 15px auto 0;
   padding: 30px;
+  box-sizing: content-box;
 }
 </style>

@@ -31,12 +31,6 @@
             src="~/assets/images/gallery_03.jpg"
             alt="Key KOUDAI."
           )
-      slide
-        p.pic
-          img(
-            src="~/assets/images/gallery_03.jpg"
-            alt="Key KOUDAI."
-          )
 </template>
 
 <script>
@@ -56,7 +50,7 @@ export default {
   overflow: hidden; // カルーセルが飛び出ないよう対策
 }
 .heading-adj {
-  padding: 30px 0;
+  padding: 30px;
 }
 .pic {
   max-width: 700px;

@@ -67,6 +67,7 @@ export default {
     position: fixed;
     top: 0;
     bottom: unset;
+    box-shadow: 0px -30px 40px 0px rgba(0, 0, 0, 0.4);
   }
 }
 .link-to-top {

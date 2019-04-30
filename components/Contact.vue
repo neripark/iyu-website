@@ -8,11 +8,16 @@
   .wrap
     p.lead
       | ライブのチケットお取り置き、共演のお誘いなど、お気軽にご連絡ください。
+    //- form.contact-form(
+    //-   name="iyu-contact"
+    //-   method="POST"
+    //-   data-netlify="true"
+    //-   netlify-honeypot="bot-field"
+    //- )
     form.contact-form(
       name="iyu-contact"
       method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
+      netlify
     )
       //- setting for Netlify
       input(
@@ -20,6 +25,7 @@
         name="form-name"
         value="iyu-contact"
       )
+      //- form start
       input(
         name="name"
         type="text"

@@ -9,7 +9,6 @@
     p.lead
       | ライブのチケットお取り置き、共演のお誘いなど、お気軽にご連絡ください。
     form.contact-form(
-      action="/"
       method="POST"
       data-netlify="true"
     )

@@ -9,6 +9,7 @@
     p.lead
       | ライブのチケットお取り置き、共演のお誘いなど、お気軽にご連絡ください。
     form.contact-form(
+      name="iyu-contact"
       method="POST"
       data-netlify="true"
     )
@@ -133,7 +134,8 @@ export default {
 // -- form parts basic style --
 input,
 select,
-textarea {
+textarea,
+button {
   width: 100%;
   -webkit-appearance: none;
   background: $white;

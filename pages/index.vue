@@ -7,7 +7,7 @@ main.container
   music-video
   LiveInfo
   Gallery
-  Contact
+  //- Contact
 </template>
 
 <script>

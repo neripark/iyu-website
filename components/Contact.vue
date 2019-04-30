@@ -4,18 +4,23 @@
     text="Contact"
     color="yellow"
   )
+  //- todo: required の制御
   .wrap
     p.lead
       | ライブのチケットお取り置き、共演のお誘いなど、お気軽にご連絡ください。
     form.contact-form(
       action="/"
+      method="POST"
+      data-netlify="true"
     )
       input(
+        name="name"
         type="text"
         placeholder="お名前"
         required
       )
       select.category(
+        name="cateogory"
         required
         v-model="selectedCategory"
       )
@@ -36,7 +41,9 @@
       .show-only-live(
           v-show="isSelectedTicketReserve"
         )
-        select.is-small
+        select.is-small(
+          name="live-date"
+        )
           option(
             value=""
             selected
@@ -46,7 +53,9 @@
             v-for="live in liveDetails"
             :key="live.date"
           ) {{ `${live.date} - ${live.title}` }}
-        select.is-small
+        select.is-small(
+          name="tickets-count"
+        )
           option(
             value=""
             selected
@@ -58,11 +67,13 @@
             :value="`${value}枚`"
           ) {{ `${value}枚` }}
       input(
+        name="email"
         type="email"
         placeholder="ご連絡先メールアドレス"
         required
       )
       textarea(
+        name="content"
         placeholder="内容"
         required
       )

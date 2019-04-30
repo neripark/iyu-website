@@ -1,7 +1,7 @@
 const pkg = require('./package')
 
 module.exports = {
-  mode: 'spa',
+  mode: 'universal',
 
   /*
   ** Headers of the page
@@ -29,7 +29,13 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~plugins/scroll.js'],
+  plugins: [
+    '~plugins/scroll.js',
+    {
+      src: '~plugins/vue-carousel.js',
+      ssr: false
+    }
+  ],
 
   /*
   ** Nuxt.js modules

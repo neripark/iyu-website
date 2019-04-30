@@ -12,9 +12,7 @@
       p.lead
         | 2019/6/8 (Sat.)
         br
-        | なんかすごそうなイベント名@Shimokitazawa ERA
-        br
-        | w) mouse on the keys / toe / AGRAPH
+        | イベント名@Shimokitazawa Some Live-House
 </template>
 
 <style lang="scss" scoped>

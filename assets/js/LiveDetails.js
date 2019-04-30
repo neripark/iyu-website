@@ -11,12 +11,12 @@ export default [
       open: '18:00',
       start: '18:30'
     },
-    with: ['toe', 'mouse on the keys', 'agraph']
+    with: ['dummy', 'dummy', 'dummy']
   },
   {
-    title: 'ZUN(from iyu) 31th birthday live 〜1831〜',
+    title: 'ZUN(from iyu) birthday live 〜1831〜',
     date: '2019/9/20 (Fri)',
-    place: 'Shimotakaido Club Zun-chi',
+    place: 'Club Zun-chi',
     ticket: {
       adv: 500,
       door: 500
@@ -25,6 +25,6 @@ export default [
       open: '18:00',
       start: '18:30'
     },
-    with: ['柏倉隆史']
+    with: ['dummy', 'band name']
   }
 ]

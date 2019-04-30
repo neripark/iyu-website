@@ -8,91 +8,90 @@
   .wrap
     p.lead
       | ライブのチケットお取り置き、共演のお誘いなど、お気軽にご連絡ください。
-    no-ssr
-      form.contact-form(
-        name="iyu-contact"
-        method="POST"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
+    form.contact-form(
+      name="iyu-contact"
+      method="POST"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+    )
+      //- NOTE:
+      //- Netlify側で生成されるhiddenを直接書いているが、
+      //- no-ssrタグでくくらないと生成されないため必要。
+      //- no-ssrタグがないと、NuxtのSSRでレンダリングされるDOMとの差分が発生してJSがエラーになるため
+      //- https://qiita.com/yahsan2/items/a70c4c8f617ee9b1f9ff
+      input(
+        type="hidden"
+        name="form-name"
+        value="iyu-contact"
       )
-        //- NOTE:
-        //- Netlify側で生成されるhiddenを直接書いているが、
-        //- no-ssrタグでくくらないと生成されないため必要。
-        //- no-ssrタグがないと、NuxtのSSRでレンダリングされるDOMとの差分が発生してJSがエラーになるため
-        //- https://qiita.com/yahsan2/items/a70c4c8f617ee9b1f9ff
-        input(
-          type="hidden"
-          name="form-name"
-          value="iyu-contact"
+      //- form start
+      input(
+        name="name"
+        type="text"
+        placeholder="お名前"
+        required
+      )
+      select.category(
+        name="cateogory"
+        required
+        v-model="selectedCategory"
+      )
+        option(
+          value=""
+          disabled
+        ) - お問い合わせ種類を選択してください -
+        option(
+          value="live"
+        ) ライブのチケットお取り置き
+        option(
+          value="together"
+        ) 共演のお誘い
+        option(
+          value="other"
+        ) その他
+      //- チケット取り置きが選択されたときのみ
+      .show-only-live(
+          v-show="isSelectedTicketReserve"
         )
-        //- form start
-        input(
-          name="name"
-          type="text"
-          placeholder="お名前"
-          required
-        )
-        select.category(
-          name="cateogory"
-          required
-          v-model="selectedCategory"
+        select.is-small(
+          name="live-date"
         )
           option(
             value=""
+            selected
             disabled
-          ) - お問い合わせ種類を選択してください -
+          ) - お取り置き日程 -
           option(
-            value="live"
-          ) ライブのチケットお取り置き
-          option(
-            value="together"
-          ) 共演のお誘い
-          option(
-            value="other"
-          ) その他
-        //- チケット取り置きが選択されたときのみ
-        .show-only-live(
-            v-show="isSelectedTicketReserve"
-          )
-          select.is-small(
-            name="live-date"
-          )
-            option(
-              value=""
-              selected
-              disabled
-            ) - お取り置き日程 -
-            option(
-              v-for="live in liveDetails"
-              :key="live.date"
-            ) {{ `${live.date} - ${live.title}` }}
-          select.is-small(
-            name="tickets-count"
-          )
-            option(
-              value=""
-              selected
-              disabled
-            ) - お取り置き枚数 -
-            option(
-              v-for="value in maxTicketNumber"
-              :key="value"
-              :value="`${value}枚`"
-            ) {{ `${value}枚` }}
-        input(
-          name="email"
-          type="email"
-          placeholder="ご連絡先メールアドレス"
-          required
+            v-for="live in liveDetails"
+            :key="live.date"
+          ) {{ `${live.date} - ${live.title}` }}
+        select.is-small(
+          name="tickets-count"
         )
-        textarea(
-          name="content"
-          placeholder="内容"
-          required
-        )
-        button(
-          type="submit"
-        ) 送信
+          option(
+            value=""
+            selected
+            disabled
+          ) - お取り置き枚数 -
+          option(
+            v-for="value in maxTicketNumber"
+            :key="value"
+            :value="`${value}枚`"
+          ) {{ `${value}枚` }}
+      input(
+        name="email"
+        type="email"
+        placeholder="ご連絡先メールアドレス"
+        required
+      )
+      textarea(
+        name="content"
+        placeholder="内容"
+        required
+      )
+      button(
+        type="submit"
+      ) 送信
 </template>
 
 <script>

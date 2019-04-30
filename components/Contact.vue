@@ -15,6 +15,12 @@
         netlify-honeypot="bot-field"
         data-netlify="true"
       )
+        //- for netlify form
+        input(
+          type="hidden"
+          name="form-name"
+          value="iyu-contact"
+        )
         //- form start
         input(
           name="name"

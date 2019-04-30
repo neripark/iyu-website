@@ -1,5 +1,5 @@
 import Vue from 'vue'
-// import VueScrollTo from 'vue-scrollto';
+import VueScrollTo from 'vue-scrollto'
 
 // スクロールイベント
 Vue.directive('scroll', {
@@ -10,4 +10,4 @@ Vue.directive('scroll', {
   }
 })
 
-// Vue.use(VueScrollTo);
+Vue.use(VueScrollTo)

@@ -5,23 +5,26 @@ nav.site-nav(
 )
   ul.anchor-list
     li.anchor-item
-      a.anchor(href="#") Profile
+      a.anchor(:href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.profile)") Profile
     li.anchor-item
-      a.anchor(href="#") Music
+      a.anchor(:href="`#${anchorList.music.id}`" v-scroll-to="scrollTo(anchorList.music)") Music
     li.anchor-item
-      a.anchor(href="#") Live
+      a.anchor(:href="`#${anchorList.live.id}`" v-scroll-to="scrollTo(anchorList.live)") Live
     li.anchor-item
-      a.anchor(href="#") Gallery
+      a.anchor(:href="`#${anchorList.gallery.id}`" v-scroll-to="scrollTo(anchorList.gallery)") Gallery
     li.anchor-item
-      a.anchor(href="#") Contact
+      a.anchor(:href="`#${anchorList.contact.id}`" v-scroll-to="scrollTo(anchorList.contact)") Contact
 </template>
 
 <script>
+import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js'
+
 export default {
   data() {
     return {
       isNavScrollStart: false,
-      isNavWindowTop: false
+      isNavWindowTop: false,
+      anchorList: anchorList
     }
   },
   methods: {
@@ -29,6 +32,14 @@ export default {
       this.isNavScrollStart = window.pageYOffset > 0
       this.isNavWindowTop =
         window.pageYOffset > window.innerHeight - this.$el.clientHeight
+    },
+    scrollTo(to) {
+      return {
+        duration: scrollOptions.duration,
+        easing: scrollOptions.easing,
+        el: `#${to.id}`,
+        offset: to.offset
+      }
     }
   }
 }

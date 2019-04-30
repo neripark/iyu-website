@@ -6,7 +6,7 @@ section.sec
       alt="iyu-logo"
     )
   video.mainVisual(
-    src="~assets/videos/190429_iyu-webtop-video1280pix.mp4"
+    src="~assets/videos/190430_iyu-webtop-video-20sec3000bit24F.mp4"
     autoplay
     loop
   )

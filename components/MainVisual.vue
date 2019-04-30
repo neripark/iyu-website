@@ -7,6 +7,7 @@ section.sec
     )
   video.mainVisual(
     src="~assets/videos/190430_iyu-webtop-video-20sec3000bit24F.mp4"
+    muted
     autoplay
     loop
   )

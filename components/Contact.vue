@@ -12,7 +12,14 @@
       name="iyu-contact"
       method="POST"
       data-netlify="true"
+      netlify-honeypot="bot-field"
     )
+      //- setting for Netlify
+      input(
+        type="hidden"
+        name="form-name"
+        value="iyu-contact"
+      )
       input(
         name="name"
         type="text"

@@ -9,7 +9,7 @@ ul.live-cards
 
 <script>
 import LiveCard from '~/components/LiveCard.vue'
-import liveArray from '~/assets/js/LiveDetails.js'
+import liveDetails from '~/assets/js/LiveDetails.js'
 
 export default {
   components: {
@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      liveDetails: liveArray
+      liveDetails: liveDetails
     }
   }
 }

@@ -4,7 +4,7 @@
     text="Music"
     color="blue"
   )
-  iframe#ytplayer.setasu(
+  iframe.setasu(
     type="text/html"
     :width="this.width"
     :height="this.height"

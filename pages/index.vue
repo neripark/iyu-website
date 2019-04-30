@@ -5,7 +5,7 @@ main.container
   site-nav
   profile( :id="anchorList.profile.id" )
   music-video( :id="anchorList.music.id" )
-  LiveInfo( :id="anchorList.live.id" )
+  Live( :id="anchorList.live.id" )
   Gallery( :id="anchorList.gallery.id" )
   Contact( :id="anchorList.contact.id" )
 </template>
@@ -17,7 +17,7 @@ import FloatingInfo from '~/components/FloatingInfo'
 import SiteNav from '~/components/SiteNav'
 import Profile from '~/components/Profile'
 import MusicVideo from '~/components/MusicVideo'
-import LiveInfo from '~/components/LiveInfo'
+import Live from '~/components/Live'
 import Gallery from '~/components/Gallery'
 import Contact from '~/components/Contact'
 
@@ -28,7 +28,7 @@ export default {
     SiteNav,
     Profile,
     MusicVideo,
-    LiveInfo,
+    Live,
     Gallery,
     Contact
   },

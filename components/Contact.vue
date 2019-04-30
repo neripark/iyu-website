@@ -76,7 +76,9 @@
         placeholder="内容"
         required
       )
-      input(type="submit" value="送信する")
+      button(
+        type="submit"
+      ) 送信
 </template>
 
 <script>

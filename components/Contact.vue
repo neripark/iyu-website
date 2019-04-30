@@ -15,7 +15,11 @@
         netlify-honeypot="bot-field"
         data-netlify="true"
       )
-        //- for netlify form
+        //- NOTE:
+        //- Netlify側で生成されるhiddenを直接書いているが、
+        //- no-ssrタグでくくらないと生成されないため必要。
+        //- no-ssrタグがないと、NuxtのSSRでレンダリングされるDOMとの差分が発生してJSがエラーになるため
+        //- https://qiita.com/yahsan2/items/a70c4c8f617ee9b1f9ff
         input(
           type="hidden"
           name="form-name"

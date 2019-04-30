@@ -72,8 +72,8 @@ export default {
 .VueCarousel {
   margin: 0 auto;
   max-width: 700px;
-}
-.VueCarousel-wrapper {
-  overflow: visible;
+  .VueCarousel-wrapper {
+    overflow: visible;
+  }
 }
 </style>

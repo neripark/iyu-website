@@ -12,10 +12,14 @@ footer.site-footer
   .wrap-copyright
     p.copyright-text ©iyumusic.tokyo All Rights Reserved.
   .wrap-sns-icons
-    img.twitter-icon(
-      src="~/assets/images/twitter-icon.svg"
-      alt="mail"
+    a(
+      href="https://twitter.com/iyu_band"
+      target="_blank"
     )
+      img.twitter-icon(
+        src="~/assets/images/twitter-icon.svg"
+        alt="mail"
+      )
 </template>
 
 <style lang="scss" scoped>

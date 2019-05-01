@@ -1,4 +1,4 @@
-const pkg = require('./package')
+// const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
@@ -56,7 +56,7 @@ module.exports = {
   },
   styleResources: {
     sass: [
-      '~assets/scss/color.scss'
+      '~assets/scss/**/*.scss'
     ]
   },
 

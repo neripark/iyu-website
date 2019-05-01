@@ -1,0 +1,12 @@
+// for media query
+@mixin mq($breakpoint: sm) {
+  @media (#{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+};
+
+// breakpoints
+$breakpoints: (
+  'sm': "max-width: 600px", // mixin側のデフォルト値
+  'tb': "max-width: 840px"
+);

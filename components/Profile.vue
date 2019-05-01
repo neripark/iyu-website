@@ -84,6 +84,10 @@ export default {
   }
   .part {
     font-size: 12px;
+    // test
+    @include mq() {
+      color: red;
+    }
   }
 }
 .description {

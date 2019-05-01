@@ -8,6 +8,7 @@ main.container
   Live( :id="anchorList.live.id" )
   Gallery( :id="anchorList.gallery.id" )
   Contact( :id="anchorList.contact.id" )
+  site-footer
 </template>
 
 <script>
@@ -20,6 +21,7 @@ import MusicVideo from '~/components/MusicVideo'
 import Live from '~/components/Live'
 import Gallery from '~/components/Gallery'
 import Contact from '~/components/Contact'
+import SiteFooter from '~/components/SiteFooter'
 
 export default {
   components: {
@@ -30,7 +32,8 @@ export default {
     MusicVideo,
     Live,
     Gallery,
-    Contact
+    Contact,
+    SiteFooter
   },
   data() {
     return {

@@ -46,20 +46,35 @@ export default {
   position: relative;
 }
 .wrap-photo {
-  min-height: 630px;
+  // min-height: 630px;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
+  @include mq(fhd) {
+    display: flex;
+    justify-content: center;
+  }
 }
 .profile-photo {
   width: 100%;
   min-width: 1500px;
-  margin: 0 auto;
   margin-top: -280px;
-}
-// todo: media_queryをmixin化
-@media (min-width: 1500px) {
-  .profile-photo {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  @include mq(tb) {
+    left: 49%;
+    min-width: 1300px;
+    margin-top: -230px;
+  }
+  @include mq(sm) {
+    min-width: 1100px;
+    margin-top: -180px;
+  }
+  @include mq(ssm) {
+    left: 49%;
+    min-width: 840px;
+    margin-top: -120px;
+  }
+  @include mq(fhd) {
     height: 100%;
     margin-top: -350px;
   }

@@ -7,6 +7,8 @@
 
 // breakpoints
 $breakpoints: (
+  'ssm': "max-width: 450px",
   'sm': "max-width: 600px", // mixin側のデフォルト値
-  'tb': "max-width: 840px"
+  'tb': "max-width: 840px",
+  'fhd': "min-width: 1500px"
 );

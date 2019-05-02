@@ -42,6 +42,7 @@ export default {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
   }
   @include mq(tb) {
     letter-spacing: 0.7em;

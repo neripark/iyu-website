@@ -39,16 +39,30 @@ export default {
   color: $white;
 }
 .anchor-list {
-  display: flex;
   width: 100%;
-  justify-content: center;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  @include mq(tb) {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: $main-blue; // 仮
+    z-index: 1;
+  }
 }
 .anchor-item {
+  text-align: center;
+  width: 20%;
   &:not(:first-child) {
-    margin-left: 50px;
-    padding-left: 50px;
     border-left: 1px solid $white;
+    @include mq(tb) {
+      border: none;
+    }
   }
 }
 .anchor {

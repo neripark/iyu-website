@@ -1,8 +1,5 @@
 <template lang="pug">
-nav.site-nav(
-  v-scroll='scrollHandler'
-  :class="{'is-scroll-start': isNavScrollStart, 'is-window-top': isNavWindowTop}"
-)
+nav.site-ham-menu
   common-navigation
 </template>
 
@@ -12,30 +9,20 @@ import CommonNavigation from '~/components/CommonNavigation.vue'
 export default {
   components: {
     CommonNavigation
-  },
-  data() {
-    return {
-      isNavScrollStart: false,
-      isNavWindowTop: false
-    }
-  },
-  methods: {
-    scrollHandler() {
-      this.isNavScrollStart = window.pageYOffset > 0
-      this.isNavWindowTop =
-        window.pageYOffset > window.innerHeight - this.$el.clientHeight
-    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.site-nav {
-  position: absolute;
+.site-ham-menu {
+  display: none;
+  // position: fixed;
   z-index: 1;
   bottom: 0;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 30px;
   background: rgba(0, 0, 0, 0.4);
   transition: 1s;
   &.is-scroll-start {
@@ -48,7 +35,7 @@ export default {
     box-shadow: 0px -30px 40px 0px rgba(0, 0, 0, 0.4);
   }
   @include mq() {
-    display: none;
+    display: flex;
   }
 }
 </style>

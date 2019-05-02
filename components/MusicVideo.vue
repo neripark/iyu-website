@@ -28,7 +28,21 @@ export default {
   width: 100%;
   padding-bottom: 100px;
   background-image: url(~assets/images/bg-movie.png);
-  background-size: cover;
+  background-position: right -150px top 0px;
+  @include mq(tb) {
+    background-position: right -500px top 0px;
+  }
+  @include mq() {
+    padding-bottom: 50px;
+  }
+  @include mq(ssm) {
+    background-position: right -550px top 0px;
+  }
+  @include mq(fhd) {
+    padding-bottom: 50px;
+    background-position: unset;
+    background-size: cover;
+  }
 }
 // iframeをレスポンシブにするための２重ラップ
 .wrap-mv {
@@ -48,6 +62,9 @@ iframe.setasu {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 30px;
+  padding: 0 $side-padding-pc;
+  @include mq() {
+    padding: 0 $side-padding-sp;
+  }
 }
 </style>

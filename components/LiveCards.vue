@@ -28,6 +28,5 @@ export default {
   max-width: 1000px;
   margin: 15px auto 0;
   padding: 30px;
-  box-sizing: content-box;
 }
 </style>

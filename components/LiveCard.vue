@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$date-width: 400px;
+$date-width: 360px;
 .live-card {
   display: flex;
   justify-content: center;

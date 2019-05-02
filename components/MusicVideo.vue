@@ -4,28 +4,21 @@
     text="Music"
     color="blue"
   )
-  iframe.setasu(
-    type="text/html"
-    :width="this.width"
-    :height="this.height"
-    src="https://www.youtube.com/embed/5Ji3VKWpWwg"
-    frameborder="0"
-  )
+  .wrap-mv
+    .inner
+      iframe.setasu(
+        type="text/html"
+        src="https://www.youtube.com/embed/5Ji3VKWpWwg"
+        frameborder="0"
+      )
 </template>
 
 <script>
 import Heading from '~/components/Heading.vue'
-const width = 1000
 
 export default {
   components: {
     Heading
-  },
-  data() {
-    return {
-      width: width,
-      height: (width * 9) / 16
-    }
   }
 }
 </script>
@@ -40,8 +33,24 @@ export default {
 .heading-adj {
   padding: 30px;
 }
-.setasu {
-  display: block;
+// iframeをレスポンシブにするための２重ラップ
+.wrap-mv {
   margin: 10px auto 0;
+  width: 100%;
+  max-width: 1000px; // padding-bottomの%指定が広がり続けてしまうためmax-width
+}
+.inner {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+iframe.setasu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
 }
 </style>

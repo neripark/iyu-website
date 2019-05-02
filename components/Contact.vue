@@ -39,7 +39,7 @@
         option(
           value=""
           disabled
-        ) - お問い合わせ種類を選択してください -
+        ) - お問い合わせ種類 -
         option(
           value="live"
         ) ライブのチケットお取り置き
@@ -89,9 +89,9 @@
         placeholder="内容"
         required
       )
-      button(
+      button.send-button(
         type="submit"
-      ) 送信
+      ) 送信する
 </template>
 
 <script>
@@ -123,8 +123,12 @@ export default {
   padding-bottom: 50px;
 }
 .wrap {
-  max-width: 400px;
+  max-width: 560px;
   margin: 0 auto;
+  padding: 0 $side-padding-pc;
+  @include mq() {
+    padding: 0 $side-padding-sp;
+  }
 }
 .lead {
   color: $white;
@@ -138,6 +142,11 @@ export default {
   .is-small {
     width: 95%;
   }
+}
+.send-button {
+  background: $orange;
+  color: $white;
+  cursor: pointer;
 }
 
 // -- form parts basic style --

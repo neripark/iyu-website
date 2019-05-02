@@ -1,6 +1,6 @@
 <template lang="pug">
 .music-video
-  heading.heading-adj(
+  heading(
     text="Music"
     color="blue"
   )
@@ -29,9 +29,6 @@ export default {
   padding-bottom: 100px;
   background-image: url(~assets/images/bg-movie.png);
   background-size: cover;
-}
-.heading-adj {
-  padding: 30px;
 }
 // iframeをレスポンシブにするための２重ラップ
 .wrap-mv {

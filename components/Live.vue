@@ -1,6 +1,6 @@
 <template lang="pug">
 .live
-  heading.heading-adj(
+  heading(
     text="Live"
     color="yellow"
   )
@@ -25,9 +25,10 @@ export default {
 .live {
   background: $main-blue;
   padding-bottom: 50px;
-}
-.heading-adj {
-  padding: 30px;
+  padding: 0 $side-padding-pc 60px;
+  @include mq() {
+    padding: 0 $side-padding-sp 40px;
+  }
 }
 .lead {
   color: $white;

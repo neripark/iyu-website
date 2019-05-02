@@ -1,6 +1,6 @@
 <template lang="pug">
 .contact
-  heading.heading-adj(
+  heading(
     text="Contact"
     color="yellow"
   )
@@ -121,9 +121,6 @@ export default {
 .contact {
   background: $main-blue;
   padding-bottom: 50px;
-}
-.heading-adj {
-  padding: 30px;
 }
 .wrap {
   max-width: 400px;

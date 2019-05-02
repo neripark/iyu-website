@@ -1,6 +1,6 @@
 <template lang="pug">
 .gallery
-  heading.heading-adj(
+  heading(
     text="Gallery"
     color="blue"
   )
@@ -48,9 +48,6 @@ export default {
   background: $white;
   padding-bottom: 50px;
   overflow: hidden; // カルーセルが飛び出ないよう対策
-}
-.heading-adj {
-  padding: 30px;
 }
 .pic {
   max-width: 700px;

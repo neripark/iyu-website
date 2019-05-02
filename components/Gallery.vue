@@ -19,20 +19,32 @@
       slide
         p.pic
           img(
-            src="~/assets/images/gallery_01.jpg"
-            alt="setagaya suside last scene."
+            src="~/assets/images/gallery-zun.jpg"
+            alt="gallery zun"
           )
       slide
         p.pic
           img(
-            src="~/assets/images/gallery_02.jpg"
-            alt="Vocal ZUN."
+            src="~/assets/images/gallery-setasu-last.jpg"
+            alt="setagaya suside last scene"
           )
       slide
         p.pic
           img(
-            src="~/assets/images/gallery_03.jpg"
-            alt="Key KOUDAI."
+            src="~/assets/images/gallery-sky.jpg"
+            alt="gallery sky"
+          )
+      slide
+        p.pic
+          img(
+            src="~/assets/images/gallery-car-beam.jpg"
+            alt="gallery car beam"
+          )
+      slide
+        p.pic
+          img(
+            src="~/assets/images/gallery-car-light.jpg"
+            alt="gallery car light"
           )
 </template>
 

@@ -120,15 +120,14 @@ export default {
 <style lang="scss" scoped>
 .contact {
   background: $main-blue;
-  padding-bottom: 50px;
+  padding: 0 $side-padding-pc 50px;
+  @include mq() {
+    padding: 0 $side-padding-sp 50px;
+  }
 }
 .wrap {
-  max-width: 560px;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 0 $side-padding-pc;
-  @include mq() {
-    padding: 0 $side-padding-sp;
-  }
 }
 .lead {
   color: $white;

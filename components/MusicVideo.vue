@@ -26,14 +26,14 @@ export default {
 <style lang="scss" scoped>
 .music-video {
   width: 100%;
-  padding-bottom: 100px;
+  padding: 0 $side-padding-pc 100px;
   background-image: url(~assets/images/bg-movie.png);
   background-position: right -150px top 0px;
   @include mq(tb) {
     background-position: right -500px top 0px;
   }
   @include mq() {
-    padding-bottom: 50px;
+    padding: 0 $side-padding-sp 50px;
   }
   @include mq(ssm) {
     background-position: right -550px top 0px;
@@ -62,9 +62,5 @@ iframe.setasu {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 $side-padding-pc;
-  @include mq() {
-    padding: 0 $side-padding-sp;
-  }
 }
 </style>

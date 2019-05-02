@@ -27,6 +27,10 @@ export default {
 .live-cards {
   max-width: 1000px;
   margin: 15px auto 0;
-  padding: 30px;
+  padding-bottom: $side-padding-pc;
+  @include mq() {
+    padding-bottom: $side-padding-sp;
+    margin: 40px auto 0;
+  }
 }
 </style>

@@ -51,7 +51,9 @@ export default {
 }
 .pic {
   max-width: 700px;
-  padding: 10px;
+  @include mq() {
+    padding: $side-padding-sp;
+  }
   img {
     width: 100%;
   }

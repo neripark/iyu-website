@@ -104,14 +104,14 @@ export default {
       display: none;
     }
     &:focus {
-      outline: none;
+      outline: none !important;
     }
   }
   .VueCarousel-navigation-prev {
-    left: 20px;
+    left: 20px !important;
   }
   .VueCarousel-navigation-next {
-    right: 20px;
+    right: 20px !important;
   }
 }
 </style>

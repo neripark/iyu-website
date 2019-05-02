@@ -5,12 +5,15 @@
     color="blue"
   )
   no-ssr
-    carousel.carousel-adj(
+    carousel(
       :center-mode="true"
       :loop="true"
       :per-page="1"
       :navigation-enabled="true"
+      pagination-color="#ccc"
       pagination-active-color="#36afca"
+      navigationPrevLabel="<image class=\"arrow\" src=\"/images/gallery-button-L.png\" alt=\"left\" />"
+      navigationNextLabel="<image class=\"arrow\" src=\"/images/gallery-button-R.png\" alt=\"left\" />"
     )
       //- todo: v-forで書き直す
       slide
@@ -51,6 +54,7 @@ export default {
 }
 .pic {
   max-width: 700px;
+  padding: $side-padding-pc;
   @include mq() {
     padding: $side-padding-sp;
   }
@@ -67,6 +71,35 @@ export default {
   max-width: 700px;
   .VueCarousel-wrapper {
     overflow: visible;
+  }
+  .VueCarousel-dot-container {
+    @include mq() {
+      margin-top: 0 !important;
+    }
+  }
+  .VueCarousel-dot {
+    @include mq() {
+      margin-top: 0 !important;
+    }
+  }
+  // 矢印ボタン
+  img.arrow {
+    width: 30px;
+  }
+  // 左右ボタン
+  .VueCarousel-navigation-button {
+    @include mq(carousel) {
+      display: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .VueCarousel-navigation-prev {
+    left: 20px;
+  }
+  .VueCarousel-navigation-next {
+    right: 20px;
   }
 }
 </style>

@@ -32,7 +32,7 @@ export default {
 <style lang="scss" scoped>
 .site-nav {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   bottom: 0;
   width: 100%;
   padding: 15px 0;

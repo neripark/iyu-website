@@ -8,6 +8,7 @@
   .wrap
     p.lead
       | ライブのチケットお取り置き、共演のお誘いなど、お気軽にご連絡ください。
+
     form.contact-form(
       name="iyu-contact"
       method="POST"
@@ -15,6 +16,7 @@
       data-netlify="true"
       @submit.prevent="handleSubmit"
     )
+
       //- NOTE:
       //- Netlify側で生成されるhiddenを直接書いているが、
       //- no-ssrタグでくくらないと生成されないため必要。
@@ -25,74 +27,36 @@
         name="form-name"
         value="iyu-contact"
       )
-      //- form start
-      input(
-        name="name"
-        type="text"
-        placeholder="お名前"
-        required
-      )
-      select.category(
-        name="cateogory"
-        required
-        v-model="selectedCategory"
-      )
-        option(
-          value=""
-          disabled
-        ) - お問い合わせ種類 -
-        option(
-          value="live"
-        ) ライブのチケットお取り置き
-        option(
-          value="together"
-        ) 共演のお誘い
-        option(
-          value="other"
-        ) その他
+
+      //- お名前
+      input( name="name" type="text" placeholder="お名前" required )
+
+      //- お問い合わせ種類
+      select.category( name="cateogory" required v-model="selectedCategory" )
+        option( value="" disabled ) - お問い合わせ種類 -
+        option( value="live" ) ライブのチケットお取り置き
+        option( value="together" ) 共演のお誘い
+        option( value="other" ) その他
+
       //- チケット取り置きが選択されたときのみ
-      .show-only-live(
-          v-show="isSelectedTicketReserve"
-        )
-        select.is-small(
-          name="live-date"
-        )
-          option(
-            value=""
-            selected
-            disabled
-          ) - お取り置き日程 -
-          option(
-            v-for="live in liveDetails"
-            :key="live.date"
-          ) {{ `${live.date} - ${live.title}` }}
-        select.is-small(
-          name="tickets-count"
-        )
-          option(
-            value=""
-            selected
-            disabled
-          ) - お取り置き枚数 -
-          option(
-            v-for="value in maxTicketNumber"
-            :key="value"
-            :value="`${value}枚`"
-          ) {{ `${value}枚` }}
-      input(
-        name="email"
-        type="email"
-        placeholder="ご連絡先メールアドレス"
-        required
-      )
-      textarea(
-        name="content"
-        placeholder="内容"
-        required
-      )
-      button.send-button(
-        type="submit"
-      ) 送信する
+      .show-only-live( v-show="isSelectedTicketReserve" )
+        //- お取り置き日程
+        select.is-small( name="live-date" )
+          option( value="" selected disabled ) - お取り置き日程 -
+          option( v-for="live in liveDetails" :key="live.date" ) {{ `${live.date} - ${live.title}` }}
+        //- お取り置き枚数
+        select.is-small( name="tickets-count" )
+          option( value="" selected disabled ) - お取り置き枚数 -
+          option( v-for="value in maxTicketNumber" :key="value" :value="`${value}枚`" ) {{ `${value}枚` }}
+
+      //- メールアドレス
+      input( name="email" type="email" placeholder="ご連絡先メールアドレス" required )
+
+      //- 本文
+      textarea( name="content" placeholder="内容" required )
+
+      //- 送信ボタン
+      button.send-button( type="submit") 送信する
 </template>
 
 <script>

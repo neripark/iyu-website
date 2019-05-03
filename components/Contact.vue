@@ -22,6 +22,8 @@
       //- no-ssrタグでくくらないと生成されないため必要。
       //- no-ssrタグがないと、NuxtのSSRでレンダリングされるDOMとの差分が発生してJSがエラーになるため
       //- https://qiita.com/yahsan2/items/a70c4c8f617ee9b1f9ff
+
+      //- memo: js側でnameを付与するならいらない
       input(
         type="hidden"
         name="form-name"
@@ -29,10 +31,11 @@
       )
 
       //- お名前
-      input( name="name" type="text" placeholder="お名前" required )
+      //- input( name="name" type="text" placeholder="お名前" required @input="ev => formData.name = ev.target.value")
+      input( name="name" type="text" placeholder="お名前" required v-model="formData.name")
 
       //- お問い合わせ種類
-      select.category( name="cateogory" required v-model="selectedCategory" )
+      select.category( name="cateogory" required v-model="formData.category" )
         option( value="" disabled ) - お問い合わせ種類 -
         option( value="live" ) ライブのチケットお取り置き
         option( value="together" ) 共演のお誘い
@@ -41,27 +44,30 @@
       //- チケット取り置きが選択されたときのみ
       .show-only-live( v-show="isSelectedTicketReserve" )
         //- お取り置き日程
-        select.is-small( name="live-date" )
+        select.is-small( name="live-date" v-model="formData.liveDate" )
           option( value="" selected disabled ) - お取り置き日程 -
           option( v-for="live in liveDetails" :key="live.date" ) {{ `${live.date} - ${live.title}` }}
         //- お取り置き枚数
-        select.is-small( name="tickets-count" )
+        select.is-small( name="tickets-count" v-model="formData.ticketsCount" )
           option( value="" selected disabled ) - お取り置き枚数 -
           option( v-for="value in maxTicketNumber" :key="value" :value="`${value}枚`" ) {{ `${value}枚` }}
 
       //- メールアドレス
-      input( name="email" type="email" placeholder="ご連絡先メールアドレス" required )
+      input( name="email" type="email" placeholder="ご連絡先メールアドレス" required v-model="formData.email" )
 
       //- 本文
-      textarea( name="content" placeholder="内容" required )
+      textarea( name="content" placeholder="内容" required v-model="formData.content" )
 
       //- 送信ボタン
       button.send-button( type="submit") 送信する
+    //- p.test(@click="logger") trigger
+    //- p.test(@click="printEncode") encode
 </template>
 
 <script>
 import Heading from '~/components/Heading.vue'
 import liveArray from '~/assets/js/LiveDetails.js'
+import axios from 'axios'
 
 export default {
   components: {
@@ -71,19 +77,48 @@ export default {
     return {
       liveDetails: liveArray,
       maxTicketNumber: 5,
-      selectedCategory: ''
+      formData: {
+        name: '',
+        category: '',
+        liveDate: '',
+        ticketsCount: '',
+        email: '',
+        content: ''
+      }
     }
   },
   computed: {
     isSelectedTicketReserve() {
-      return this.selectedCategory === 'live'
+      return this.formData.category === 'live'
     }
   },
   methods: {
+    // logger() {
+    //   console.log(JSON.stringify(this.formData))
+    // },
+    // printEncode() {
+    //   console.log(JSON.stringify(this.encode(this.formData)))
+    // },
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
     handleSubmit() {
-      fetch('/', {
-        method: 'POST'
-      })
+      const axiosConfig = {
+        header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      }
+      axios
+        .post(
+          '/',
+          this.encode({
+            'form-name': 'iyu-contact',
+            ...this.formData
+          }),
+          axiosConfig
+        )
         .then(res => alert('success!'))
         .catch(err => alert('failed!' + err))
     }

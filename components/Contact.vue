@@ -35,7 +35,7 @@
       input( name="name" type="text" placeholder="お名前" required v-model="formData.name")
 
       //- お問い合わせ種類
-      select.category( name="cateogory" required v-model="formData.category" )
+      select.category( name="category" required v-model="formData.category" )
         option( value="" disabled ) - お問い合わせ種類 -
         option( value="live" ) ライブのチケットお取り置き
         option( value="together" ) 共演のお誘い

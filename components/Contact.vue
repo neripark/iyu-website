@@ -13,6 +13,7 @@
       method="POST"
       netlify-honeypot="bot-field"
       data-netlify="true"
+      @submit.prevent="handleSubmit"
     )
       //- NOTE:
       //- Netlify側で生成されるhiddenを直接書いているが、
@@ -112,6 +113,15 @@ export default {
   computed: {
     isSelectedTicketReserve() {
       return this.selectedCategory === 'live'
+    }
+  },
+  methods: {
+    handleSubmit() {
+      fetch('/', {
+        method: 'POST'
+      })
+        .then(res => alert('success!'))
+        .catch(err => alert('failed!' + err))
     }
   }
 }

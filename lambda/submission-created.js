@@ -13,14 +13,13 @@ exports.handler = function(event, context, callback) {
     },
     data: querystring.stringify({
       // message: 'test string from "submittion-created"!'
-      message: `test string from "submittion-created"!
-        ${JSON.stringify(event)}`
+      message: `本文： ${JSON.stringify(event.body)}`
     })
   })
   .then((res) => {
     res.data.statusCode = 200
-    // res.data.body = 'test body!!!'
-    res.data.body = JSON.stringify(event)
+    res.data.body = 'ok'
+    // res.data.body = JSON.stringify(event.body)
     callback(null, res.data)
   })
   .catch(err => callback(err))

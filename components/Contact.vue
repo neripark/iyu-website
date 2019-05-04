@@ -112,6 +112,8 @@ export default {
       }
       axios
         .post(
+          // todo: 環境変数でdevとprodを分ける
+          // '/.netlify/functions/submission-created',
           '/',
           this.encode({
             'form-name': 'iyu-contact',

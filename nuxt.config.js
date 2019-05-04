@@ -46,6 +46,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     '@nuxtjs/style-resources'
   ],
   /*
@@ -53,6 +54,13 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+  },
+  // ローカル環境でfunctionsのサーバーを立ち上げるときのCORS対策
+  proxy: {
+    '/.netlify': {
+      target: 'http://localhost:9000',
+      pathRewrite: {'^/.netlify/functions': ''},
+    },
   },
   styleResources: {
     sass: [

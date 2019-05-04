@@ -3,6 +3,17 @@ import querystring from 'querystring'
 
 exports.handler = function(event, context, callback) {
   const token = 'sFW0U11C8weGFxvGsnL8MMXG0aT3ta7fpqvSc2SHbRU'
+  const payload = event.body.payload
+
+  const msg = `
+[Name] ${payload.name}
+[Category] ${payload.category}
+[LiveDate] ${payload.livedate}
+[TicketsCount] ${payload.ticketscount}
+[email] ${payload.email}
+[Content]
+${payload.content}
+  `
 
   axios({
     method: 'post',

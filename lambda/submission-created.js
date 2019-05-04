@@ -3,7 +3,7 @@ import querystring from 'querystring'
 
 exports.handler = function(event, context, callback) {
   const token = 'sFW0U11C8weGFxvGsnL8MMXG0aT3ta7fpqvSc2SHbRU'
-  const payload = event.body.payload
+  // const payload = event.body.payload
 
 //   const msg = `
 // [Name] ${payload.name}
@@ -24,7 +24,7 @@ exports.handler = function(event, context, callback) {
     },
     data: querystring.stringify({
       // message: 'test string from "submittion-created"!'
-      message: `本文： ${JSON.stringify(event.body.payload)}`
+      message: `本文： ${JSON.stringify(event.body)}`
     })
   })
   .then((res) => {

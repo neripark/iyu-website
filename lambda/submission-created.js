@@ -4,6 +4,10 @@ import querystring from 'querystring'
 exports.handler = function(event, context, callback) {
   const token = 'sFW0U11C8weGFxvGsnL8MMXG0aT3ta7fpqvSc2SHbRU'
 
+  // logger
+  console.log(`event.payload::: ${JSON.stringify(event.payload)}`)
+  console.log(`event.body.payload::: ${JSON.stringify(event.body.payload)}`)
+
   axios({
     method: 'post',
     url: 'https://notify-api.line.me/api/notify',

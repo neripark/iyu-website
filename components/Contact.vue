@@ -32,10 +32,10 @@
 
       //- お名前
       //- input( name="name" type="text" placeholder="お名前" required @input="ev => formData.name = ev.target.value")
-      input( name="name" type="text" placeholder="お名前" required v-model="formData.name")
+      input( name="Name" type="text" placeholder="お名前" required v-model="formData.name")
 
       //- お問い合わせ種類
-      select.category( name="category" required v-model="formData.category" )
+      select.category( name="Category" required v-model="formData.category" )
         option( value="" disabled ) - お問い合わせ種類 -
         option( value="live" ) ライブのチケットお取り置き
         option( value="together" ) 共演のお誘い
@@ -44,19 +44,19 @@
       //- チケット取り置きが選択されたときのみ
       .show-only-live( v-show="isSelectedTicketReserve" )
         //- お取り置き日程
-        select.is-small( name="live-date" v-model="formData.liveDate" )
+        select.is-small( name="LiveDate" v-model="formData.liveDate" )
           option( value="" selected disabled ) - お取り置き日程 -
           option( v-for="live in liveDetails" :key="live.date" ) {{ `${live.date} - ${live.title}` }}
         //- お取り置き枚数
-        select.is-small( name="tickets-count" v-model="formData.ticketsCount" )
+        select.is-small( name="TicketsCount" v-model="formData.ticketsCount" )
           option( value="" selected disabled ) - お取り置き枚数 -
           option( v-for="value in maxTicketNumber" :key="value" :value="`${value}枚`" ) {{ `${value}枚` }}
 
       //- メールアドレス
-      input( name="email" type="email" placeholder="ご連絡先メールアドレス" required v-model="formData.email" )
+      input( name="Email" type="email" placeholder="ご連絡先メールアドレス" required v-model="formData.email" )
 
       //- 本文
-      textarea( name="content" placeholder="内容" required v-model="formData.content" )
+      textarea( name="Message" placeholder="内容" required v-model="formData.content" )
 
       //- 送信ボタン
       button.send-button( type="submit") 送信する

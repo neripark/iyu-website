@@ -55,11 +55,11 @@ webサイトからContactがありました！
 --
 [Name] ${params.name}
 [Category] ${params.category}
-[LiveDate] ${params['live-date']}
-[TicketsCount] ${params['tickets-count']}
+[LiveDate] ${params.reservedate}
+[TicketsCount] ${params.reservecount}
 [Email] ${params.email}
 [Content]
-${params.content}
+${params.message}
   `
 
   return msg

@@ -45,11 +45,11 @@
       //- チケット取り置きが選択されたときのみ
       .show-only-live( v-show="isSelectedTicketReserve" )
         //- お取り置き日程
-        select.is-small( name="LiveDate" v-model="formData.liveDate" )
+        select.is-small( name="reservedate" v-model="formData.liveDate" )
           option( value="" selected disabled ) - お取り置き日程 -
           option( v-for="live in liveDetails" :key="live.date" ) {{ `${live.date} - ${live.title}` }}
         //- お取り置き枚数
-        select.is-small( name="TicketsCount" v-model="formData.ticketsCount" )
+        select.is-small( name="reservecount" v-model="formData.ticketsCount" )
           option( value="" selected disabled ) - お取り置き枚数 -
           option( v-for="value in maxTicketNumber" :key="value" :value="`${value}枚`" ) {{ `${value}枚` }}
 

@@ -14,10 +14,10 @@ form.contact-form(
     name="Cateogory"
   )
   select.is-small(
-    name="LiveDate"
+    name="reservedate"
   )
   select.is-small(
-    name="TicketsCount"
+    name="reservecount"
   )
   input(
     name="Email"

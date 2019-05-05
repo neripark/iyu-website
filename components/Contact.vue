@@ -81,10 +81,10 @@ export default {
       formData: {
         name: '',
         category: '',
-        liveDate: '',
-        ticketsCount: '',
+        reservedate: '',
+        reservecount: '',
         email: '',
-        content: ''
+        message: ''
       }
     }
   },

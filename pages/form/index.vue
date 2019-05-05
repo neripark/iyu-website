@@ -11,7 +11,7 @@ form.contact-form(
     type="text"
   )
   select.category(
-    name="cateogory"
+    name="category"
   )
   select.is-small(
     name="reservedate"

@@ -9,8 +9,9 @@
     p.lead
       | ライブのチケットお取り置き、共演のお誘いなど、お気軽にご連絡ください。
 
+  no-ssr
     form.contact-form(
-      name="iyu-contact"
+      name="iyu-contact-form"
       method="POST"
       netlify-honeypot="bot-field"
       data-netlify="true"
@@ -27,7 +28,7 @@
       input(
         type="hidden"
         name="form-name"
-        value="iyu-contact"
+        value="iyu-contact-form"
       )
 
       //- お名前
@@ -116,7 +117,7 @@ export default {
           // '/.netlify/functions/submission-created',
           '/',
           this.encode({
-            'form-name': 'iyu-contact',
+            'form-name': 'iyu-contact-form',
             ...this.formData
           }),
           axiosConfig

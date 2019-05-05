@@ -11,7 +11,7 @@
 
   no-ssr
     form.contact-form(
-      name="iyu-contact-form"
+      name="iyu-form"
       method="POST"
       netlify-honeypot="bot-field"
       data-netlify="true"
@@ -28,15 +28,15 @@
       input(
         type="hidden"
         name="form-name"
-        value="iyu-contact-form"
+        value="iyu-form"
       )
 
       //- お名前
       //- input( name="name" type="text" placeholder="お名前" required @input="ev => formData.name = ev.target.value")
-      input( name="Name" type="text" placeholder="お名前" required v-model="formData.name")
+      input( name="name" type="text" placeholder="お名前" required v-model="formData.name")
 
       //- お問い合わせ種類
-      select.category( name="Category" required v-model="formData.category" )
+      select.category( name="category" required v-model="formData.category" )
         option( value="" disabled ) - お問い合わせ種類 -
         option( value="live" ) ライブのチケットお取り置き
         option( value="together" ) 共演のお誘い
@@ -54,10 +54,10 @@
           option( v-for="value in maxTicketNumber" :key="value" :value="`${value}枚`" ) {{ `${value}枚` }}
 
       //- メールアドレス
-      input( name="Email" type="email" placeholder="ご連絡先メールアドレス" required v-model="formData.email" )
+      input( name="email" type="email" placeholder="ご連絡先メールアドレス" required v-model="formData.email" )
 
       //- 本文
-      textarea( name="Message" placeholder="内容" required v-model="formData.content" )
+      textarea( name="message" placeholder="内容" required v-model="formData.content" )
 
       //- 送信ボタン
       button.send-button( type="submit") 送信する
@@ -117,7 +117,7 @@ export default {
           // '/.netlify/functions/submission-created',
           '/',
           this.encode({
-            'form-name': 'iyu-contact-form',
+            'form-name': 'iyu-form',
             ...this.formData
           }),
           axiosConfig

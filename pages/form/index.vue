@@ -1,17 +1,17 @@
 <template lang="pug">
 form.contact-form(
-  name="iyu-contact-form"
+  name="iyu-form"
   method="POST"
   netlify-honeypot="bot-field"
   data-netlify="true"
 )
   //- form start
   input(
-    name="Name"
+    name="name"
     type="text"
   )
   select.category(
-    name="Cateogory"
+    name="cateogory"
   )
   select.is-small(
     name="reservedate"
@@ -20,10 +20,10 @@ form.contact-form(
     name="reservecount"
   )
   input(
-    name="Email"
+    name="email"
   )
   textarea(
-    name="Message"
+    name="message"
   )
 
 </template>

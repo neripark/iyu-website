@@ -55,8 +55,8 @@ webサイトからContactがありました！
 --
 [Name] ${params.name}
 [Category] ${params.category}
-[LiveDate] ${params.reservedate}
-[TicketsCount] ${params.reservecount}
+[ReserveDate] ${params.reservedate}
+[ReserveCount] ${params.reservecount}
 [Email] ${params.email}
 [Content]
 ${params.message}

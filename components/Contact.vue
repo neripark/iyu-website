@@ -45,11 +45,11 @@
       //- チケット取り置きが選択されたときのみ
       .show-only-live( v-show="isSelectedTicketReserve" )
         //- お取り置き日程
-        select.is-small( name="reservedate" v-model="formData.liveDate" )
+        select.is-small( name="reservedate" v-model="formData.reservedate" )
           option( value="" selected disabled ) - お取り置き日程 -
           option( v-for="live in liveDetails" :key="live.date" ) {{ `${live.date} - ${live.title}` }}
         //- お取り置き枚数
-        select.is-small( name="reservecount" v-model="formData.ticketsCount" )
+        select.is-small( name="reservecount" v-model="formData.reservecount" )
           option( value="" selected disabled ) - お取り置き枚数 -
           option( v-for="value in maxTicketNumber" :key="value" :value="`${value}枚`" ) {{ `${value}枚` }}
 
@@ -57,7 +57,7 @@
       input( name="email" type="email" placeholder="ご連絡先メールアドレス" required v-model="formData.email" )
 
       //- 本文
-      textarea( name="message" placeholder="内容" required v-model="formData.content" )
+      textarea( name="message" placeholder="内容" required v-model="formData.message" )
 
       //- 送信ボタン
       button.send-button( type="submit") 送信する

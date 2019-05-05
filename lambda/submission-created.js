@@ -5,8 +5,12 @@ exports.handler = function(event, context, callback) {
   const token = 'sFW0U11C8weGFxvGsnL8MMXG0aT3ta7fpqvSc2SHbRU'
   // const payload = event.body.payload
 
-//   const msg = `
-// [Name] ${payload.name}
+  const payload = typeof event.body // これはString
+  const payload2 = typeof event.body.payload // これはundefined!
+
+  // const msg = new Buffer(event.body, 'base64')
+
+//   const msg = ` // [Name] ${payload.name}
 // [Category] ${payload.category}
 // [LiveDate] ${payload.livedate}
 // [TicketsCount] ${payload.ticketscount}
@@ -14,6 +18,15 @@ exports.handler = function(event, context, callback) {
 // [Content]
 // ${payload.content}
 //   `
+
+  const msg = `
+[Name]
+[Category]
+[LiveDate]
+[TicketsCount]
+[email]
+[Content]
+`
 
   axios({
     method: 'post',
@@ -24,7 +37,9 @@ exports.handler = function(event, context, callback) {
     },
     data: querystring.stringify({
       // message: 'test string from "submittion-created"!'
-      message: `本文： ${JSON.stringify(event.body)}`
+      // message: `本文： ${JSON.stringify(event.body)}`
+      // message: `本文： ${event.body.name}`
+      message: msg
     })
   })
   .then((res) => {

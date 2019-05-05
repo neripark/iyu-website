@@ -9,7 +9,6 @@
     p.lead
       | ライブのチケットお取り置き、共演のお誘いなど、お気軽にご連絡ください。
 
-  no-ssr
     form.contact-form(
       name="iyu-form"
       method="POST"
@@ -24,12 +23,7 @@
       //- no-ssrタグがないと、NuxtのSSRでレンダリングされるDOMとの差分が発生してJSがエラーになるため
       //- https://qiita.com/yahsan2/items/a70c4c8f617ee9b1f9ff
 
-      //- memo: js側でnameを付与するならいらない
-      input(
-        type="hidden"
-        name="form-name"
-        value="iyu-form"
-      )
+      input( type="hidden" name="form-name" value="iyu-form" )
 
       //- お名前
       //- input( name="name" type="text" placeholder="お名前" required @input="ev => formData.name = ev.target.value")
@@ -114,8 +108,8 @@ export default {
       axios
         .post(
           // todo: 環境変数でdevとprodを分ける
-          // '/.netlify/functions/submission-created',
-          '/',
+          // '/.netlify/functions/submission-created', // development
+          '/', // production
           this.encode({
             'form-name': 'iyu-form',
             ...this.formData

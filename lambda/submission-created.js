@@ -1,31 +1,22 @@
-// 結論：おそらくfunctionフォルダに直接ファイルを置くか置かないかは関係ないかな・・・
 import querystring from 'querystring'
 import axios from 'axios'
 
 exports.handler = function(event, context, callback) {
   const token = 'sFW0U11C8weGFxvGsnL8MMXG0aT3ta7fpqvSc2SHbRU'
-  // const params = querystring.parse(decodeURIComponent(event.body)) // development
 
-  // const eventKeys = Object.keys(event)
+  // NOTE:
+  // event はオブジェクト型で来ているが、event.body はString型だった。
+  // Netlify側のログが出たり出なかったりしたため苦労したが、
+  // JSON形式の文字列なので JSON.parse(event.body) で取得できる。
+  // が、console.log が長すぎるとNetlify側のコンソールで末尾の3500文字程度しか表示してくれないので、
+  // 先頭の3500文字を切り取って表示し、キー名を突き止めた。
 
-  // event はObject型。
-  // event.body はString型。（どうして？）
-  // console.log(event.body) は長すぎて取れない。フルで見れれば・・・
+  // NOTE:
+  // function/ に直接ファイルを置くか置かないかは関係なかった。
+  // ローカルでのエミュレートに合わせ、Netlify 側でもビルドするようにした。
+  // そうしないと axios も使えないし。
 
-  const eventBody = event.body
   const eventBodyObj = JSON.parse(event.body)
-
-  console.log('-- typeof event.body --')
-  // console.log(typeof event.body)
-
-  console.log('-- eventBodyObj.payload.human_fields.Name --')
-  console.log(eventBodyObj.payload.human_fields.Name) // とれた！
-
-  const body1 = eventBody.substr(0, 3000)
-  console.log(body1)
-
-
-  // console.log(getMsg(eventBodyObj.payload.data))
 
   axios({
     method: 'post',
@@ -36,7 +27,6 @@ exports.handler = function(event, context, callback) {
     },
     data: querystring.stringify({
       message: getMsg(eventBodyObj.payload.data)
-      // message: '固定メッセージ'
     })
   })
     .then(res => {
@@ -48,7 +38,7 @@ exports.handler = function(event, context, callback) {
 }
 
 function getMsg(params) {
-  // todo: liveDateとTicketsCountがなかったら表示しない制御
+  // todo: reservedateとreservecountがなかったら表示しない制御
   const msg = `
 webサイトからContactがありました！
 
@@ -58,15 +48,9 @@ webサイトからContactがありました！
 [ReserveDate] ${params.reservedate}
 [ReserveCount] ${params.reservecount}
 [Email] ${params.email}
-[Content]
+[Message]
 ${params.message}
   `
 
   return msg
 }
-
-// function arrayLogger(array) {
-//   array.forEach((value, index) => {
-//     console.log(value)
-//   })
-// }

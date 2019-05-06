@@ -33,6 +33,7 @@ export default {
 .main-visual {
   position: relative;
   width: 100%;
+  // todo: iPadでvhが取れない（ハンバーガーにしちゃうのもあり）
   height: 100vh;
   display: flex;
   justify-content: center;

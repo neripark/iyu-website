@@ -117,8 +117,13 @@ export default {
           }),
           axiosConfig
         )
-        .then(res => alert('success!'))
-        .catch(err => alert('failed!' + err))
+        .then(res => alert('ご連絡ありがとうございます！返信をお待ち下さい。'))
+        .catch(err =>
+          alert(
+            '申し訳ありません！エラーが発生しました。\r\nメール（iyumusictokyo@gmail.com）かTwitterでお問い合わせください。\r\n\r\n' +
+              err
+          )
+        )
     }
   }
 }

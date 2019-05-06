@@ -16,7 +16,8 @@ exports.handler = function(event, context, callback) {
   // ローカルでのエミュレートに合わせ、Netlify 側でもビルドするようにした。
   // そうしないと axios も使えないし。
 
-  const eventBodyObj = JSON.parse(event.body)
+  // const params = querystring.parse(decodeURIComponent(event.body)) // development
+  const params = JSON.parse(event.body).payload.data // production
 
   axios({
     method: 'post',
@@ -26,7 +27,7 @@ exports.handler = function(event, context, callback) {
       'Content-Type': 'application/x-www-form-urlencoded'
     },
     data: querystring.stringify({
-      message: getMsg(eventBodyObj.payload.data)
+      message: getMsg(params)
     })
   })
     .then(res => {

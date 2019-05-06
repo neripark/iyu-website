@@ -6,11 +6,15 @@ section.main-visual
       alt="iyu-logo"
     )
   information-summary
-  video.mainVisual(
+  video.bg-movie(
     src="~assets/videos/190430_iyu-webtop-video-20sec3000bit24F.mp4"
     muted
     autoplay
     loop
+  )
+  img.bg-photo(
+    src="~assets/images/bg-main-visual-sp.png"
+    alt="background"
   )
     //- TODO: posterの設定
 </template>
@@ -49,7 +53,7 @@ export default {
     padding: 30px 5%;
   }
 }
-.mainVisual {
+.bg-movie {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,5 +62,18 @@ export default {
   width: auto;
   height: auto;
   z-index: -1;
+  @include mq() {
+    display: none;
+  }
+}
+.bg-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+  @include mq() {
+    display: block;
+  }
 }
 </style>

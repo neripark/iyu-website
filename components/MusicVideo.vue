@@ -27,21 +27,21 @@ export default {
 .music-video {
   width: 100%;
   padding: 0 $side-padding-pc 100px;
-  background-image: url(~assets/images/bg-movie.png);
+  background-image: url(~assets/images/bg-movie.jpg);
   background-position: right -150px top 0px;
+  background-size: cover;
   @include mq(tb) {
     background-position: right -500px top 0px;
   }
   @include mq() {
     padding: 0 $side-padding-sp 50px;
+    background-size: unset;
   }
   @include mq(ssm) {
     background-position: right -550px top 0px;
   }
   @include mq(fhd) {
-    padding-bottom: 50px;
     background-position: unset;
-    background-size: cover;
   }
 }
 // iframeをレスポンシブにするための２重ラップ

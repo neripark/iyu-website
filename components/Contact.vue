@@ -18,9 +18,9 @@
     )
 
       //- NOTE:
-      //- Netlify側で生成されるhiddenを直接書いているが、
-      //- no-ssrタグでくくらないと生成されないため必要。
-      //- no-ssrタグがないと、NuxtのSSRでレンダリングされるDOMとの差分が発生してJSがエラーになるため
+      //- formをデプロイするとNetlify側で鍵となるこのhiddenタグをappendしてくれるが、
+      //- Nuxt.jsの仕様により、prerenderされたDOMと実際に描画されたDOMに差分があるとJSエラーとなるため、
+      //- SSRにする、かつno-ssrでくくらない、なおかつ直接hiddenタグを記述している。
       //- https://qiita.com/yahsan2/items/a70c4c8f617ee9b1f9ff
 
       input( type="hidden" name="form-name" value="iyu-form" )
@@ -73,6 +73,7 @@ export default {
       liveDetails: liveArray,
       maxTicketNumber: 5,
       formData: {
+        // memo: form本体のname、Netlifyのform-API生成用のダミーの両方と名前を一致させる
         name: '',
         category: '',
         reservedate: '',
@@ -108,8 +109,8 @@ export default {
       axios
         .post(
           // todo: 環境変数でdevとprodを分ける
-          // '/.netlify/functions/submission-created', // development
-          '/', // production
+          '/.netlify/functions/submission-created', // development
+          // '/', // production
           this.encode({
             'form-name': 'iyu-form',
             ...this.formData

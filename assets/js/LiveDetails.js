@@ -2,7 +2,7 @@ export default [
   {
     title: 'りんご音楽祭ライブオーディション RINGOOO A GO-GO',
     date: '2019/6/8 (Sat)',
-    place: '東高円寺U.F.O.CLUB',
+    place: '東高円寺U.F.O. CLUB',
     ticket: {
       adv: 1500,
       door: 2000

@@ -1,10 +1,11 @@
 <template lang="pug">
-section.sec
+section.main-visual
   h1.iyu-logo
     img(
       src="~assets/images/iyu-logo-RGB.svg"
       alt="iyu-logo"
     )
+  information-summary
   video.mainVisual(
     src="~assets/videos/190430_iyu-webtop-video-20sec3000bit24F.mp4"
     muted
@@ -14,12 +15,18 @@ section.sec
     //- TODO: posterの設定
 </template>
 
-<style lang="scss" scoped>
-.iyu-logo {
-  width: 495px;
-  text-align: center;
+<script>
+import InformationSummary from '~/components/InformationSummary'
+
+export default {
+  components: {
+    InformationSummary
+  }
 }
-.sec {
+</script>
+
+<style lang="scss" scoped>
+.main-visual {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -27,6 +34,20 @@ section.sec
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  @include mq(tb) {
+    flex-direction: column;
+  }
+}
+.iyu-logo {
+  width: 495px;
+  text-align: center;
+  @include mq(tb) {
+    width: 70%;
+  }
+  @include mq() {
+    width: 100%;
+    padding: 30px 5%;
+  }
 }
 .mainVisual {
   position: absolute;

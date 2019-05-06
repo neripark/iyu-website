@@ -6,10 +6,10 @@
   )
   p.lead
     | チケットのお取置きは
-    a.contact(:href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.contact)") こちらのフォーム
+    a.text-link(:href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.contact)") こちらのフォーム
     | から。
     br
-    a.twitter(
+    a.text-link(
       href="https://twitter.com/iyu_band"
       target="_blank"
     ) Twitter
@@ -46,9 +46,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  color: $white;
-}
 .live {
   background: $main-blue;
   padding-bottom: 50px;
@@ -58,14 +55,20 @@ export default {
   }
 }
 .lead {
+  color: $white;
   text-align: center;
   line-height: 2;
   @include mq() {
     line-height: 1.5;
   }
 }
-.contact,
-.twitter {
+// todo: componentに切り出す
+.text-link {
+  color: $white;
   text-decoration: underline;
+  margin: 0 0.2em;
+  &:hover {
+    text-decoration: none;
+  }
 }
 </style>

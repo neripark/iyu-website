@@ -47,7 +47,8 @@ export default {
     bottom: unset;
     box-shadow: 0px -30px 40px 0px rgba(0, 0, 0, 0.4);
   }
-  @include mq() {
+  // todo: あとでちゃんとやる
+  @include mq(tb) {
     display: none;
   }
 }

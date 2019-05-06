@@ -127,7 +127,7 @@ export default {
 <style lang="scss" scoped>
 .contact {
   background: $main-blue;
-  padding: 0 $side-padding-pc 50px;
+  padding: 0 $side-padding-pc 80px;
   @include mq() {
     padding: 0 $side-padding-sp 50px;
   }

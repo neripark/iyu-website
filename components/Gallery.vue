@@ -61,8 +61,11 @@ export default {
 <style lang="scss" scoped>
 .gallery {
   background: $white;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   overflow: hidden; // カルーセルが飛び出ないよう対策
+  @include mq() {
+    padding-bottom: 50px;
+  }
 }
 .pic {
   max-width: 700px;
@@ -85,14 +88,10 @@ export default {
     overflow: visible;
   }
   .VueCarousel-dot-container {
-    @include mq() {
-      margin-top: 0 !important;
-    }
+    margin-top: 0 !important;
   }
   .VueCarousel-dot {
-    @include mq() {
-      margin-top: 0 !important;
-    }
+    margin-top: 0 !important;
   }
   // 矢印ボタン
   img.arrow {

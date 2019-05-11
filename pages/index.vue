@@ -1,7 +1,7 @@
 <template lang="pug">
 main.container
   main-visual
-  site-nav
+  site-floating-nav
   profile( :id="anchorList.profile.id" )
   music-video( :id="anchorList.music.id" )
   Live( :id="anchorList.live.id" )
@@ -13,7 +13,7 @@ main.container
 <script>
 import { anchorList } from '~/assets/js/v-scroll-settings.js'
 import MainVisual from '~/components/MainVisual.vue'
-import SiteNav from '~/components/SiteNav'
+import SiteFloatingNav from '~/components/SiteFloatingNav'
 import Profile from '~/components/Profile'
 import MusicVideo from '~/components/MusicVideo'
 import Live from '~/components/Live'
@@ -24,7 +24,7 @@ import SiteFooter from '~/components/SiteFooter'
 export default {
   components: {
     MainVisual,
-    SiteNav,
+    SiteFloatingNav,
     Profile,
     MusicVideo,
     Live,

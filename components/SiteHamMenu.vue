@@ -10,8 +10,9 @@ nav.site-ham-menu(
         alt="iyu-logo"
       )
   a.burger-button(
+    href=""
     :class="{'isOpenMenu': isOpenMenu}"
-    @click="toggleMenu()"
+    @click.prevent="toggleMenu()"
   )
     span.line
     span.line
@@ -90,7 +91,6 @@ export default {
   $size: 50px;
   width: $size;
   height: $size;
-  display: block;
   padding: 10px;
   position: absolute;
   top: 50%;

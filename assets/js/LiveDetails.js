@@ -11,20 +11,17 @@ export default [
       open: '18:00',
       start: '18:30'
     },
-    with: ['dummy', 'dummy', 'dummy']
-  },
-  {
-    title: 'ZUN(from iyu) birthday live 〜1831〜',
-    date: '2019/9/20 (Fri)',
-    place: 'Club Zun-chi',
-    ticket: {
-      adv: 500,
-      door: 500
-    },
-    time: {
-      open: '18:00',
-      start: '18:30'
-    },
-    with: ['dummy', 'band name']
+    with: [
+      'pejite',
+      'Club Nobody',
+      'IN-KYA in Canada',
+      'Siririnok',
+      'Kotan',
+      'むらかみなぎさ',
+      '呉 純太',
+      'ペチコート',
+      'the おこめマン(z)',
+      'Black Jam'
+    ]
   }
 ]

@@ -177,8 +177,10 @@ button {
   margin-top: 10px;
   font-size: 16px;
   padding: 0.5em 0.7em;
-  user-select: none;
   outline-color: $yellow-rgba;
+}
+button {
+  user-select: none;
 }
 textarea {
   resize: vertical;

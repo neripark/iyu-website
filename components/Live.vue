@@ -46,6 +46,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@mixin selection-color() {
+  &::selection {
+    background: $yellow-rgba;
+    color: $main-blue;
+  }
+}
 .live {
   background: $main-blue;
   padding-bottom: 50px;
@@ -58,6 +64,7 @@ export default {
   color: $white;
   text-align: center;
   line-height: 2;
+  @include selection-color();
   @include mq() {
     line-height: 1.5;
   }
@@ -67,6 +74,7 @@ export default {
   color: $white;
   text-decoration: underline;
   margin: 0 0.2em;
+  @include selection-color();
   &:hover {
     text-decoration: none;
   }

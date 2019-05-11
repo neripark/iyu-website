@@ -22,6 +22,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@mixin selection-color() {
+  &::selection {
+    background: $yellow-rgba;
+  }
+}
 .live-card {
   display: flex;
   justify-content: center;
@@ -54,6 +59,11 @@ export default {
     padding: 15px;
   }
 }
+.ymd {
+  &::selection {
+    background: $white-rgba;
+  }
+}
 .detail {
   width: 65%;
   color: $main-blue;
@@ -71,12 +81,14 @@ export default {
   .title {
     font-size: 24px;
     line-height: 1.3;
+    @include selection-color();
     @include mq() {
       font-size: 16px;
     }
   }
   .place {
     margin-top: 10px;
+    @include selection-color();
     @include mq() {
       font-size: 16px;
     }
@@ -84,18 +96,21 @@ export default {
   .time {
     margin-top: 10px;
     font-size: 16px;
+    @include selection-color();
     @include mq() {
       font-size: 14px;
     }
   }
   .ticket {
     font-size: 16px;
+    @include selection-color();
     @include mq() {
       font-size: 14px;
     }
   }
   .with {
     margin-top: 10px;
+    @include selection-color();
     @include mq() {
       font-size: 14px;
     }

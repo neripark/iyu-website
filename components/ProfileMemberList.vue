@@ -56,6 +56,14 @@ ul.member-list
   }
   .part {
     font-size: 12px;
+    &::selection {
+      background-color: $yellow-rgba;
+    }
+  }
+  .name {
+    &::selection {
+      background-color: $yellow-rgba;
+    }
   }
 }
 </style>

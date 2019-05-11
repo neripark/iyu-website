@@ -33,9 +33,15 @@ export default {
   padding: $side-padding-pc;
   &.yellow {
     color: $yellow;
+    &::selection {
+      background: $white-rgba;
+    }
   }
   &.blue {
     color: $main-blue;
+    &::selection {
+      background: $yellow-rgba;
+    }
   }
   &.is-absolute {
     position: absolute;

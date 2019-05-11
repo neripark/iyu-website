@@ -16,6 +16,11 @@
 </template>
 
 <style lang="scss" scoped>
+@mixin selection-color() {
+  &::selection {
+    background: $main-blue;
+  }
+}
 .information-summary {
   position: absolute;
   width: 100%;
@@ -49,6 +54,7 @@
 }
 .head {
   font-size: 24px;
+  @include selection-color();
   @include mq() {
     font-size: 16px;
   }
@@ -56,6 +62,7 @@
 .lead {
   margin-top: 10px;
   font-size: 16px;
+  @include selection-color();
   @include mq() {
     font-size: 14px;
     margin-top: 5px;
@@ -66,6 +73,7 @@
   color: $white;
   text-decoration: underline;
   margin: 0 0.2em;
+  @include selection-color();
   &:hover {
     text-decoration: none;
   }

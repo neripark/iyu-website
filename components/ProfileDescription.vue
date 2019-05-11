@@ -21,6 +21,10 @@ p.description
   color: $white;
   letter-spacing: 0.1em;
   line-height: 2;
+  &::selection {
+    background-color: $yellow-rgba;
+    color: $black-rgba;
+  }
   @include mq(tb) {
     bottom: 28px;
   }

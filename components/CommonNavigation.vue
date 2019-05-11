@@ -70,6 +70,7 @@ export default {
   position: relative;
   padding: 0 5px;
   letter-spacing: 0.2em;
+  user-select: none;
   // hoverすると現れる横棒
   &::after {
     content: '';

@@ -144,6 +144,10 @@ export default {
 .lead {
   color: $white;
   text-align: center;
+  &::selection {
+    background: $yellow-rgba;
+    color: $main-blue;
+  }
 }
 .contact-form {
   margin-top: 10px;
@@ -173,6 +177,8 @@ button {
   margin-top: 10px;
   font-size: 16px;
   padding: 0.5em 0.7em;
+  user-select: none;
+  outline-color: $yellow-rgba;
 }
 textarea {
   resize: vertical;

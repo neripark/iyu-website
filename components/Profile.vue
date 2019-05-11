@@ -47,6 +47,8 @@ export default {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  user-select: none;
+  pointer-events: none; // ドラッグ禁止
   @include mq(tb) {
     left: 49%;
     min-width: 1300px;

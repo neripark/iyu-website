@@ -1,5 +1,5 @@
 <template lang="pug">
-nav.site-nav(
+nav.site-floating-nav(
   v-scroll='scrollHandler'
   :class="{'is-scroll-start': isNavScrollStart, 'is-window-top': isNavWindowTop}"
 )
@@ -30,13 +30,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.site-nav {
+.site-floating-nav {
   position: absolute;
   z-index: 2;
   bottom: 0;
   width: 100%;
   padding: 15px 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: $transparent-gray;
   transition: 1s;
   &.is-scroll-start {
     background-color: $main-blue;
@@ -47,7 +47,6 @@ export default {
     bottom: unset;
     box-shadow: 0px -30px 40px 0px rgba(0, 0, 0, 0.4);
   }
-  // todo: あとでちゃんとやる
   @include mq(tb) {
     display: none;
   }

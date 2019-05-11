@@ -13,7 +13,11 @@ ul.anchor-list
 </template>
 
 <script>
-import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js'
+import {
+  anchorList,
+  scrollOptions,
+  isSp
+} from '~/assets/js/v-scroll-settings.js'
 
 export default {
   data() {
@@ -27,7 +31,7 @@ export default {
         duration: scrollOptions.duration,
         easing: scrollOptions.easing,
         el: `#${to.id}`,
-        offset: to.offset
+        offset: isSp ? to.offsetSp : to.offset
       }
     }
   }
@@ -46,18 +50,24 @@ export default {
   align-items: center;
   margin: 0 auto;
   @include mq(tb) {
-    display: block;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     height: 100vh;
     top: 0;
     left: 0;
     background: $main-blue; // 仮
-    z-index: 1;
+    z-index: 0;
   }
 }
 .anchor-item {
   text-align: center;
   width: 20%;
+  @include mq(tb) {
+    width: 100%;
+    text-align: center;
+  }
   &:not(:first-child) {
     border-left: 1px solid $white;
     @include mq(tb) {
@@ -88,6 +98,14 @@ export default {
     color: $yellow;
     &::after {
       width: 100%;
+    }
+  }
+  @include mq(tb) {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    &::after {
+      display: none;
     }
   }
 }

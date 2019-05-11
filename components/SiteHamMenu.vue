@@ -9,7 +9,7 @@ nav.site-ham-menu(
         src="~assets/images/iyu-logo-White.svg"
         alt="iyu-logo"
       )
-  p.burger-button(
+  a.burger-button(
     :class="{'isOpenMenu': isOpenMenu}"
     @click="toggleMenu()"
   )
@@ -90,6 +90,7 @@ export default {
   $size: 50px;
   width: $size;
   height: $size;
+  display: block;
   padding: 10px;
   position: absolute;
   top: 50%;

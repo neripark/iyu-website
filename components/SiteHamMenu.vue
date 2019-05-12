@@ -4,7 +4,11 @@ nav.site-ham-menu(
   :class="{'is-scroll-top': isScrollTop}"
 )
   p.wrap-img
-    a.anchor(:href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.mainVisual)")
+    //- todo: vuexできたらページトップにいるときもふわっと出すようにする
+    a.anchor(
+      :href="`#${anchorList.profile.id}`"
+      v-scroll-to="scrollTo(anchorList.mainVisual)"
+    )
       img.logo(
         src="~assets/images/iyu-logo-White.svg"
         alt="iyu-logo"
@@ -17,9 +21,10 @@ nav.site-ham-menu(
     span.line
     span.line
     span.line
-  common-navigation(
-    v-show="isOpenMenu"
-  )
+  transition
+    common-navigation(
+      v-show="isOpenMenu"
+    )
 </template>
 
 <script>
@@ -45,6 +50,7 @@ export default {
       this.isScrollTop = window.pageYOffset < 300 // 適当
     },
     scrollTo(to) {
+      // memo: ここはトップへ戻るスクロールのみ
       return {
         duration: scrollOptions.duration,
         easing: scrollOptions.easing,
@@ -78,6 +84,7 @@ export default {
   }
 }
 .wrap-img {
+  z-index: 1;
   transition: 0.7s;
   .is-scroll-top & {
     color: #789;
@@ -108,5 +115,16 @@ export default {
   height: 3px;
   background: $white;
   z-index: 2;
+}
+// transition
+.v-enter,
+.v-leave-to {
+  transition: 0.2s;
+  opacity: 0;
+}
+.v-enter-to,
+.v-leave {
+  transition: 0.2s;
+  opacity: 1;
 }
 </style>

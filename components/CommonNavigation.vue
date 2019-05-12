@@ -13,6 +13,8 @@ ul.anchor-list
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import {
   anchorList,
   scrollOptions,
@@ -25,13 +27,20 @@ export default {
       anchorList: anchorList
     }
   },
+  computed: {
+    ...mapState('ham-menu', ['isOpen'])
+  },
   methods: {
     scrollTo(to) {
       return {
         duration: scrollOptions.duration,
         easing: scrollOptions.easing,
         el: `#${to.id}`,
-        offset: isSp ? to.offsetSp : to.offset
+        offset: isSp ? to.offsetSp : to.offset,
+        onStart: () => {
+          // このコンポーネントから操作したいのでarrow function
+          this.$store.dispatch('ham-menu/close')
+        }
       }
     }
   }

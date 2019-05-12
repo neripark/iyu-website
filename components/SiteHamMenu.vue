@@ -15,7 +15,7 @@ nav.site-ham-menu(
       )
   a.burger-button(
     href=""
-    :class="{'isOpenMenu': isOpen}"
+    :class="{'is-open-menu': isOpen}"
     @click.prevent="toggleMenu()"
   )
     span.line
@@ -101,23 +101,46 @@ export default {
   $size: 50px;
   width: $size;
   height: $size;
-  padding: 10px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 5px;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  display: block;
+  transition: 0.2s;
 }
 .line {
   display: block;
-  width: 80%;
+  width: 50%;
   height: 3px;
   background: $white;
   z-index: 2;
+  transition: 0.2s;
+  position: absolute;
+  left: 50%;
+  &:nth-child(1) {
+    top: 25%;
+    transform: translate(-50%, 0);
+    .is-open-menu & {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+  &:nth-child(2) {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .is-open-menu & {
+      opacity: 0;
+    }
+  }
+  &:nth-child(3) {
+    bottom: 25%;
+    transform: translate(-50%, 0);
+    .is-open-menu & {
+      bottom: 50%;
+      transform: translate(-50%, 50%) rotate(45deg);
+    }
+  }
 }
 // transition
 .v-enter,

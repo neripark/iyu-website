@@ -76,7 +76,7 @@ export default {
   padding: 10px $side-padding-sp;
   width: 100%;
   justify-content: space-between;
-  transition: 0.7s;
+  transition: 0.2s;
   background: $main-blue;
   box-shadow: 0px -30px 40px 0px rgba(0, 0, 0, 0.4);
   &.is-scroll-top {
@@ -88,8 +88,7 @@ export default {
   }
 }
 .wrap-img {
-  z-index: 1;
-  transition: 0.7s;
+  transition: 0.2s;
   .is-scroll-top & {
     color: #789;
     opacity: 0;

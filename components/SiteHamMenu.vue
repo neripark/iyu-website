@@ -15,7 +15,7 @@ nav.site-ham-menu(
       )
   a.burger-button(
     href=""
-    :class="{'isOpenMenu': isOpenMenu}"
+    :class="{'isOpenMenu': isOpen}"
     @click.prevent="toggleMenu()"
   )
     span.line
@@ -23,11 +23,12 @@ nav.site-ham-menu(
     span.line
   transition
     common-navigation(
-      v-show="isOpenMenu"
+      v-show="isOpen"
     )
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js'
 import CommonNavigation from '~/components/CommonNavigation.vue'
 
@@ -38,13 +39,16 @@ export default {
   data() {
     return {
       anchorList: anchorList,
-      isOpenMenu: false,
       isScrollTop: true
     }
   },
+  computed: {
+    // memo: stateを参照だけしたい場合、このようにcomputed の中に書くとすぐに参照できる
+    ...mapState('ham-menu', ['isOpen'])
+  },
   methods: {
     toggleMenu() {
-      this.isOpenMenu = !this.isOpenMenu
+      this.$store.dispatch('ham-menu/toggle')
     },
     scrollHandler() {
       this.isScrollTop = window.pageYOffset < 300 // 適当

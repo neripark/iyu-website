@@ -25,14 +25,14 @@
       slide
         p.pic
           img(
-            src="~/assets/images/gallery-setasu-last.jpg"
-            alt="setagaya suside last scene"
+            src="~/assets/images/gallery-sky.jpg"
+            alt="gallery sky"
           )
       slide
         p.pic
           img(
-            src="~/assets/images/gallery-sky.jpg"
-            alt="gallery sky"
+            src="~/assets/images/gallery-setasu-last.jpg"
+            alt="setagaya suside last scene"
           )
       slide
         p.pic

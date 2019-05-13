@@ -51,7 +51,7 @@ export default {
       this.$store.dispatch('ham-menu/toggle')
     },
     scrollHandler() {
-      this.isScrollTop = window.pageYOffset < 300 // 適当
+      this.isScrollTop = window.pageYOffset < 500 // 適当
     },
     scrollTo(to) {
       // memo: ここはトップへ戻るスクロールのみ

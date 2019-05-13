@@ -16,12 +16,12 @@
       navigationNextLabel="<image class=\"arrow\" src=\"/images/gallery-button-R.png\" alt=\"left\" />"
     )
       //- todo: v-forで書き直す
-      slide
-        p.pic
-          img(
-            src="~/assets/images/gallery-zun.jpg"
-            alt="gallery zun"
-          )
+      //- slide
+      //-   p.pic
+      //-     img(
+      //-       src="~/assets/images/gallery-zun.jpg"
+      //-       alt="gallery zun"
+      //-     )
       slide
         p.pic
           img(

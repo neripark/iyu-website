@@ -7,7 +7,7 @@
   //- todo: required の制御
   .wrap
     p.lead
-      | ライブのチケットお取り置き、共演のお誘いなど、お気軽にご連絡ください。
+      | ライブのチケットお取り置き、共演のお誘い、メッセージなど、お気軽にご連絡ください。
 
     form.contact-form(
       name="iyu-form"

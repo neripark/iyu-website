@@ -4,7 +4,6 @@ nav.site-ham-menu(
   :class="{'is-scroll-top': isScrollTop}"
 )
   p.wrap-img
-    //- todo: vuexできたらページトップにいるときもふわっと出すようにする
     a.anchor(
       :href="`#${anchorList.profile.id}`"
       v-scroll-to="scrollTo(anchorList.mainVisual)"

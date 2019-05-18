@@ -1,5 +1,4 @@
 <template lang="pug">
-//- todo: 画像の余白調整
 .profile
   heading(
     text="Profile"

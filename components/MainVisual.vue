@@ -16,7 +16,6 @@ section.main-visual
     src="~assets/images/bg-main-visual-sp.png"
     alt="background"
   )
-    //- TODO: posterの設定
 </template>
 
 <script>
@@ -33,7 +32,6 @@ export default {
 .main-visual {
   position: relative;
   width: 100%;
-  // todo: iPadでvhが取れない（ハンバーガーにしちゃうのもあり）
   height: 100vh;
   display: flex;
   justify-content: center;

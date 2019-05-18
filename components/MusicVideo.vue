@@ -1,5 +1,5 @@
 <template lang="pug">
-.music-video
+section.music-video
   heading(
     text="Music"
     color="blue"

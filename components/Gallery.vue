@@ -1,5 +1,5 @@
 <template lang="pug">
-.gallery
+section.gallery
   heading(
     text="Gallery"
     color="blue"

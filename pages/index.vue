@@ -1,8 +1,9 @@
 <template lang="pug">
 main.container
+  header
+    site-floating-nav
+    site-ham-menu
   main-visual( :id="anchorList.mainVisual.id" )
-  site-floating-nav
-  site-ham-menu
   profile( :id="anchorList.profile.id" )
   music-video( :id="anchorList.music.id" )
   Live( :id="anchorList.live.id" )

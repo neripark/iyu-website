@@ -1,5 +1,5 @@
 <template lang="pug">
-.profile
+section.profile
   heading(
     text="Profile"
     color="blue"

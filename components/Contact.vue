@@ -1,5 +1,5 @@
 <template lang="pug">
-.contact
+section.contact
   heading(
     text="Contact"
     color="yellow"

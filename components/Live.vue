@@ -1,5 +1,5 @@
 <template lang="pug">
-.live
+section.live
   heading(
     text="Live"
     color="yellow"

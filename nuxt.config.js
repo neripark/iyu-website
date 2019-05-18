@@ -17,7 +17,7 @@ module.exports = {
       { hid: 'og_title', property: 'og:title', content: 'iyu' },
       { hid: 'og_site_name', property: 'og:site_name', content: 'iyu' },
       { hid: 'og_description', property: 'og:description', content: '都内で活動中の新宿系お散歩ポップバンド、iyuの公式Webサイトです。バンドに関するすべての情報を掲載しています。' },
-      { hid: 'og_image', property: 'og:image', content: '/og_image.png' },
+      { hid: 'og_image', property: 'og:image', content: 'https://iyumusic.tokyo/og_image.png' },
       // twitter
       { hid: 'og_twitter_site', property: 'twitter:site', content: '@iyu_band' },
       { hid: 'og_twitter_card', property: 'twitter:card', content: "summary_large_image" },

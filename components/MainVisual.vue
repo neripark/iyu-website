@@ -7,7 +7,7 @@ section.main-visual
     )
   information-summary
   video.bg-movie(
-    src="~assets/videos/190430_iyu-webtop-video-5sec3000bit24F.mp4"
+    src="~assets/videos/190517_iyu-webtop-videoHF1980bit.mp4"
     muted
     autoplay
     loop

@@ -10,6 +10,7 @@ section.music-video
         type="text/html"
         src="https://www.youtube.com/embed/5Ji3VKWpWwg"
         frameborder="0"
+        allowfullscreen
       )
 </template>
 

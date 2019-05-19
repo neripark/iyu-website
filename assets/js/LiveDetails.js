@@ -8,8 +8,8 @@ export default [
       door: 2000
     },
     time: {
-      open: '18:00',
-      start: '18:30'
+      open: '未定',
+      start: '未定'
     },
     with: [
       'pejite',

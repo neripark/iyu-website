@@ -24,7 +24,10 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', href: '/apple-touch-icon.jpg' }
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.jpg' },
+      // font
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Sawarabi+Gothic' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Heebo:700&display=swap' }
     ]
   },
 

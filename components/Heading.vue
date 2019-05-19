@@ -31,6 +31,7 @@ export default {
   font-size: 48px;
   text-align: center;
   padding: $side-padding-pc;
+  font-family: 'Heebo';
   &.yellow {
     color: $yellow;
     &::selection {

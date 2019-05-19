@@ -67,7 +67,7 @@ export default {
 }
 .bg-photo {
   position: absolute;
-  top: 0;
+  top: -50px;
   left: 0;
   z-index: -1;
   display: none;

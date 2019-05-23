@@ -4,7 +4,7 @@ export default [
     date: '2019/6/8 (Sat)',
     place: '東高円寺U.F.O. CLUB',
     ticket: {
-      adv: 1500,
+      adv: 2000,
       door: 2000
     },
     time: {

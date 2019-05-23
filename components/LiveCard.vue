@@ -6,7 +6,7 @@ li.live-card
     p.title {{ detail.title }}
     p.place @{{ detail.place }}
     p.time open {{ detail.time.open }} / start {{ detail.time.start }}
-    p.ticket adv ¥{{ detail.ticket.adv }} / door ¥{{ detail.ticket.door }}
+    p.ticket adv {{ ticketString(detail.ticket.adv) }} / door {{ ticketString(detail.ticket.door) }}
     p.with w) {{ detail.with.join(' / ') }}
 </template>
 
@@ -16,6 +16,11 @@ export default {
     detail: {
       type: Object,
       default: null
+    }
+  },
+  methods: {
+    ticketString(price) {
+      return price ? `¥${price}` : '未定'
     }
   }
 }

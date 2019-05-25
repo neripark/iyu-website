@@ -6,8 +6,11 @@ li.live-card
     p.title {{ detail.title }}
     p.place @{{ detail.place }}
     p.time open {{ detail.time.open }} / start {{ detail.time.start }}
+    p.iyu-time(
+      v-if="detail.time.iyu"
+    ) ※iyuの出演は{{ detail.time.iyu }}頃の予定です。
     p.ticket adv {{ ticketString(detail.ticket.adv) }} / door {{ ticketString(detail.ticket.door) }}
-    p.with w) {{ detail.with.join(' / ') }}
+    p.with with) {{ detail.with.join(' / ') }}
 </template>
 
 <script>
@@ -106,7 +109,15 @@ export default {
       font-size: 14px;
     }
   }
+  .iyu-time {
+    font-size: 16px;
+    @include selection-color();
+    @include mq() {
+      font-size: 12px;
+    }
+  }
   .ticket {
+    margin-top: 10px;
     font-size: 16px;
     @include selection-color();
     @include mq() {
@@ -115,6 +126,7 @@ export default {
   }
   .with {
     margin-top: 10px;
+    font-size: 16px;
     @include selection-color();
     @include mq() {
       font-size: 14px;

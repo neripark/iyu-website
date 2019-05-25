@@ -8,8 +8,9 @@ export default [
       door: 2000
     },
     time: {
-      open: '未定',
-      start: '未定'
+      open: '12:30',
+      start: '13:00',
+      iyu: '20:20'
     },
     with: [
       'pejite',
@@ -21,7 +22,11 @@ export default [
       '呉 純太',
       'ペチコート',
       'the おこめマン(z)',
-      'Black Jam'
+      'Black Jam',
+      'Alberta Franico',
+      'matoe',
+      '倉田展人＋タグチカナ',
+      'Lupe'
     ]
   }
 ]

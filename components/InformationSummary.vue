@@ -13,6 +13,8 @@
         | 2019/6/8 (Sat.)
         br
         | RINGOOOO A GO-GO@東高円寺U.F.O. CLUB
+        br
+        | 出演時間更新しました。
 </template>
 
 <style lang="scss" scoped>

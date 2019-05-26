@@ -1,15 +1,20 @@
 <template lang="pug">
 ul.anchor-list
   li.anchor-item
-    a.anchor(:href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.profile)") Profile
+    a.anchor(:href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.profile)")
+      span.string Profile
   li.anchor-item
-    a.anchor(:href="`#${anchorList.music.id}`" v-scroll-to="scrollTo(anchorList.music)") Music
+    a.anchor(:href="`#${anchorList.music.id}`" v-scroll-to="scrollTo(anchorList.music)")
+      span.string Music
   li.anchor-item
-    a.anchor(:href="`#${anchorList.live.id}`" v-scroll-to="scrollTo(anchorList.live)") Live
+    a.anchor(:href="`#${anchorList.live.id}`" v-scroll-to="scrollTo(anchorList.live)")
+      span.string Live
   li.anchor-item
-    a.anchor(:href="`#${anchorList.gallery.id}`" v-scroll-to="scrollTo(anchorList.gallery)") Gallery
+    a.anchor(:href="`#${anchorList.gallery.id}`" v-scroll-to="scrollTo(anchorList.gallery)")
+      span.string Gallery
   li.anchor-item
-    a.anchor(:href="`#${anchorList.contact.id}`" v-scroll-to="scrollTo(anchorList.contact)") Contact
+    a.anchor(:href="`#${anchorList.contact.id}`" v-scroll-to="scrollTo(anchorList.contact)")
+      span.string Contact
 </template>
 
 <script>
@@ -85,28 +90,36 @@ export default {
   }
 }
 .anchor {
+  display: block;
   font-size: 20px;
   position: relative;
-  padding: 0 5px;
   letter-spacing: 0.2em;
   user-select: none;
-  // hoverすると現れる横棒
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -3px;
-    left: 0;
-    z-index: 1;
-    background: $yellow;
-    transition: 0.2s;
+  cursor: pointer;
+  .string {
+    display: inline-block;
+    position: relative;
+    padding: 0 3px 0 7px;
+    // hoverすると現れる横棒
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      z-index: 1;
+      background: $yellow;
+      transition: 0.2s;
+    }
   }
   &:hover {
-    color: $yellow;
-    &::after {
-      width: 100%;
+    .string {
+      color: $yellow;
+      &::after {
+        width: 100%;
+      }
     }
   }
   @include mq(tb) {

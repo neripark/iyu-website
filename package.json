@@ -1,6 +1,10 @@
 {
   "name": "iyu-website",
   "version": "1.0.0",
+  "engines": {
+    "node": "11.14.0",
+    "npm": "1.12.3"
+  },
   "description": "My glorious Nuxt.js project",
   "author": "neripark",
   "private": true,

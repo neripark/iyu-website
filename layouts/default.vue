@@ -2,38 +2,3 @@
 .container
   nuxt
 </template>
-
-<style lang="scss">
-html {
-  //todo: font正式に決める
-  font-family: 'Sawarabi Gothic', 'Helvetica', 'Source Sans Pro',
-    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  color: $black;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-}
-
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-img {
-  vertical-align: bottom;
-}
-</style>

@@ -39,7 +39,9 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    '@/assets/scss/base.scss'
+  ],
 
   /*
   ** Plugins to load before mounting the App
@@ -88,7 +90,8 @@ module.exports = {
   },
   styleResources: {
     sass: [
-      '~assets/scss/**/*.scss'
+      '~assets/scss/functions.scss',
+      '~assets/scss/variables.scss'
     ]
   },
 

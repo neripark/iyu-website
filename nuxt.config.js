@@ -59,8 +59,20 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap'
   ],
+
+  /*
+  ** for sitemap generate.
+  */
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://iyumusic.tokyo',
+    routes: [
+      '/'
+    ]
+  },
   /*
   ** Axios module configuration
   */

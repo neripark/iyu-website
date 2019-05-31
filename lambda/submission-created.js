@@ -2,8 +2,9 @@ import querystring from 'querystring'
 import axios from 'axios'
 
 exports.handler = function(event, context, callback) {
-  // todo: リポジトリ外に移動する
-  const token = 'sFW0U11C8weGFxvGsnL8MMXG0aT3ta7fpqvSc2SHbRU'
+
+  // const token = process.env.IYU_FORM_NOTIFY_TOKEN_TEST // test
+  const token = process.env.IYU_FORM_NOTIFY_TOKEN_PROD // production
 
   // NOTE:
   // production環境で、event はオブジェクト型で来ているが、event.body はString型だった。

@@ -1,6 +1,5 @@
 # iyu-website
-
-> My glorious Nuxt.js project
+https://iyumusic.tokyo
 
 ## Build Setup
 
@@ -8,15 +7,18 @@
 # install dependencies
 $ yarn install
 
-# serve with hot reload at localhost:3000
-$ yarn run dev
+# serve with hot reload at localhost:3333
+$ yarn dev
+
+# build and serve Netlify Function
+$ yarn lamba-serve
 
 # build for production and launch server
-$ yarn run build
+$ yarn build
 $ yarn start
 
 # generate static project
-$ yarn run generate
+$ yarn run gen
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

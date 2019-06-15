@@ -55,7 +55,7 @@ section.contact
       textarea( name="message" placeholder="内容" required v-model="formData.message" )
 
       //- 送信ボタン
-      button.send-button( type="submit") 送信する
+      button.send-button( :disabled="isFormDisabled" type="submit" ) {{isFormDisabled ? "送信中..." : "送信する"}}
     //- p.test(@click="logger") trigger
     //- p.test(@click="printEncode") encode
 </template>
@@ -73,6 +73,7 @@ export default {
     return {
       liveDetails: liveArray,
       maxTicketNumber: 5,
+      isFormDisabled: false,
       formData: {
         // memo: form本体のname、Netlifyのform-API生成用のダミーの両方と名前を一致させる
         name: '',
@@ -104,6 +105,7 @@ export default {
         .join('&')
     },
     handleSubmit() {
+      this.isFormDisabled = true
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
@@ -125,6 +127,9 @@ export default {
               err
           )
         )
+        .finally(() => {
+          this.isFormDisabled = false
+        })
     }
   }
 }
@@ -168,6 +173,9 @@ export default {
   background: $orange;
   color: $white;
   cursor: pointer;
+  &[disabled] {
+    opacity: 0.7;
+  }
 }
 
 // -- form parts basic style --

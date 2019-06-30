@@ -12,8 +12,7 @@ nav.site-ham-menu(
         src="~assets/images/iyu-logo-White.svg"
         alt="iyu-logo"
       )
-  a.burger-button(
-    href=""
+  button.burger-button(
     :class="{'is-open-menu': isOpen}"
     @click.prevent="toggleMenu()"
   )

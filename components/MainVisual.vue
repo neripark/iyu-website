@@ -12,10 +12,6 @@ section.main-visual
     autoplay
     loop
   )
-  img.bg-photo(
-    src="~assets/images/bg-main-visual-sp.png"
-    alt="background"
-  )
 </template>
 
 <script>
@@ -37,6 +33,10 @@ export default {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  @include mq() {
+    background: url(~assets/images/bg-main-visual-sp.png) no-repeat;
+    background-size: cover;
+  }
   @include mq(tb) {
     flex-direction: column;
   }

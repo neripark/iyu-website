@@ -19,12 +19,8 @@ ul.anchor-list
 
 <script>
 import { mapState } from 'vuex'
-
-import {
-  anchorList,
-  scrollOptions,
-  isSp
-} from '~/assets/js/v-scroll-settings.js'
+import { isSp } from '~/assets/js/util.js'
+import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js'
 
 export default {
   data() {

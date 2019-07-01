@@ -108,6 +108,7 @@ export default {
   transition: 0.2s;
   background-color: transparent;
   border: none;
+  outline: none;
 }
 .line {
   display: block;

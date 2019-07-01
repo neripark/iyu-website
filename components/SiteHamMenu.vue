@@ -106,6 +106,8 @@ export default {
   z-index: 2;
   display: block;
   transition: 0.2s;
+  background-color: transparent;
+  border: none;
 }
 .line {
   display: block;

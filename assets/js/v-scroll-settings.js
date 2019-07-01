@@ -36,7 +36,3 @@ export const scrollOptions = {
   duration: 400,
   easing: [0.86, 0, 0.07, 1]
 }
-
-export function isSp() {
-  return window.innerWidth < 840 // scssの値と合わせる
-}

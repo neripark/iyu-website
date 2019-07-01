@@ -7,6 +7,7 @@ section.main-visual
     )
   information-summary
   video.bg-movie(
+    v-if="!isSp"
     src="~assets/videos/190517_iyu-webtop-videoHF1980bit.mp4"
     muted
     autoplay
@@ -16,10 +17,19 @@ section.main-visual
 
 <script>
 import InformationSummary from '~/components/InformationSummary'
+import { isSp } from '~/assets/js/util.js'
 
 export default {
   components: {
     InformationSummary
+  },
+  data() {
+    return {
+      isSp: false
+    }
+  },
+  mounted() {
+    this.isSp = isSp()
   }
 }
 </script>
@@ -35,6 +45,7 @@ export default {
   overflow: hidden;
   @include mq() {
     background: url(~assets/images/bg-main-visual-sp.png) no-repeat;
+    background-attachment: fixed;
     background-size: cover;
   }
   @include mq(tb) {

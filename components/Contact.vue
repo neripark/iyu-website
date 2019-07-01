@@ -184,7 +184,6 @@ select,
 textarea,
 button {
   width: 100%;
-  -webkit-appearance: none;
   background: $white;
   border: none;
   border-radius: 0;

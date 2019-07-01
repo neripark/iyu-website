@@ -6,13 +6,14 @@ section.main-visual
       alt="iyu-logo"
     )
   information-summary
-  video.bg-movie(
-    v-if="!isSp"
-    src="~assets/videos/190517_iyu-webtop-videoHF1980bit.mp4"
-    muted
-    autoplay
-    loop
-  )
+  no-ssr
+    video.bg-movie(
+      v-if="!isSp"
+      src="~assets/videos/190517_iyu-webtop-videoHF1980bit.mp4"
+      muted
+      autoplay
+      loop
+    )
 </template>
 
 <script>

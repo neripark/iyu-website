@@ -44,9 +44,16 @@ export default {
   align-items: center;
   overflow: hidden;
   @include mq() {
-    background: url(~assets/images/bg-main-visual-sp.png) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    &:after {
+      content: '';
+      display: block;
+      position: fixed;
+      z-index: -1;
+      height: 100vh;
+      width: 100vw;
+      background: url(~assets/images/bg-main-visual-sp.png) no-repeat;
+      background-size: cover;
+    }
   }
   @include mq(tb) {
     flex-direction: column;

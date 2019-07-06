@@ -2,7 +2,7 @@ export default [
   {
     title: 'Kichijoji NEPO Live Event',
     date: '2019/9/7 (Sat)',
-    place: '吉祥寺NEPO',
+    place: '吉祥寺NEPO ※夜のイベントです。',
     ticket: {
       adv: null,
       door: null

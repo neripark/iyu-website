@@ -1,32 +1,17 @@
 export default [
   {
-    title: 'りんご音楽祭ライブオーディション RINGOOO A GO-GO',
-    date: '2019/6/8 (Sat)',
-    place: '東高円寺U.F.O. CLUB',
+    title: 'Kichijoji NEPO Live Event',
+    date: '2019/9/7 (Sat)',
+    place: '吉祥寺NEPO',
     ticket: {
-      adv: 2000,
-      door: 2000
+      adv: null,
+      door: null
     },
     time: {
-      open: '12:30',
-      start: '13:00',
-      iyu: '20:20'
+      open: '未定',
+      start: '未定',
+      iyu: null
     },
-    with: [
-      'pejite',
-      'Club Nobody',
-      'IN-KYA in Canada',
-      'Siririnok',
-      'Kotan',
-      'むらかみなぎさ',
-      '呉 純太',
-      'ペチコート',
-      'the おこめマン(z)',
-      'Black Jam',
-      'Alberta Franico',
-      'matoe',
-      '倉田展人＋タグチカナ',
-      'Lupe'
-    ]
+    with: ['パンとサーカス', 'ビオトープ', 'kawairitsu', 'and more...']
   }
 ]

@@ -13,14 +13,15 @@ p.description
 .description {
   position: absolute;
   width: 100%;
-  bottom: 40px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding: 0 $side-padding-pc;
+  padding: 30px $side-padding-pc;
   text-align: center;
   color: $white;
   letter-spacing: 0.1em;
   line-height: 2;
+  background: rgba(0, 0, 0, 0.5);
   &::selection {
     background-color: $yellow-rgba;
     color: $black-rgba;

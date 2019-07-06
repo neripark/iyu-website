@@ -1,14 +1,17 @@
 <template lang="pug">
 ul.member-list
   li.member
-    p.part Drums
-    p.name KOU
+    p.part Bass
+    p.name NAGATA
   li.member
     p.part Keyboard
     p.name KOUDAI
   li.member
     p.part Vocal
     p.name ZUN
+  li.member
+    p.part Drums
+    p.name KOU
   li.member
     p.part Guitar
     p.name NERI
@@ -17,7 +20,7 @@ ul.member-list
 <style lang="scss" scoped>
 .member-list {
   position: absolute;
-  top: 500px;
+  top: 400px;
   left: 50%;
   transform: translateX(-47%); // 写真に合わせて微調整
   display: flex;

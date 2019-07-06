@@ -50,17 +50,17 @@ export default {
   pointer-events: none; // ドラッグ禁止
   @include mq(tb) {
     left: 49%;
-    min-width: 1300px;
+    min-width: 1100px;
     margin-top: -230px;
   }
   @include mq() {
-    min-width: 1100px;
-    margin-top: -180px;
+    min-width: 900px;
+    margin-top: -120px;
   }
   @include mq(ssm) {
     left: 49%;
-    min-width: 840px;
-    margin-top: -120px;
+    min-width: 640px;
+    margin-top: -20px;
   }
   @include mq(fhd) {
     height: 100%;

@@ -2,19 +2,11 @@
 .information-summary
   .wrap
     section.info-unit
-      h3.head News
-      p.lead
-        | りんご音楽祭出演をかけたオーディション
-        a.text-link(href="http://ringofes.info/ringooo-a-go-go-schedule/") RINGOOOO A GO-GO
-        | に出場します！
-    section.info-unit
       h3.head Next Live
       p.lead
-        | 2019/6/8 (Sat.)
+        | 2019/9/7 (Sat.)
         br
-        | RINGOOOO A GO-GO@東高円寺U.F.O. CLUB
-        br
-        | 出演時間更新しました。
+        | @吉祥寺NEPO
 </template>
 
 <style lang="scss" scoped>

@@ -38,7 +38,7 @@ ul.member-list
     top: 370px;
   }
   @include mq(fhd) {
-    top: 70%;
+    top: 80%;
   }
   .member {
     text-align: center;

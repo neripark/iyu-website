@@ -10,7 +10,7 @@ section.profile
       src="~assets/images/profile.jpg"
       alt="profile photo"
     )
-  profile-member-list
+  //- profile-member-list
   profile-description
 </template>
 
@@ -64,7 +64,7 @@ export default {
   }
   @include mq(fhd) {
     height: 100%;
-    margin-top: -350px;
+    margin-top: -400px;
   }
 }
 </style>

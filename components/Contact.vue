@@ -61,9 +61,9 @@ section.contact
 </template>
 
 <script>
+import axios from 'axios'
 import Heading from '~/components/Heading.vue'
 import liveArray from '~/assets/js/LiveDetails.js'
-import axios from 'axios'
 
 export default {
   components: {

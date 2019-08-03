@@ -2,7 +2,11 @@
 .information-summary
   .wrap
     section.info-unit
-      h3.head Next Live
+      h3.head Live Schedule
+      p.lead
+        | 2019/8/18 (Sat.)
+        br
+        | @下北沢ERA
       p.lead
         | 2019/9/7 (Sat.)
         br

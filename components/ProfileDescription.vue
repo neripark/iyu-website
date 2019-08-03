@@ -1,6 +1,6 @@
 <template lang="pug">
 .profile-description
-  p.l-to-r [ L to R ]
+  //- p.l-to-r [ L to R ]
   ul.member-list
     li.member
       p.name NAGATA
@@ -82,15 +82,15 @@
   letter-spacing: 0.1em;
   line-height: 2;
   position: relative;
-  &::before {
-    // 区切りハイフン
-    content: '';
-    display: block;
-    width: 30px;
-    height: 1px;
-    margin: 23px auto;
-    background: $white;
-  }
+  // &::before {
+  //   // 区切りハイフン
+  //   content: '';
+  //   display: block;
+  //   width: 30px;
+  //   height: 1px;
+  //   margin: 23px auto;
+  //   background: $white;
+  // }
   &::selection {
     background-color: $yellow-rgba;
     color: $black-rgba;

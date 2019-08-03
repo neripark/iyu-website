@@ -9,7 +9,8 @@ li.live-card
     p.iyu-time(
       v-if="detail.time.iyu"
     ) ※iyuの出演は{{ detail.time.iyu }}頃の予定です。
-    p.ticket adv {{ ticketString(detail.ticket.adv) }} / door {{ ticketString(detail.ticket.door) }}
+    p.ticket
+      | adv {{ ticketString(detail.ticket.adv) }} / door {{ ticketString(detail.ticket.door) }} {{ detail.ticket.other ? "+" + detail.ticket.other : "" }}
     p.with with) {{ detail.with.join(' / ') }}
 </template>
 

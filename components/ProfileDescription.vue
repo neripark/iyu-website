@@ -35,7 +35,8 @@
   padding: 30px $side-padding-pc;
   @include mq(tb) {
     position: static;
-    left: 0;
+    bottom: auto;
+    left: auto;
     transform: unset;
     background: $main-blue;
   }
@@ -43,9 +44,9 @@
 .member-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   color: $white;
-  max-width: 40%;
   margin: 0 auto;
 }
 .member {
@@ -77,10 +78,10 @@
   }
   @include mq() {
     position: static;
-    transform: unset;
+    /* transform: unset; */
     background: $main-blue;
     font-size: 14px;
-    padding: $side-padding-sp;
+    /* padding: $side-padding-sp; */
   }
   @include mq(fhd) {
     line-height: 2;

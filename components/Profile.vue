@@ -51,12 +51,15 @@ export default {
     top: 40px;
   }
   @include mq() {
-    min-width: 700px;
-    margin-top: -120px;
+    min-width: unset;
+    width: 150%;
+    top: 40px;
+    margin-top: -135px;
   }
   @include mq(ssm) {
     min-width: 450px;
-    margin-top: -20px;
+    top: 26px;
+    margin-top: -24%;
   }
   @include mq(fhd) {
     height: 100%;

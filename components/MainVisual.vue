@@ -44,7 +44,8 @@ export default {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  @include mq() {
+  @include mq(tb) {
+    flex-direction: column;
     &:after {
       content: '';
       display: block;
@@ -55,9 +56,6 @@ export default {
       background: url(~assets/images/bg-main-visual-sp.png) no-repeat;
       background-size: cover;
     }
-  }
-  @include mq(tb) {
-    flex-direction: column;
   }
 }
 .iyu-logo {

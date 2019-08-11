@@ -3,31 +3,51 @@ backend:
   branch: master
 
 media_folder: "images/uploads"
+publish_mode: editorial_workflow
+site_url: https://iyumusic.tokyo
+display_url: https://iyumusic.tokyo
 
 collections:
-  # - name: "blog" # Used in routes, e.g., /admin/collections/blog
-  #   label: "Blog" # Used in the UI
-  #   folder: "content/blog/posts" # The path to the folder where the documents are stored
-  #   create: true # Allow users to create new documents in this collection
-  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-  #   fields: # The fields for each document, usually in front matter
-  #     - {label: Title, name: title, widget: string, required: true}
-  #     - {label: Description, name: description, widget: text, required: true}
-  #     - {label: Publish date, name: date, widget: "datetime"}
-  #     - {label: Content, name: body, widget: "markdown"}
   - name: "live-info"
     label: "Live Info"
     folder: "_posts/live-info"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Event Name", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Place", name: "place", widget: "string"}
-      - {label: "Ticket(adv)", name: "ticket_adv", widget: "number", default: "未定"}
-      - {label: "Ticket(door)", name: "ticket_door", widget: "number", default: "未定"}
-      - {label: "Ticket(other)", name: "ticket_other", widget: "number"}
-      - {label: "Open", name: "time_open", widget: "datetime", default: "未定"}
-      - {label: "Start", name: "time_start", widget: "datetime", default: "未定"}
-      - {label: "iyu Appear", name: "iyu_appear_time", widget: "datetime"}
-      - {label: "With", name: "with", widget: "list"}
+      - label: "イベント名"
+        name: "title"
+        widget: "string"
+      - label: "公開日"
+        name: "date"
+        widget: "datetime"
+      - label: "イベント日付"
+        name: "date"
+        widget: "datetime"
+      - label: "場所"
+        name: "place"
+        widget: "string"
+      - label: "チケット"
+        name: "ticket"
+        widget: "list"
+        default: ["未定"]
+        allow_add: false
+        fields:
+          - { label: "adv", name: "adv", widget: "number" }
+          - { label: "door", name: "door", widget: "number" }
+          - { label: "other", name: "other", widget: "string" }
+      - label: "Open"
+        name: "time_open"
+        widget: "string"
+        default: "未定"
+      - label: "Start"
+        name: "time_start"
+        widget: "string"
+        default: "未定"
+      - label: "iyu出演予定時間"
+        name: "iyu_appear_time"
+        widget: "string"
+      - label: "対バン"
+        name: "with"
+        widget: "list"
+        default: ["未定"]
+        field: { label: "band_name", name: "band_name", widget: "string" }

@@ -6,6 +6,7 @@ media_folder: "images/uploads"
 publish_mode: editorial_workflow
 site_url: https://iyumusic.tokyo
 display_url: https://iyumusic.tokyo
+extension: json
 
 collections:
   - name: "liveInfo"

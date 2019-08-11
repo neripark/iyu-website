@@ -1,39 +1,88 @@
 <template lang="pug">
-p.description
-  | 2017年3月、[iyu]結成。
-  br
-  | 都市の雑踏、積み重ねの日々、
-  br.break-sp
-  | 暮らしの中に等身大で身近な音楽。
-  br
-  | 東京都世田谷区、渋谷区、新宿区を中心に活動中。
+.profile-description
+  ul.member-list
+    li.member
+      p.name NAGATA
+      p.part (Ba)
+    li.member
+      p.name KOUDAI
+      p.part (Key)
+    li.member
+      p.name ZUN
+      p.part (Vo)
+    li.member
+      p.name KOU
+      p.part (Dr)
+    li.member
+      p.name NERI
+      p.part (Gt)
+  p.description
+    | 2017年3月結成。都内を中心に活動中。
+    br
+    | 都市の雑踏、積み重ねの日々、
+    br.break-sp
+    | 暮らしの中に等身大で身近な音楽。
 </template>
 
 <style lang="scss" scoped>
-.description {
+.profile-description {
   position: absolute;
   width: 100%;
-  bottom: 40px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding: 0 $side-padding-pc;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px $side-padding-pc;
+  @include mq(tb) {
+    position: static;
+    bottom: auto;
+    left: auto;
+    transform: unset;
+    background: $main-blue;
+  }
+}
+.member-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  color: $white;
+  margin: 0 auto;
+}
+.member {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  &:not(:last-child) {
+    &::after {
+      content: ',';
+      display: block;
+      padding: 0 0.7em 0 0;
+    }
+  }
+}
+.part {
+  margin-left: 0.2em;
+}
+.description {
   text-align: center;
   color: $white;
   letter-spacing: 0.1em;
-  line-height: 2;
+  line-height: 1.8;
+  position: relative;
+  margin-top: 20px;
   &::selection {
     background-color: $yellow-rgba;
     color: $black-rgba;
   }
-  @include mq(tb) {
-    bottom: 28px;
-  }
   @include mq() {
     position: static;
-    transform: unset;
     background: $main-blue;
     font-size: 14px;
-    padding: $side-padding-sp;
+  }
+  @include mq(fhd) {
+    line-height: 2;
   }
 }
 .break-sp {

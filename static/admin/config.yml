@@ -24,7 +24,7 @@ collections:
         widget: "datetime"
       - label: "イベント日付"
         name: "eventDate"
-        widget: "datetime"
+        widget: "date"
       - label: "場所"
         name: "place"
         widget: "string"

@@ -37,15 +37,15 @@ collections:
           - { label: "door", name: door, widget: "number" }
           - { label: "other", name: other, widget: "string", required: false }
 
-      # - label: "時間"
-      #   name: "time"
-      #   widget: "list"
-      #   default: ["未定"]
-      #   allow_add: false
-      #   fields:
-      #     - { label: "list", name: "adv", widget: "number" }
-      #     - { label: "door", name: "door", widget: "number" }
-      #     - { label: "other", name: "other", widget: "string", required: false }
+      - label: "時間"
+        name: "time"
+        widget: "list"
+        # default: ["未定"]
+        allow_add: false
+        fields:
+          - { label: "list", name: "adv", widget: "number" }
+          - { label: "door", name: "door", widget: "number" }
+          - { label: "other", name: "other", widget: "string", required: false }
 
       # format: 'YYYY-MM-DD HH:mm',
 
@@ -66,4 +66,4 @@ collections:
         name: "with"
         widget: "list"
         default: ["未定"]
-        field: { label: "band_name", name: "band_name", widget: "string" }
+        # field: { label: "band_name", name: "band_name", widget: "string" }

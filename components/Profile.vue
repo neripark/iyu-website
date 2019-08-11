@@ -10,19 +10,16 @@ section.profile
       src="~assets/images/profile.jpg"
       alt="profile photo"
     )
-  //- profile-member-list
   profile-description
 </template>
 
 <script>
 import Heading from '~/components/Heading.vue'
-import ProfileMemberList from '~/components/ProfileMemberList.vue'
 import ProfileDescription from '~/components/ProfileDescription.vue'
 
 export default {
   components: {
     Heading,
-    ProfileMemberList,
     ProfileDescription
   }
 }
@@ -41,30 +38,29 @@ export default {
 }
 .profile-photo {
   width: 100%;
-  min-width: 1500px;
-  margin-top: -280px;
+  min-width: 1300px;
+  margin-top: -240px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   user-select: none;
   pointer-events: none; // ドラッグ禁止
   @include mq(tb) {
-    left: 49%;
-    min-width: 1100px;
-    margin-top: -230px;
+    min-width: 900px;
+    margin-top: -160px;
+    top: 40px;
   }
   @include mq() {
-    min-width: 900px;
+    min-width: 700px;
     margin-top: -120px;
   }
   @include mq(ssm) {
-    left: 49%;
-    min-width: 640px;
+    min-width: 450px;
     margin-top: -20px;
   }
   @include mq(fhd) {
     height: 100%;
-    margin-top: -400px;
+    margin-top: -380px;
   }
 }
 </style>

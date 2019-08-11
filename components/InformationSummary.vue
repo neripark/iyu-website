@@ -36,6 +36,7 @@
   @include mq() {
     width: 100%;
     padding-bottom: 100px;
+    text-align: center;
   }
 }
 .wrap {

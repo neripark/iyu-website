@@ -27,43 +27,34 @@ collections:
       - label: "場所"
         name: "place"
         widget: "string"
-      - label: "チケット"
-        name: "ticket"
-        widget: "list"
-        label_singular: '情報'
-        allow_add: false
-        fields:
-          - { label: "adv", name: adv, widget: "number" }
-          - { label: "door", name: door, widget: "number" }
-          - { label: "other", name: other, widget: "string", required: false }
 
-      - label: "時間"
-        name: "time"
-        widget: "list"
-        # default: ["未定"]
-        allow_add: false
-        fields:
-          - { label: "list", name: "adv", widget: "number" }
-          - { label: "door", name: "door", widget: "number" }
-          - { label: "other", name: "other", widget: "string", required: false }
+      - label: "チケット(予約)"
+        name: "ticketAdv"
+        widget: "number"
+      - label: "チケット(当日)"
+        name: "ticketDoor"
+        widget: "number"
+      - label: "チケット(その他ドリンクとか)"
+        name: "ticketOther"
+        widget: "string"
 
-      # format: 'YYYY-MM-DD HH:mm',
-
-      # - label: "Open"
-      #   name: "timeOpen"
-      #   widget: "string"
-      #   default: "未定"
-      # - label: "Start"
-      #   name: "time_start"
-      #   widget: "string"
-      #   default: "未定"
-      # - label: "iyu出演予定時間"
-      #   name: "iyu_appear_time"
-      #   widget: "string"
-      #   required: false
+      - label: "Open"
+        name: "timeOpen"
+        widget: "datetime"
+        format: 'HH:mm'
+      - label: "Start"
+        name: "timeStart"
+        widget: "datetime"
+        default: "未定"
+        format: 'HH:mm'
+      - label: "iyu出演時刻"
+        name: "timeIyuAppear"
+        widget: "datetime"
+        format: 'HH:mm'
+        required: false
 
       - label: "対バン"
         name: "with"
         widget: "list"
-        default: ["未定"]
-        # field: { label: "band_name", name: "band_name", widget: "string" }
+        field: { label: "bandName", name: "bandName", widget: "string" }
+        required: false

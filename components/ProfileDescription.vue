@@ -54,8 +54,8 @@
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  &:not(:first-child) {
-    &::before {
+  &:not(:last-child) {
+    &::after {
       content: ',';
       display: block;
       padding: 0 0.7em 0 0;

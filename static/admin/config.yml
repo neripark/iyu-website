@@ -30,12 +30,12 @@ collections:
       - label: "チケット"
         name: "ticket"
         widget: "list"
-        default: ["未定"]
+        label_singular: '情報'
         allow_add: false
         fields:
-          - { label: "adv", name: "adv", widget: "number" }
-          - { label: "door", name: "door", widget: "number" }
-          - { label: "other", name: "other", widget: "string", required: false }
+          - { label: "adv", name: adv, widget: "number" }
+          - { label: "door", name: door, widget: "number" }
+          - { label: "other", name: other, widget: "string", required: false }
 
       # - label: "時間"
       #   name: "time"
@@ -46,6 +46,8 @@ collections:
       #     - { label: "list", name: "adv", widget: "number" }
       #     - { label: "door", name: "door", widget: "number" }
       #     - { label: "other", name: "other", widget: "string", required: false }
+
+      # format: 'YYYY-MM-DD HH:mm',
 
       # - label: "Open"
       #   name: "timeOpen"

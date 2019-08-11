@@ -58,7 +58,7 @@ export default {
   }
   @include mq(ssm) {
     min-width: 450px;
-    top: 26px;
+    top: 35px;
     margin-top: -24%;
   }
   @include mq(fhd) {

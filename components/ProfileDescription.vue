@@ -78,10 +78,8 @@
   }
   @include mq() {
     position: static;
-    /* transform: unset; */
     background: $main-blue;
     font-size: 14px;
-    /* padding: $side-padding-sp; */
   }
   @include mq(fhd) {
     line-height: 2;

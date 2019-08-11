@@ -47,8 +47,8 @@ export default {
   pointer-events: none; // ドラッグ禁止
   @include mq(tb) {
     min-width: 900px;
-    margin-top: -160px;
     top: 40px;
+    margin-top: -160px;
   }
   @include mq() {
     min-width: unset;
@@ -57,7 +57,6 @@ export default {
     margin-top: -135px;
   }
   @include mq(ssm) {
-    min-width: 450px;
     top: 35px;
     margin-top: -24%;
   }

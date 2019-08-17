@@ -4,7 +4,7 @@
     section.info-unit
       h3.head Live Schedule
       p.lead
-        | 2019/8/18 (Sat.)
+        | 2019/8/18 (Sun.)
         br
         | @下北沢ERA
       p.lead

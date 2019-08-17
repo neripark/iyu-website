@@ -1,7 +1,7 @@
 export default [
   {
     title: 'ERA presents "MEAN TO YOU 〜DAY TIME SPECIAL〜"',
-    date: '2019/8/18 (Sat)',
+    date: '2019/8/18 (Sun)',
     place: '下北沢ERA ※お昼のイベントです。',
     ticket: {
       adv: 2400,

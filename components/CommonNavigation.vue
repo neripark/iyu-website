@@ -25,7 +25,7 @@ import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js'
 export default {
   data() {
     return {
-      anchorList: anchorList
+      anchorList
     }
   },
   computed: {

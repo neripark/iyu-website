@@ -38,7 +38,7 @@ export default {
   },
   data() {
     return {
-      anchorList: anchorList
+      anchorList
     }
   }
 }

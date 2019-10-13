@@ -10,7 +10,7 @@ li.live-card
       v-if="detail.time.iyu"
     ) ※iyuの出演は{{ detail.time.iyu }}頃の予定です。
     p.ticket
-      | adv {{ ticketString(detail.ticket.adv) }} / door {{ ticketString(detail.ticket.door) }} {{ detail.ticket.other ? "+" + detail.ticket.other : "" }}
+      | {{ detail.ticket }}
     p.with with) {{ detail.with.join(' / ') }}
 </template>
 
@@ -118,7 +118,6 @@ export default {
     }
   }
   .ticket {
-    margin-top: 10px;
     font-size: 16px;
     @include selection-color();
     @include mq() {

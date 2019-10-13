@@ -6,7 +6,7 @@ section.main-visual
       alt="iyu-logo"
     )
   information-summary
-  no-ssr
+  client-only
     video.bg-movie(
       v-if="!isSp"
       src="~assets/videos/190517_iyu-webtop-videoHF1980bit.mp4"

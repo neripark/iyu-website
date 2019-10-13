@@ -4,7 +4,7 @@ section.gallery
     text="Gallery"
     color="blue"
   )
-  no-ssr
+  client-only
     carousel(
       :center-mode="true"
       :loop="true"

@@ -50,7 +50,7 @@ export default {
   }
 }
 .date {
-  width: 35%;
+  width: 37%;
   color: $main-blue;
   background-color: $yellow;
   font-size: 36px;
@@ -74,7 +74,7 @@ export default {
   }
 }
 .detail {
-  width: 65%;
+  width: 63%;
   color: $main-blue;
   background-color: $white;
   padding: 30px 60px;

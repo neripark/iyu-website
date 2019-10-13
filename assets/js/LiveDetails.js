@@ -21,6 +21,12 @@ export default [
       start: '18:00',
       iyu: '21:00'
     },
-    with: [ 'adult cinema', 'ReeSyant', 'The Bedroom Cloud', 'The 1st Sunday', 'ドラリ座']
+    with: [
+      'adult cinema',
+      'ReeSyant',
+      'The Bedroom Cloud',
+      'The 1st Sunday',
+      'ドラリ座'
+    ]
   }
 ]

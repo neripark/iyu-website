@@ -3,15 +3,25 @@
   .wrap
     section.info-unit
       h3.head Live Schedule
-      p.lead
-        | 2019/8/18 (Sun.)
+      p.lead(
+        v-for="live in liveDetails"
+      )
+        | {{live.date}}
         br
-        | @下北沢ERA
-      p.lead
-        | 2019/9/7 (Sat.)
-        br
-        | @吉祥寺NEPO
+        | {{live.place}}
 </template>
+
+<script>
+import liveDetails from '~/assets/js/LiveDetails.js'
+
+export default {
+  data() {
+    return {
+      liveDetails
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @mixin selection-color() {

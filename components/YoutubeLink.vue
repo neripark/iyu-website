@@ -15,13 +15,12 @@
   padding: 0 10px;
   box-sizing: content-box;
 }
-.icon {
-  max-width: 30px;
-  height: auto;
-  box-sizing: content-box;
-}
 .link {
   display: block;
   text-align: center;
+}
+.icon {
+  max-width: 30px;
+  height: auto;
 }
 </style>

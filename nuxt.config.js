@@ -77,6 +77,10 @@ module.exports = {
     {
       src: '~plugins/vue-carousel.js',
       ssr: false
+    },
+    {
+      src: '~plugins/ga.js',
+      ssr: false
     }
   ],
 

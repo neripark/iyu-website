@@ -28,5 +28,16 @@ export default [
       'The 1st Sunday',
       'ドラリ座'
     ]
+  },
+  {
+    title: 'NEPO presents 〜Our Weekend〜',
+    date: '2020/1/12 (Sun)',
+    place: '吉祥寺NEPO',
+    // ticket: '未定',
+    time: {
+      open: '未定',
+      start: '未定'
+    },
+    with: ['未定']
   }
 ]

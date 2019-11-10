@@ -12,7 +12,7 @@ export default [
     with: ['FOYO', 'イハラカンタロウ楽団']
   },
   {
-    title: 'NEPO presents 〜Our Weekend〜',
+    title: 'Kichijoji NEPO presents 〜Our Weekend〜',
     date: '2019/11/10 (Sun)',
     place: '吉祥寺NEPO',
     ticket: 'adv / door ¥2,000 (＋1d)',
@@ -28,5 +28,16 @@ export default [
       'The 1st Sunday',
       'ドラリ座'
     ]
+  },
+  {
+    title: 'Kichijoji NEPO presents 〜Our Weekend〜',
+    date: '2020/1/12 (Sun)',
+    place: '吉祥寺NEPO',
+    // ticket: '未定',
+    time: {
+      open: '未定',
+      start: '未定'
+    },
+    with: ['未定']
   }
 ]

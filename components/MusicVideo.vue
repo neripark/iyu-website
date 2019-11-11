@@ -4,17 +4,17 @@ section.music-video
     text="Music"
     color="blue"
   )
-  .wrap-mv
+  .wrap-video
     .inner
-      iframe.setasu(
+      iframe.yt-embed(
         type="text/html"
         src="https://www.youtube.com/embed/5Ji3VKWpWwg"
         frameborder="0"
         allowfullscreen
       )
-  .wrap-mv
+  .wrap-video
     .inner
-      iframe.setasu(
+      iframe.yt-embed(
         type="text/html"
         src="https://www.youtube.com/embed/h4QUsVf9f0c"
         frameborder="0"
@@ -54,7 +54,7 @@ export default {
   }
 }
 // iframeをレスポンシブにするための２重ラップ
-.wrap-mv {
+.wrap-video {
   margin: 10px auto 0;
   width: 100%;
   max-width: 1000px; // padding-bottomの%指定が広がり続けてしまうためmax-width
@@ -71,7 +71,7 @@ export default {
   padding-bottom: 56.25%;
   position: relative;
 }
-iframe.setasu {
+iframe.yt-embed {
   position: absolute;
   top: 0;
   left: 0;

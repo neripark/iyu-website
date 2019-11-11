@@ -12,6 +12,14 @@ section.music-video
         frameborder="0"
         allowfullscreen
       )
+  .wrap-mv
+    .inner
+      iframe.setasu(
+        type="text/html"
+        src="https://www.youtube.com/embed/h4QUsVf9f0c"
+        frameborder="0"
+        allowfullscreen
+      )
 </template>
 
 <script>
@@ -50,6 +58,12 @@ export default {
   margin: 10px auto 0;
   width: 100%;
   max-width: 1000px; // padding-bottomの%指定が広がり続けてしまうためmax-width
+  &:not(:first-of-type) {
+    margin-top: 45px;
+    @include mq(fhd) {
+      margin-top: 30px;
+    }
+  }
 }
 .inner {
   width: 100%;

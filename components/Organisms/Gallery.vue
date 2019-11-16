@@ -49,7 +49,7 @@ section.gallery
 </template>
 
 <script>
-import Heading from '~/components/Heading.vue'
+import Heading from '~/components/Atoms/Heading.vue'
 
 export default {
   components: {

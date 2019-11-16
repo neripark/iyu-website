@@ -28,7 +28,7 @@ nav.site-ham-menu(
 <script>
 import { mapState } from 'vuex'
 import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js'
-import CommonNavigation from '~/components/CommonNavigation.vue'
+import CommonNavigation from '~/components/Molecules/CommonNavigation.vue'
 
 export default {
   components: {

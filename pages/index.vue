@@ -14,15 +14,15 @@ main.container
 
 <script>
 import { anchorList } from '~/assets/js/v-scroll-settings.js'
-import MainVisual from '~/components/MainVisual.vue'
-import SiteFloatingNav from '~/components/SiteFloatingNav'
-import SiteHamMenu from '~/components/SiteHamMenu'
-import Profile from '~/components/Profile'
-import MusicVideo from '~/components/MusicVideo'
-import Live from '~/components/Live'
-import Gallery from '~/components/Gallery'
-import Contact from '~/components/Contact'
-import SiteFooter from '~/components/SiteFooter'
+import MainVisual from '~/components/Organisms/MainVisual.vue'
+import SiteFloatingNav from '~/components/Molecules/SiteFloatingNav'
+import SiteHamMenu from '~/components/Molecules/SiteHamMenu'
+import Profile from '~/components/Organisms/Profile'
+import MusicVideo from '~/components/Organisms/MusicVideo'
+import Live from '~/components/Organisms/Live'
+import Gallery from '~/components/Organisms/Gallery'
+import Contact from '~/components/Organisms/Contact'
+import SiteFooter from '~/components/Organisms/SiteFooter'
 
 export default {
   components: {

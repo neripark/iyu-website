@@ -62,7 +62,7 @@ section.contact
 
 <script>
 import axios from 'axios'
-import Heading from '~/components/Heading.vue'
+import Heading from '~/components/Atoms/Heading.vue'
 import liveArray from '~/assets/js/LiveDetails.js'
 
 export default {

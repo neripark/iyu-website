@@ -7,7 +7,7 @@ nav.site-floating-nav(
 </template>
 
 <script>
-import CommonNavigation from '~/components/CommonNavigation.vue'
+import CommonNavigation from '~/components/Molecules/CommonNavigation.vue'
 
 export default {
   components: {

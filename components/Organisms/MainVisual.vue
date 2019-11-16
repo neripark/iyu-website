@@ -17,7 +17,7 @@ section.main-visual
 </template>
 
 <script>
-import InformationSummary from '~/components/InformationSummary'
+import InformationSummary from '~/components/Molecules/InformationSummary'
 import { isSp } from '~/assets/js/util.js'
 
 export default {

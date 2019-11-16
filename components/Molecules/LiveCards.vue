@@ -8,7 +8,7 @@ ul.live-cards
 </template>
 
 <script>
-import LiveCard from '~/components/LiveCard.vue'
+import LiveCard from '~/components/Molecules/LiveCard.vue'
 import liveDetails from '~/assets/js/LiveDetails.js'
 
 export default {

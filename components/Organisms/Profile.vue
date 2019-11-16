@@ -1,9 +1,8 @@
 <template lang="pug">
 section.profile
-  heading(
+  heading.heading(
     text="Profile"
     color="blue"
-    :isAbsolute="true"
   )
   .wrap-photo
     img.profile-photo(
@@ -28,6 +27,13 @@ export default {
 <style lang="scss" scoped>
 .profile {
   position: relative;
+}
+.heading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 .wrap-photo {
   overflow: hidden;

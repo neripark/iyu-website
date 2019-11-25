@@ -5,13 +5,15 @@ li.live-card
   .detail
     p.title {{ detail.title }}
     p.place @{{ detail.place }}
-    p.time open {{ detail.time.open }} / start {{ detail.time.start }}
+    p.time
+      | open {{ detail.timeOpen ? detail.timeOpen : "未定" }} /
+      | start {{ detail.timeStart ? detail.timeStart : "未定"}}
     p.iyu-time(
-      v-if="detail.time.iyu"
-    ) ※iyuの出演は{{ detail.time.iyu }}頃の予定です。
+      v-if="detail.timeIyu"
+    ) ※iyuの出演は{{ detail.timeIyu }}頃の予定です。
     p.ticket
       | {{ detail.ticket }}
-    p.with with) {{ detail.with.join(' / ') }}
+    p.with w) {{ detail.with ? detail.with.join(' / ') : "未定"}}
 </template>
 
 <script>

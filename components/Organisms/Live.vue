@@ -14,18 +14,27 @@ section.live
       target="_blank"
     ) Twitter
     | でも承っております。
-  live-cards
+  live-cards(
+    :liveDetails="liveDetails"
+  )
 </template>
 
 <script>
 import Heading from '~/components/Atoms/Heading.vue'
 import LiveCards from '~/components/Molecules/LiveCards.vue'
 import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js'
+import { typeOfLiveDetail } from '~/plugins/contentful.js'
 
 export default {
   components: {
     Heading,
     LiveCards
+  },
+  props: {
+    liveDetails: {
+      type: Array[typeOfLiveDetail],
+      default: []
+    }
   },
   data() {
     return {

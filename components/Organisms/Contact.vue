@@ -63,15 +63,20 @@ section.contact
 <script>
 import axios from 'axios'
 import Heading from '~/components/Atoms/Heading.vue'
-import liveArray from '~/assets/js/LiveDetails.js'
+import { typeOfLiveDetail } from '~/plugins/contentful.js'
 
 export default {
   components: {
     Heading
   },
+  props: {
+    liveDetails: {
+      type: Array[typeOfLiveDetail],
+      default: []
+    }
+  },
   data() {
     return {
-      liveDetails: liveArray,
       maxTicketNumber: 5,
       isFormDisabled: false,
       formData: {

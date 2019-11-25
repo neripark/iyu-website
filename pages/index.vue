@@ -11,7 +11,10 @@ main.container
     :liveDetails="liveDetails"
   )
   Gallery( :id="anchorList.gallery.id" )
-  Contact( :id="anchorList.contact.id" )
+  Contact(
+    :id="anchorList.contact.id"
+    :liveDetails="liveDetails"
+  )
   site-footer
 </template>
 

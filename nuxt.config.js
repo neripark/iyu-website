@@ -81,6 +81,10 @@ module.exports = {
     {
       src: '~plugins/ga.js',
       ssr: false
+    },
+    {
+      src: '~plugins/contentful.js',
+      ssr: false
     }
   ],
 
@@ -118,6 +122,11 @@ module.exports = {
   },
   styleResources: {
     scss: ['~assets/scss/functions.scss', '~assets/scss/variables.scss']
+  },
+
+  env: {
+    contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
+    contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN
   },
 
   /*

@@ -9,15 +9,16 @@ ul.live-cards
 
 <script>
 import LiveCard from '~/components/Molecules/LiveCard.vue'
-import liveDetails from '~/assets/js/LiveDetails.js'
+import { typeOfLiveDetail } from '~/plugins/contentful.js'
 
 export default {
   components: {
     LiveCard
   },
-  data() {
-    return {
-      liveDetails
+  props: {
+    liveDetails: {
+      type: Array[typeOfLiveDetail],
+      default: []
     }
   }
 }

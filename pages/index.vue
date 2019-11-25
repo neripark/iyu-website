@@ -3,12 +3,21 @@ main.container
   header
     site-floating-nav
     site-ham-menu
-  main-visual( :id="anchorList.mainVisual.id" )
+  main-visual(
+    :id="anchorList.mainVisual.id"
+    :liveDetails="liveDetails"
+  )
   profile( :id="anchorList.profile.id" )
   music-video( :id="anchorList.music.id" )
-  Live( :id="anchorList.live.id" )
+  Live(
+    :id="anchorList.live.id"
+    :liveDetails="liveDetails"
+  )
   Gallery( :id="anchorList.gallery.id" )
-  Contact( :id="anchorList.contact.id" )
+  Contact(
+    :id="anchorList.contact.id"
+    :liveDetails="liveDetails"
+  )
   site-footer
 </template>
 
@@ -23,6 +32,8 @@ import Live from '~/components/Organisms/Live'
 import Gallery from '~/components/Organisms/Gallery'
 import Contact from '~/components/Organisms/Contact'
 import SiteFooter from '~/components/Organisms/SiteFooter'
+import { getEntries } from '~/plugins/contentful.js'
+import { dateExchangeForDisplay } from '~/assets/js/util.js'
 
 export default {
   components: {
@@ -40,6 +51,22 @@ export default {
     return {
       anchorList
     }
+  },
+  // asyncDataはページコンポーネントで扱う必要がある
+  // https://ja.nuxtjs.org/faq/async-data-components/
+  asyncData() {
+    return getEntries().then(entry => {
+      return {
+        liveDetails: entry.items
+          .map(e => {
+            // ソート用にオリジナル文字列を退避
+            e.fields.dateRaw = e.fields.date
+            e.fields.date = dateExchangeForDisplay(e.fields.date)
+            return e.fields
+          })
+          .sort((a, b) => (a.dateRaw > b.dateRaw ? 1 : -1))
+      }
+    })
   }
 }
 </script>

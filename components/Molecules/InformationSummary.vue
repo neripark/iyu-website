@@ -12,12 +12,13 @@
 </template>
 
 <script>
-import liveDetails from '~/assets/js/LiveDetails.js'
+import { typeOfLiveDetail } from '~/plugins/contentful.js'
 
 export default {
-  data() {
-    return {
-      liveDetails
+  props: {
+    liveDetails: {
+      type: Array[typeOfLiveDetail],
+      default: []
     }
   }
 }

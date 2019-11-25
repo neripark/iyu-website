@@ -3,14 +3,18 @@ export function isSp() {
 }
 
 // YYYY-MM-DD => YYYY/MM/DD (date)
-export const dateExchange = date => {
-  const ymdDate = date.replace(/-/g, '/')
-  const youbiIndex = new Date(ymdDate).getDay()
+export const dateExchangeForDisplay = date => {
+  const dateAsDate = new Date(date)
+  const y = dateAsDate.getFullYear()
+  const m = dateAsDate.getMonth() + 1
+  const d = dateAsDate.getDate()
+  const ymdFormatted = `${y}/${m}/${d}`
+  const youbiIndex = dateAsDate.getDay()
 
-  return `${ymdDate} (${dayOfWeek[youbiIndex].en})`
+  return `${ymdFormatted} (${weekday[youbiIndex].en})`
 }
 
-const dayOfWeek = [
+const weekday = [
   { jp: '日', en: 'Sun' },
   { jp: '月', en: 'Mon' },
   { jp: '火', en: 'Tue' },

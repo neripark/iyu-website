@@ -3,7 +3,10 @@ main.container
   header
     site-floating-nav
     site-ham-menu
-  main-visual( :id="anchorList.mainVisual.id" )
+  main-visual(
+    :id="anchorList.mainVisual.id"
+    :liveDetails="liveDetails"
+  )
   profile( :id="anchorList.profile.id" )
   music-video( :id="anchorList.music.id" )
   Live(

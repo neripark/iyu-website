@@ -5,7 +5,9 @@ section.main-visual
       src="~assets/images/iyu-logo-RGB.svg"
       alt="iyu-logo"
     )
-  information-summary
+  information-summary(
+    :liveDetails="liveDetails"
+  )
   client-only
     video.bg-movie(
       v-if="!isSp"
@@ -19,10 +21,17 @@ section.main-visual
 <script>
 import InformationSummary from '~/components/Molecules/InformationSummary'
 import { isSp } from '~/assets/js/util.js'
+import { typeOfLiveDetail } from '~/plugins/contentful.js'
 
 export default {
   components: {
     InformationSummary
+  },
+  props: {
+    liveDetails: {
+      type: Array[typeOfLiveDetail],
+      default: []
+    }
   },
   data() {
     return {

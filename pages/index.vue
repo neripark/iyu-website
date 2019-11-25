@@ -33,6 +33,7 @@ import Gallery from '~/components/Organisms/Gallery'
 import Contact from '~/components/Organisms/Contact'
 import SiteFooter from '~/components/Organisms/SiteFooter'
 import { getEntries } from '~/plugins/contentful.js'
+import { dateExchange } from '~/assets/js/util.js'
 
 export default {
   components: {
@@ -57,7 +58,10 @@ export default {
     return getEntries().then(entry => {
       return {
         liveDetails: entry.items
-          .map(e => e.fields)
+          .map(e => {
+            e.fields.date = dateExchange(e.fields.date)
+            return e.fields
+          })
           .sort((a, b) => (a.date > b.date ? 1 : -1))
       }
     })

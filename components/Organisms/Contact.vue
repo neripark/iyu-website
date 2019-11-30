@@ -61,9 +61,9 @@ section.contact
 </template>
 
 <script>
-import axios from 'axios'
-import Heading from '~/components/Atoms/Heading.vue'
-import { typeOfLiveDetail } from '~/plugins/contentful.js'
+import axios from 'axios';
+import Heading from '~/components/Atoms/Heading.vue';
+import { typeOfLiveDetail } from '~/plugins/contentful.js';
 
 export default {
   components: {
@@ -88,11 +88,11 @@ export default {
         email: '',
         message: ''
       }
-    }
+    };
   },
   computed: {
     isSelectedTicketReserve() {
-      return this.formData.category === 'live'
+      return this.formData.category === 'live';
     }
   },
   methods: {
@@ -107,13 +107,13 @@ export default {
         .map(
           key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
         )
-        .join('&')
+        .join('&');
     },
     handleSubmit() {
-      this.isFormDisabled = true
+      this.isFormDisabled = true;
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
-      }
+      };
       axios
         .post(
           // todo: 環境変数でdevとprodを分ける
@@ -133,11 +133,11 @@ export default {
           )
         )
         .finally(() => {
-          this.isFormDisabled = false
-        })
+          this.isFormDisabled = false;
+        });
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

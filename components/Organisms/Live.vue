@@ -20,10 +20,10 @@ section.live
 </template>
 
 <script>
-import Heading from '~/components/Atoms/Heading.vue'
-import LiveCards from '~/components/Molecules/LiveCards.vue'
-import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js'
-import { typeOfLiveDetail } from '~/plugins/contentful.js'
+import Heading from '~/components/Atoms/Heading.vue';
+import LiveCards from '~/components/Molecules/LiveCards.vue';
+import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js';
+import { typeOfLiveDetail } from '~/plugins/contentful.js';
 
 export default {
   components: {
@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       anchorList
-    }
+    };
   },
   methods: {
     scrollTo(to) {
@@ -48,10 +48,10 @@ export default {
         easing: scrollOptions.easing,
         el: `#${to.id}`,
         offset: to.offset
-      }
+      };
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

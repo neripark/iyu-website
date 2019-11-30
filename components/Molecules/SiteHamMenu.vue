@@ -26,9 +26,9 @@ nav.site-ham-menu(
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js'
-import CommonNavigation from '~/components/Molecules/CommonNavigation.vue'
+import { mapState } from 'vuex';
+import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js';
+import CommonNavigation from '~/components/Molecules/CommonNavigation.vue';
 
 export default {
   components: {
@@ -38,7 +38,7 @@ export default {
     return {
       anchorList,
       isScrollTop: true
-    }
+    };
   },
   computed: {
     // memo: stateを参照だけしたい場合、このようにcomputed の中に書くとすぐに参照できる
@@ -46,10 +46,10 @@ export default {
   },
   methods: {
     toggleMenu() {
-      this.$store.dispatch('ham-menu/toggle')
+      this.$store.dispatch('ham-menu/toggle');
     },
     scrollHandler() {
-      this.isScrollTop = window.pageYOffset < 500 // 適当
+      this.isScrollTop = window.pageYOffset < 500; // 適当
     },
     scrollTo(to) {
       // memo: ここはトップへ戻るスクロールのみ
@@ -58,10 +58,10 @@ export default {
         easing: scrollOptions.easing,
         el: `#${to.id}`,
         offset: to.offset
-      }
+      };
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

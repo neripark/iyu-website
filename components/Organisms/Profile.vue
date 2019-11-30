@@ -13,15 +13,15 @@ section.profile
 </template>
 
 <script>
-import Heading from '~/components/Atoms/Heading.vue'
-import ProfileDescription from '~/components/Molecules/ProfileDescription.vue'
+import Heading from '~/components/Atoms/Heading.vue';
+import ProfileDescription from '~/components/Molecules/ProfileDescription.vue';
 
 export default {
   components: {
     Heading,
     ProfileDescription
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

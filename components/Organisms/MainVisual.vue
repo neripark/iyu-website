@@ -19,9 +19,9 @@ section.main-visual
 </template>
 
 <script>
-import InformationSummary from '~/components/Molecules/InformationSummary'
-import { isSp } from '~/assets/js/util.js'
-import { typeOfLiveDetail } from '~/plugins/contentful.js'
+import InformationSummary from '~/components/Molecules/InformationSummary';
+import { isSp } from '~/assets/js/util.js';
+import { typeOfLiveDetail } from '~/plugins/contentful.js';
 
 export default {
   components: {
@@ -36,12 +36,12 @@ export default {
   data() {
     return {
       isSp: false
-    }
+    };
   },
   mounted() {
-    this.isSp = isSp()
+    this.isSp = isSp();
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

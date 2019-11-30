@@ -30,9 +30,9 @@ export const anchorList = {
     offset: -60,
     offsetSp: -59
   }
-}
+};
 
 export const scrollOptions = {
   duration: 400,
   easing: [0.86, 0, 0.07, 1]
-}
+};

@@ -7,7 +7,7 @@ nav.site-floating-nav(
 </template>
 
 <script>
-import CommonNavigation from '~/components/Molecules/CommonNavigation.vue'
+import CommonNavigation from '~/components/Molecules/CommonNavigation.vue';
 
 export default {
   components: {
@@ -17,16 +17,16 @@ export default {
     return {
       isNavScrollStart: false,
       isNavWindowTop: false
-    }
+    };
   },
   methods: {
     scrollHandler() {
-      this.isNavScrollStart = window.pageYOffset > 0
+      this.isNavScrollStart = window.pageYOffset > 0;
       this.isNavWindowTop =
-        window.pageYOffset > window.innerHeight - this.$el.clientHeight
+        window.pageYOffset > window.innerHeight - this.$el.clientHeight;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

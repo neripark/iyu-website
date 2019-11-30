@@ -26,10 +26,10 @@ export default {
   },
   methods: {
     ticketString(price) {
-      return price ? `¥${price}` : '未定'
+      return price ? `¥${price}` : '未定';
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,11 +1,11 @@
-import { createClient } from 'contentful'
+import { createClient } from 'contentful';
 
 // api call function
 const client = createClient({
   space: process.env.contentfulSpaceId,
   accessToken: process.env.contentfulAccessToken
-})
-export const getEntries = () => client.getEntries()
+});
+export const getEntries = () => client.getEntries();
 
 // type of liveDetails
 export const typeOfLiveDetail = {
@@ -41,4 +41,4 @@ export const typeOfLiveDetail = {
     type: Array,
     default: []
   }
-}
+};

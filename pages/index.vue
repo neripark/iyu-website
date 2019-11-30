@@ -22,18 +22,18 @@ main.container
 </template>
 
 <script>
-import { anchorList } from '~/assets/js/v-scroll-settings.js'
-import MainVisual from '~/components/Organisms/MainVisual.vue'
-import SiteFloatingNav from '~/components/Molecules/SiteFloatingNav'
-import SiteHamMenu from '~/components/Molecules/SiteHamMenu'
-import Profile from '~/components/Organisms/Profile'
-import MusicVideo from '~/components/Organisms/MusicVideo'
-import Live from '~/components/Organisms/Live'
-import Gallery from '~/components/Organisms/Gallery'
-import Contact from '~/components/Organisms/Contact'
-import SiteFooter from '~/components/Organisms/SiteFooter'
-import { getEntries } from '~/plugins/contentful.js'
-import { dateExchangeForDisplay } from '~/assets/js/util.js'
+import { anchorList } from '~/assets/js/v-scroll-settings.js';
+import MainVisual from '~/components/Organisms/MainVisual.vue';
+import SiteFloatingNav from '~/components/Molecules/SiteFloatingNav';
+import SiteHamMenu from '~/components/Molecules/SiteHamMenu';
+import Profile from '~/components/Organisms/Profile';
+import MusicVideo from '~/components/Organisms/MusicVideo';
+import Live from '~/components/Organisms/Live';
+import Gallery from '~/components/Organisms/Gallery';
+import Contact from '~/components/Organisms/Contact';
+import SiteFooter from '~/components/Organisms/SiteFooter';
+import { getEntries } from '~/plugins/contentful.js';
+import { dateExchangeForDisplay } from '~/assets/js/util.js';
 
 export default {
   components: {
@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       anchorList
-    }
+    };
   },
   // asyncDataはページコンポーネントで扱う必要がある
   // https://ja.nuxtjs.org/faq/async-data-components/
@@ -60,13 +60,13 @@ export default {
         liveDetails: entry.items
           .map(e => {
             // ソート用にオリジナル文字列を退避
-            e.fields.dateRaw = e.fields.date
-            e.fields.date = dateExchangeForDisplay(e.fields.date)
-            return e.fields
+            e.fields.dateRaw = e.fields.date;
+            e.fields.date = dateExchangeForDisplay(e.fields.date);
+            return e.fields;
           })
           .sort((a, b) => (a.dateRaw > b.dateRaw ? 1 : -1))
-      }
-    })
+      };
+    });
   }
-}
+};
 </script>

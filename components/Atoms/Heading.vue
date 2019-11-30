@@ -16,7 +16,7 @@ export default {
       default: 'blue'
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

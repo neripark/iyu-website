@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { typeOfLiveDetail } from '~/plugins/contentful.js'
+import { typeOfLiveDetail } from '~/plugins/contentful.js';
 
 export default {
   props: {
@@ -21,7 +21,7 @@ export default {
       default: []
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

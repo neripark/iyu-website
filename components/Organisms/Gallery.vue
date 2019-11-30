@@ -49,13 +49,13 @@ section.gallery
 </template>
 
 <script>
-import Heading from '~/components/Atoms/Heading.vue'
+import Heading from '~/components/Atoms/Heading.vue';
 
 export default {
   components: {
     Heading
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

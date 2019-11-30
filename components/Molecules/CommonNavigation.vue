@@ -18,15 +18,15 @@ ul.anchor-list
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { isSp } from '~/assets/js/util.js'
-import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js'
+import { mapState } from 'vuex';
+import { isSp } from '~/assets/js/util.js';
+import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js';
 
 export default {
   data() {
     return {
       anchorList
-    }
+    };
   },
   computed: {
     ...mapState('ham-menu', ['isOpen'])
@@ -40,12 +40,12 @@ export default {
         offset: isSp ? to.offsetSp : to.offset,
         onStart: () => {
           // このコンポーネントから操作したいのでarrow function
-          this.$store.dispatch('ham-menu/close')
+          this.$store.dispatch('ham-menu/close');
         }
-      }
+      };
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

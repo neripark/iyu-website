@@ -12,9 +12,9 @@ footer.site-footer
 </template>
 
 <script>
-import TwitterLink from '~/components/Atoms/TwitterLink.vue'
-import MailLink from '~/components/Atoms/MailLink.vue'
-import YoutubeLink from '~/components/Atoms/YoutubeLink.vue'
+import TwitterLink from '~/components/Atoms/TwitterLink.vue';
+import MailLink from '~/components/Atoms/MailLink.vue';
+import YoutubeLink from '~/components/Atoms/YoutubeLink.vue';
 
 export default {
   components: {
@@ -22,7 +22,7 @@ export default {
     MailLink,
     YoutubeLink
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

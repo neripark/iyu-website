@@ -1,9 +1,9 @@
-import querystring from 'querystring'
-import axios from 'axios'
+import querystring from 'querystring';
+import axios from 'axios';
 
 exports.handler = function(event, context, callback) {
   // const token = process.env.IYU_FORM_NOTIFY_TOKEN_TEST // test
-  const token = process.env.IYU_FORM_NOTIFY_TOKEN_PROD // production
+  const token = process.env.IYU_FORM_NOTIFY_TOKEN_PROD; // production
 
   // NOTE:
   // production環境で、event はオブジェクト型で来ているが、event.body はString型だった。
@@ -19,7 +19,7 @@ exports.handler = function(event, context, callback) {
 
   // todo: 環境変数でdevとprodを分ける
   // const params = querystring.parse(decodeURIComponent(event.body)) // development
-  const params = JSON.parse(event.body).payload.data // production
+  const params = JSON.parse(event.body).payload.data; // production
 
   axios({
     method: 'post',
@@ -33,12 +33,12 @@ exports.handler = function(event, context, callback) {
     })
   })
     .then(res => {
-      res.data.statusCode = 200
-      res.data.body = 'ok'
-      callback(null, res.data)
+      res.data.statusCode = 200;
+      res.data.body = 'ok';
+      callback(null, res.data);
     })
-    .catch(err => callback(err))
-}
+    .catch(err => callback(err));
+};
 
 function getMsg(params) {
   // todo: reservedateとreservecountがなかったら表示しない制御
@@ -53,7 +53,7 @@ webサイトからContactがありました！
 [Email] ${params.email}
 [Message]
 ${params.message}
-  `
+  `;
 
-  return msg
+  return msg;
 }

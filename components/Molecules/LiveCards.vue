@@ -8,8 +8,8 @@ ul.live-cards
 </template>
 
 <script>
-import LiveCard from '~/components/Molecules/LiveCard.vue'
-import { typeOfLiveDetail } from '~/plugins/contentful.js'
+import LiveCard from '~/components/Molecules/LiveCard.vue';
+import { typeOfLiveDetail } from '~/plugins/contentful.js';
 
 export default {
   components: {
@@ -21,7 +21,7 @@ export default {
       default: []
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

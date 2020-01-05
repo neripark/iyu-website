@@ -2,7 +2,6 @@ import querystring from 'querystring';
 import axios from 'axios';
 
 exports.handler = function(event, context, callback) {
-
   // NOTE:
   // production環境で、event はオブジェクト型で来ているが、event.body はString型だった。
   // Netlify側のログが出たり出なかったりしたため苦労したが、
@@ -15,7 +14,9 @@ exports.handler = function(event, context, callback) {
   // ローカルでのエミュレートに合わせ、Netlify 側でもビルドするようにした。
   // そうしないと axios も使えないし。
 
-  const token = process.env.IYU_FORM_NOTIFY_TOKEN_TEST && process.env.IYU_FORM_NOTIFY_TOKEN_PROD;
+  const token =
+    process.env.IYU_FORM_NOTIFY_TOKEN_TEST &&
+    process.env.IYU_FORM_NOTIFY_TOKEN_PROD;
   const params = process.env.IYU_FORM_NOTIFY_TOKEN_TEST
     ? querystring.parse(decodeURIComponent(event.body))
     : JSON.parse(event.body).payload.data;

@@ -15,45 +15,29 @@ section.gallery
       navigationPrevLabel="<image class=\"arrow\" src=\"/images/gallery-button-L.png\" alt=\"left\" />"
       navigationNextLabel="<image class=\"arrow\" src=\"/images/gallery-button-R.png\" alt=\"left\" />"
     )
-      //- todo: v-forで書き直す
-      //- slide
-      //-   p.pic
-      //-     img(
-      //-       src="~/assets/images/gallery-zun.jpg"
-      //-       alt="gallery zun"
-      //-     )
-      slide
+      slide(
+        v-for="image in images"
+        :key="image.src"
+      )
         p.pic
           img(
-            src="~/assets/images/gallery-sky.jpg"
-            alt="gallery sky"
-          )
-      slide
-        p.pic
-          img(
-            src="~/assets/images/gallery-setasu-last.jpg"
-            alt="setagaya suside last scene"
-          )
-      slide
-        p.pic
-          img(
-            src="~/assets/images/gallery-car-beam.jpg"
-            alt="gallery car beam"
-          )
-      slide
-        p.pic
-          img(
-            src="~/assets/images/gallery-car-light.jpg"
-            alt="gallery car light"
+            :src="image.src"
+            :alt="image.alt"
           )
 </template>
 
 <script>
 import Heading from '~/components/Atoms/Heading.vue';
+import carouselImages from '~/assets/js/vue-carousel-images.js';
 
 export default {
   components: {
     Heading
+  },
+  data() {
+    return {
+      images: carouselImages
+    };
   }
 };
 </script>

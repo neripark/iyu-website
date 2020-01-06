@@ -5,6 +5,7 @@
       h3.head Live Schedule
       p.lead(
         v-for="live in liveDetails"
+        v-if="$dayjs().subtract(7, 'day').isBefore(live.date)"
       )
         | {{live.date}}
         br

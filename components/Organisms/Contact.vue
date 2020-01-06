@@ -42,7 +42,11 @@ section.contact
         //- お取り置き日程
         select.is-small( name="reservedate" v-model="formData.reservedate" )
           option( value="" selected disabled ) - お取り置き日程 -
-          option( v-for="live in liveDetails" :key="live.date" ) {{ `${live.date} - ${live.title}` }}
+          option(
+            v-for="live in liveDetails"
+            v-if="$dayjs().subtract(1, 'day').isBefore(live.date)"
+            :key="live.date"
+          ) {{ `${$dayjs(live.date).format('YYYY/M/D (ddd)')} - ${live.title}` }}
         //- お取り置き枚数
         select.is-small( name="reservecount" v-model="formData.reservecount" )
           option( value="" selected disabled ) - お取り置き枚数 -

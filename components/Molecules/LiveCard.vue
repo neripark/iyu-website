@@ -1,7 +1,7 @@
 <template lang="pug">
 li.live-card
   .date
-    p.ymd {{ detail.date }}
+    p.ymd {{ $dayjs(detail.date).format('YYYY/M/D (ddd)') }}
   .detail
     p.title {{ detail.title }}
     p.place @{{ detail.place }}

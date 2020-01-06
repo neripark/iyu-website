@@ -7,7 +7,7 @@
         v-for="live in liveDetails"
         v-if="$dayjs().subtract(7, 'day').isBefore(live.date)"
       )
-        | {{live.date}}
+        | {{ $dayjs(live.date).format('YYYY/M/D (ddd)') }}
         br
         | {{live.place}}
 </template>

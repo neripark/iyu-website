@@ -22,7 +22,8 @@
     "contentful": "^7.10.0",
     "cross-env": "^6.0.0",
     "netlify-lambda": "^1.4.7",
-    "nuxt": "^2.4.0"
+    "nuxt": "^2.4.0",
+    "nuxt-dayjs-module": "^1.1.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.1.2",

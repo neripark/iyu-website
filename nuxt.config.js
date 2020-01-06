@@ -96,7 +96,8 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
     '@nuxtjs/style-resources',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    'nuxt-dayjs-module'
   ],
 
   /*
@@ -107,6 +108,7 @@ module.exports = {
     hostname: 'https://iyumusic.tokyo',
     routes: ['/']
   },
+
   /*
    ** Axios module configuration
    */
@@ -122,6 +124,14 @@ module.exports = {
   },
   styleResources: {
     scss: ['~assets/scss/functions.scss', '~assets/scss/variables.scss']
+  },
+
+  /*
+   ** dayjs settings
+   */
+  dayjs: {
+    locales: ['en', 'ja'],
+    defaultLocale: 'en'
   },
 
   env: {

@@ -33,7 +33,6 @@ import Gallery from '~/components/Organisms/Gallery';
 import Contact from '~/components/Organisms/Contact';
 import SiteFooter from '~/components/Organisms/SiteFooter';
 import { getEntries } from '~/plugins/contentful.js';
-import { dateExchangeForDisplay } from '~/assets/js/util.js';
 
 export default {
   components: {
@@ -59,12 +58,9 @@ export default {
       return {
         liveDetails: entry.items
           .map(e => {
-            // ソート用にオリジナル文字列を退避
-            e.fields.dateRaw = e.fields.date;
-            e.fields.date = dateExchangeForDisplay(e.fields.date);
             return e.fields;
           })
-          .sort((a, b) => (a.dateRaw > b.dateRaw ? 1 : -1))
+          .sort((a, b) => (a.date > b.date ? 1 : -1))
       };
     });
   }

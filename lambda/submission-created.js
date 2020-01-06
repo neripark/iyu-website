@@ -15,7 +15,7 @@ exports.handler = function(event, context, callback) {
   // そうしないと axios も使えないし。
 
   const token =
-    process.env.IYU_FORM_NOTIFY_TOKEN_TEST &&
+    process.env.IYU_FORM_NOTIFY_TOKEN_TEST ||
     process.env.IYU_FORM_NOTIFY_TOKEN_PROD;
   const params = process.env.IYU_FORM_NOTIFY_TOKEN_TEST
     ? querystring.parse(decodeURIComponent(event.body))

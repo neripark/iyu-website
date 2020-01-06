@@ -180,6 +180,7 @@ export default {
   cursor: pointer;
   &[disabled] {
     opacity: 0.7;
+    cursor: not-allowed;
   }
 }
 

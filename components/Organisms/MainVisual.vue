@@ -11,7 +11,7 @@ section.main-visual
   client-only
     video.bg-movie(
       v-if="!isSp"
-      src="~assets/videos/190517_iyu-webtop-videoHF1980bit.mp4"
+      src="~assets/videos/200109_iyu-webtop-video.mp4"
       muted
       autoplay
       loop

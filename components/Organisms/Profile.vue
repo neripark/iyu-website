@@ -4,9 +4,12 @@ section.profile
     text="Profile"
     color="blue"
   )
-  .wrap-photo
+  .wrap-photo(
+    v-lazy-container="{selector: 'img'}"
+  )
     img.profile-photo(
-      src="~assets/images/profile.jpg"
+      :data-src="require('~/assets/images/profile.jpg')"
+      data-loading="/images/loading-spin.gif"
       alt="profile photo"
     )
   profile-description
@@ -36,13 +39,23 @@ export default {
   z-index: 1;
 }
 .wrap-photo {
+  width: 100%;
+  min-height: 300px; // loading中の高さを確保
   overflow: hidden;
+  position: relative;
   @include mq(fhd) {
     display: flex;
     justify-content: center;
   }
 }
-.profile-photo {
+.profile-photo[lazy='loading'] {
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.profile-photo[lazy='loaded'] {
   width: 100%;
   min-width: 1300px;
   margin-top: -240px;

@@ -20,8 +20,8 @@ section.gallery
         :key="image.src"
       )
         p.pic
-          img(
-            :src="image.src"
+          img.image(
+            v-lazy="image"
             :alt="image.alt"
           )
 </template>
@@ -52,14 +52,22 @@ export default {
   }
 }
 .pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   max-width: 700px;
   padding: $side-padding-pc;
   @include mq() {
     padding: $side-padding-sp;
   }
-  img {
-    width: 100%;
-  }
+}
+.image[lazy='loading'] {
+  width: 100px;
+  height: auto;
+}
+.image[lazy='loaded'] {
+  width: 100%;
 }
 </style>
 

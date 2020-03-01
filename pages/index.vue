@@ -53,7 +53,7 @@ export default {
   },
   // asyncDataはページコンポーネントで扱う必要がある
   // https://ja.nuxtjs.org/faq/async-data-components/
-  asyncData() {
+  asyncData({ $dayjs }) {
     return getEntries().then(entry => {
       return {
         liveDetails: entry.items
@@ -61,6 +61,12 @@ export default {
             return e.fields;
           })
           .sort((a, b) => (a.date > b.date ? 1 : -1))
+          // ライブが終わっても１週間は表示しておく
+          .filter(e => {
+            return $dayjs()
+              .subtract(7, 'day')
+              .isBefore(e.date);
+          })
       };
     });
   }

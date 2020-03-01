@@ -2,7 +2,6 @@
 ul.live-cards
   live-card(
     v-for="live in liveDetails"
-    v-if="$dayjs().subtract(7, 'day').isBefore(live.date)"
     :key="live.date"
     :detail="live"
   )

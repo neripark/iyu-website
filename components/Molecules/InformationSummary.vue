@@ -5,11 +5,13 @@
       h3.head Live Schedule
       p.lead(
         v-for="live in liveDetails"
-        v-if="$dayjs().subtract(7, 'day').isBefore(live.date)"
       )
         | {{ $dayjs(live.date).format('YYYY/M/D (ddd)') }}
         br
         | {{live.place}}
+      p.lead(
+        v-if="!liveDetails.length"
+      ) 現在予定しているライブはありません。
 </template>
 
 <script>
@@ -52,7 +54,7 @@ export default {
   }
 }
 .wrap {
-  width: 300px;
+  width: 350px;
   padding: 30px;
   @include mq(tb) {
     width: 100%;

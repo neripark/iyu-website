@@ -2,7 +2,10 @@
 div
   p.lead(v-if="liveCnt")
     | チケットのお取置きは
-    a.text-link(:href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.contact)") こちらのフォーム
+    a.text-link(
+      :href="`#${anchorList.profile.id}`"
+      v-scroll-to="scrollTo(anchorList.contact)"
+    ) こちらのフォーム
     | から。
     br
     a.text-link(
@@ -19,7 +22,8 @@ div
       href="https://twitter.com/iyu_band"
       target="_blank"
     ) Twitter
-    | もぜひチェックしてくださいね。 </template>
+    | もぜひチェックしてくださいね。
+</template>
 
 <script>
 import { anchorList, scrollOptions } from '~/assets/js/v-scroll-settings.js';

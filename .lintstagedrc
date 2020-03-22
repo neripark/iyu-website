@@ -1,0 +1,3 @@
+{
+  "*.vue|*.js": "yarn run lint"
+}

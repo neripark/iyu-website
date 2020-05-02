@@ -4,6 +4,16 @@ section.music-video
     text="Music"
     color="blue"
   )
+  //- daniel
+  .wrap-video
+    .inner
+      iframe.yt-embed(
+        type="text/html"
+        src="https://www.youtube.com/embed/w46aUHg6nkk"
+        frameborder="0"
+        allowfullscreen
+      )
+  //- setasu
   .wrap-video
     .inner
       iframe.yt-embed(
@@ -12,6 +22,7 @@ section.music-video
         frameborder="0"
         allowfullscreen
       )
+  //- jose (live)
   .wrap-video
     .inner
       iframe.yt-embed(

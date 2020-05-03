@@ -4,30 +4,14 @@ section.music-video
     text="Music"
     color="blue"
   )
-  //- daniel
-  .wrap-video
+  .wrap-video(
+    v-for="video in videos"
+    :key="video.id"
+  )
     .inner
       iframe.yt-embed(
         type="text/html"
-        src="https://www.youtube.com/embed/w46aUHg6nkk"
-        frameborder="0"
-        allowfullscreen
-      )
-  //- setasu
-  .wrap-video
-    .inner
-      iframe.yt-embed(
-        type="text/html"
-        src="https://www.youtube.com/embed/5Ji3VKWpWwg"
-        frameborder="0"
-        allowfullscreen
-      )
-  //- jose (live)
-  .wrap-video
-    .inner
-      iframe.yt-embed(
-        type="text/html"
-        src="https://www.youtube.com/embed/h4QUsVf9f0c"
+        :src="`https://www.youtube.com/embed/${video.id}`"
         frameborder="0"
         allowfullscreen
       )
@@ -35,10 +19,16 @@ section.music-video
 
 <script>
 import Heading from '~/components/Atoms/Heading.vue';
+import carouselVideos from '~/assets/js/vue-carousel-videos.js';
 
 export default {
   components: {
     Heading
+  },
+  data() {
+    return {
+      videos: carouselVideos
+    };
   }
 };
 </script>

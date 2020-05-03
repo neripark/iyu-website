@@ -45,10 +45,10 @@ export default {
   }
   @include mq() {
     padding: 0 $side-padding-sp 50px;
-    background-size: unset;
   }
   @include mq(ssm) {
     background-position: right -550px top 0px;
+    background-size: unset;
   }
   @include mq(fhd) {
     background-position: unset;

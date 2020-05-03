@@ -4,43 +4,41 @@ section.music-video
     text="Music"
     color="blue"
   )
-  client-only
-    carousel(
-      :center-mode="true"
-      :loop="true"
-      :per-page="1"
-      :navigation-enabled="true"
-      pagination-color="#ccc"
-      pagination-active-color="#36afca"
-      navigationPrevLabel="<image class=\"arrow\" src=\"/images/gallery-button-L.png\" alt=\"left\" />"
-      navigationNextLabel="<image class=\"arrow\" src=\"/images/gallery-button-R.png\" alt=\"left\" />"
-    )
-      slide(
-        v-for="video in videos"
-        :key="video.id"
+  //- daniel
+  .wrap-video
+    .inner
+      iframe.yt-embed(
+        type="text/html"
+        src="https://www.youtube.com/embed/w46aUHg6nkk"
+        frameborder="0"
+        allowfullscreen
       )
-        .wrap-video
-          .inner
-            iframe.yt-embed(
-              type="text/html"
-              :src="`https://www.youtube.com/embed/${video.id}`"
-              frameborder="0"
-              allowfullscreen
-            )
+  //- setasu
+  .wrap-video
+    .inner
+      iframe.yt-embed(
+        type="text/html"
+        src="https://www.youtube.com/embed/5Ji3VKWpWwg"
+        frameborder="0"
+        allowfullscreen
+      )
+  //- jose (live)
+  .wrap-video
+    .inner
+      iframe.yt-embed(
+        type="text/html"
+        src="https://www.youtube.com/embed/h4QUsVf9f0c"
+        frameborder="0"
+        allowfullscreen
+      )
 </template>
 
 <script>
 import Heading from '~/components/Atoms/Heading.vue';
-import carouselVideos from '~/assets/js/vue-carousel-videos.js';
 
 export default {
   components: {
     Heading
-  },
-  data() {
-    return {
-      videos: carouselVideos
-    };
   }
 };
 </script>
@@ -48,16 +46,15 @@ export default {
 <style lang="scss" scoped>
 .music-video {
   width: 100%;
-  padding: 0 0 100px;
+  padding: 0 $side-padding-pc 100px;
   background-image: url(~assets/images/bg-movie.jpg);
-  background-position: right -32px top 0px;
+  background-position: right -150px top 0px;
   background-size: cover;
-  overflow: hidden; // カルーセルが飛び出ないよう対策
   @include mq(tb) {
     background-position: right -500px top 0px;
   }
   @include mq() {
-    padding: 0 0 50px;
+    padding: 0 $side-padding-sp 50px;
     background-size: unset;
   }
   @include mq(ssm) {
@@ -71,11 +68,7 @@ export default {
 .wrap-video {
   margin: 10px auto 0;
   width: 100%;
-  max-width: 1000px;
-  padding: $side-padding-pc;
-  @include mq() {
-    padding: $side-padding-sp;
-  }
+  max-width: 1000px; // padding-bottomの%指定が広がり続けてしまうためmax-width
   &:not(:first-of-type) {
     margin-top: 45px;
     @include mq(fhd) {

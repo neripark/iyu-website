@@ -1,6 +1,10 @@
 const carouselImages = [
   {
     // nuxtに解釈させるためにrequire
+    src: require('~/assets/images/gallery-daniel-mv.jpg'),
+    alt: 'gallery sky'
+  },
+  {
     src: require('~/assets/images/gallery-sky.jpg'),
     alt: 'gallery sky'
   },

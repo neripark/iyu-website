@@ -10,6 +10,7 @@ section.gallery
       :loop="true"
       :per-page="1"
       :navigation-enabled="true"
+      :navigateTo="[2, false]"
       pagination-color="#ccc"
       pagination-active-color="#36afca"
       navigationPrevLabel="<image class=\"arrow\" src=\"/images/gallery-button-L.png\" alt=\"left\" />"

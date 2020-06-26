@@ -1,2 +1,5 @@
 [build]
 functions = "./functions"
+
+[context.branch-deploy]
+command = "nuxt generate && rm -rf functions/ && netlify-lambda build lambda/ && cp netlify_headers dist/_headers"

@@ -5,4 +5,4 @@ functions = "./functions"
 # command = "nuxt generate && rm -rf functions/ && netlify-lambda build lambda/ && cp netlify_headers dist/_headers"
 
 [context.deploy-preview]
-command = "nuxt generate && rm -rf functions/ && netlify-lambda build lambda/ && cp netlify_headers dist/_headers"
+command = "nuxt generate && rm -rf functions/ && netlify-lambda build lambda/ && cp netlify_headers _site/_headers"

@@ -6,16 +6,16 @@ https://iyumusic.tokyo
 
 ``` bash
 # install dependencies
-$ yarn install
+$ yarn
 
 # serve with hot reload at localhost:3333
 $ yarn dev
 
 # build and serve Netlify Function
-$ yarn lamba-serve
+$ yarn lambda-serve
 
 # only build Netlify Function
-$ yarn lamba-serve
+$ yarn lambda-build
 
 # build for production and launch server
 $ yarn build

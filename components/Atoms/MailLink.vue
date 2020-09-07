@@ -11,7 +11,7 @@
 
 <style lang="scss" scoped>
 .mail {
-  width: 22px;
+  width: 28px;
   padding: 0 8px;
   box-sizing: content-box;
 }

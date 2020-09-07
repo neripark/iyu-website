@@ -20,7 +20,7 @@
   text-align: center;
 }
 .icon {
-  max-width: 30px;
+  max-width: 34px;
   height: auto;
 }
 </style>

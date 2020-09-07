@@ -7,6 +7,8 @@ footer.site-footer
       YoutubeLink
     li.contact-item
       MailLink
+    li.contact-item
+      InstagramLink
   .wrap-copyright
     p.copyright-text ©iyumusic.tokyo All Rights Reserved.
 </template>
@@ -15,12 +17,14 @@ footer.site-footer
 import TwitterLink from '~/components/Atoms/TwitterLink.vue';
 import MailLink from '~/components/Atoms/MailLink.vue';
 import YoutubeLink from '~/components/Atoms/YoutubeLink.vue';
+import InstagramLink from '~/components/Atoms/InstagramLink.vue';
 
 export default {
   components: {
     TwitterLink,
     MailLink,
-    YoutubeLink
+    YoutubeLink,
+    InstagramLink
   }
 };
 </script>

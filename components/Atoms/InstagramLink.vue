@@ -1,16 +1,16 @@
 <template lang="pug">
-.youtube
+.instagram
   a.link(
-    href="https://www.youtube.com/channel/UCOhjr68zt5bWJo8cLKs2YAw"
+    href="https://www.instagram.com/iyu_musictokyo/"
   )
     img.icon(
-      src="~assets/images/yt_icon_mono_dark.png"
-      alt="iyu youtube channel"
+      src="~assets/images/instagram_icon.svg"
+      alt="iyu instagram account"
     )
 </template>
 
 <style lang="scss" scoped>
-.youtube {
+.instagram {
   width: 40px;
   padding: 0 10px;
   box-sizing: content-box;
@@ -20,7 +20,7 @@
   text-align: center;
 }
 .icon {
-  max-width: 34px;
+  max-width: 30px;
   height: auto;
 }
 </style>

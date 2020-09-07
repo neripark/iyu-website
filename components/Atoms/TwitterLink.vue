@@ -3,7 +3,7 @@
   a.link(
     href="https://twitter.com/iyu_band"
   )
-    img(
+    img.icon(
       src="~assets/images/Twitter_Logo_WhiteOnImage.svg"
       alt="iyu twitter"
     )
@@ -11,10 +11,12 @@
 
 <style lang="scss" scoped>
 .twitter {
-  width: 40px;
   overflow: hidden;
 }
 .link {
   display: block;
+}
+.icon {
+  width: 54px;
 }
 </style>

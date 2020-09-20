@@ -12,7 +12,7 @@
 <style lang="scss" scoped>
 .instagram {
   width: 40px;
-  padding: 0 10px;
+  padding: 0 6px;
   box-sizing: content-box;
 }
 .link {

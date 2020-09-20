@@ -14,6 +14,7 @@ nav.site-ham-menu(
       )
   button.burger-button(
     :class="{'is-open-menu': isOpen}"
+    :aria-label="isOpen ? `メニューを閉じる` : `メニューを開く`"
     @click.prevent="toggleMenu()"
   )
     span.line

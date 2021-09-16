@@ -2,19 +2,19 @@
 .profile-description
   ul.member-list
     li.member
-      p.name NAGATA
+      p.name nagata
       p.part (Ba)
     li.member
-      p.name KOUDAI
+      p.name koudai
       p.part (Key)
     li.member
-      p.name ZUN
+      p.name zun
       p.part (Vo)
     li.member
-      p.name KOU
+      p.name kou
       p.part (Dr)
     li.member
-      p.name NERI
+      p.name neri
       p.part (Gt)
   p.description
     | 2017年3月結成。都内を中心に活動中。

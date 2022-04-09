@@ -17,11 +17,6 @@
     "lambda-serve": "netlify-lambda serve lambda/",
     "lambda-build": "netlify-lambda build lambda/"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "contentful": "^7.10.0",
@@ -47,8 +42,6 @@
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.0.0",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
     "prettier": "1.18.2",

@@ -1,12 +1,13 @@
-<template lang="pug">
-.instagram
-  a.link(
-    href="https://www.instagram.com/iyu_musictokyo/"
-  )
-    img.icon(
-      src="~assets/images/instagram_icon.svg"
-      alt="iyu instagram account"
-    )
+<template>
+  <div class="instagram">
+    <a class="link" href="https://www.instagram.com/iyu_musictokyo/">
+      <img
+        class="icon"
+        src="~assets/images/instagram_icon.svg"
+        alt="iyu instagram account"
+      />
+    </a>
+  </div>
 </template>
 
 <style lang="scss" scoped>

@@ -1,67 +1,96 @@
-<template lang="pug">
-section.contact
-  heading(
-    text="Contact"
-    color="yellow"
-  )
-  //- todo: required の制御
-  .wrap
-    p.lead
-      | ライブのチケットお取り置き、共演のお誘い、
-      br
-      | メッセージなど、お気軽にご連絡ください。
-    form.contact-form(
-      name="iyu-form"
-      method="POST"
-      netlify-honeypot="bot-field"
-      data-netlify="true"
-      @submit.prevent="handleSubmit"
-    )
-
-      //- NOTE:
-      //- formをデプロイするとNetlify側で鍵となるこのhiddenタグをappendしてくれるが、
-      //- Nuxt.jsの仕様により、prerenderされたDOMと実際に描画されたDOMに差分があるとJSエラーとなるため、
-      //- SSRにする、かつno-ssrでくくらない、なおかつ直接hiddenタグを記述している。
-      //- https://qiita.com/yahsan2/items/a70c4c8f617ee9b1f9ff
-
-      input( type="hidden" name="form-name" value="iyu-form" )
-
-      //- お名前
-      //- input( name="name" type="text" placeholder="お名前" required @input="ev => formData.name = ev.target.value")
-      input( name="name" type="text" placeholder="お名前" required v-model="formData.name")
-
-      //- お問い合わせ種類
-      select.category( name="category" required v-model="formData.category" )
-        option( value="" disabled ) - お問い合わせ種類 -
-        option( value="live" ) ライブのチケットお取り置き
-        option( value="together" ) 共演のお誘い
-        option( value="other" ) その他
-
-      //- チケット取り置きが選択されたときのみ
-      .show-only-live( v-show="isSelectedTicketReserve" )
-        //- お取り置き日程
-        select.is-small( name="reservedate" v-model="formData.reservedate" )
-          option( value="" selected disabled ) - お取り置き日程 -
-          option(
-            v-for="live in liveDetails"
-            v-if="$dayjs().subtract(1, 'day').isBefore(live.date)"
-            :key="live.date"
-          ) {{ `${$dayjs(live.date).format('YYYY/M/D (ddd)')} - ${live.title}` }}
-        //- お取り置き枚数
-        select.is-small( name="reservecount" v-model="formData.reservecount" )
-          option( value="" selected disabled ) - お取り置き枚数 -
-          option( v-for="value in maxTicketNumber" :key="value" :value="`${value}枚`" ) {{ `${value}枚` }}
-
-      //- メールアドレス
-      input( name="email" type="email" placeholder="ご連絡先メールアドレス" required v-model="formData.email" )
-
-      //- 本文
-      textarea( name="message" placeholder="内容" required v-model="formData.message" )
-
-      //- 送信ボタン
-      button.send-button( :disabled="isFormDisabled" type="submit" ) {{isFormDisabled ? "送信中..." : "送信する"}}
-    //- p.test(@click="logger") trigger
-    //- p.test(@click="printEncode") encode
+<template>
+  <section class="contact">
+    <heading text="Contact" color="yellow" />
+    <div class="wrap">
+      <p class="lead">
+        ライブのチケットお取り置き、共演のお誘い、<br />メッセージなど、お気軽にご連絡ください。
+      </p>
+      <form
+        class="contact-form"
+        name="iyu-form"
+        method="POST"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        @submit.prevent="handleSubmit"
+      >
+        <input type="hidden" name="form-name" value="iyu-form" />
+        <input
+          v-model="formData.name"
+          name="name"
+          type="text"
+          placeholder="お名前"
+          required
+        />
+        <select
+          v-model="formData.category"
+          class="category"
+          name="category"
+          required
+        >
+          <option value="" disabled>
+            - お問い合わせ種類 -
+          </option>
+          <option value="live">
+            ライブのチケットお取り置き
+          </option>
+          <option value="together">
+            共演のお誘い
+          </option>
+          <option value="other">
+            その他
+          </option>
+        </select>
+        <div v-show="isSelectedTicketReserve" class="show-only-live">
+          <select
+            v-model="formData.reservedate"
+            class="is-small"
+            name="reservedate"
+          >
+            <option value="" selected disabled>
+              - お取り置き日程 -
+            </option>
+            <option v-for="live in filteredLiveDetail" :key="live.date">
+              {{
+                `${$dayjs(live.date).format('YYYY/M/D (ddd)')} - ${live.title}`
+              }}
+            </option>
+          </select>
+          <select
+            v-model="formData.reservecount"
+            class="is-small"
+            name="reservecount"
+          >
+            <option value="" selected disabled>
+              - お取り置き枚数 -
+            </option>
+            <option
+              v-for="value in maxTicketNumber"
+              :key="value"
+              :value="`${value}枚`"
+            >
+              {{ `${value}枚` }}
+            </option>
+          </select>
+        </div>
+        <input
+          v-model="formData.email"
+          name="email"
+          type="email"
+          placeholder="ご連絡先メールアドレス"
+          required
+        />
+        <textarea
+          v-model="formData.message"
+          name="message"
+          placeholder="内容"
+          required
+        />
+        <button class="send-button" :disabled="isFormDisabled" type="submit">
+          {{ isFormDisabled ? '送信中...' : '送信する' }}
+        </button>
+      </form>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -97,6 +126,13 @@ export default {
   computed: {
     isSelectedTicketReserve() {
       return this.formData.category === 'live';
+    },
+    filteredLiveDetail() {
+      return this.liveDetails.filter(live =>
+        this.$dayjs()
+          .subtract(1, 'day')
+          .isBefore(live.date)
+      );
     }
   },
   methods: {

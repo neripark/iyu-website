@@ -1,4 +1,5 @@
-<template lang="pug">
-.container
-  nuxt
+<template>
+  <div class="container">
+    <nuxt />
+  </div>
 </template>

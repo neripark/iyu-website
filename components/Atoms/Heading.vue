@@ -1,7 +1,7 @@
-<template lang="pug">
-h2.heading(
-  :class="color"
-) {{ text }}
+<template>
+  <h2 class="heading" :class="color">
+    {{ text }}
+  </h2>
 </template>
 
 <script>

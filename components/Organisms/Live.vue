@@ -1,16 +1,9 @@
-<template lang="pug">
-section.live
-  heading(
-    text="Live"
-    color="yellow"
-  )
-  live-info-description(
-    :liveCount="liveDetails.length"
-  )
-  live-cards(
-    v-if="liveDetails.length"
-    :liveDetails="liveDetails"
-  )
+<template>
+  <section class="live">
+    <heading text="Live" color="yellow" />
+    <live-info-description :live-count="liveDetails.length" />
+    <live-cards v-if="liveDetails.length" :live-details="liveDetails" />
+  </section>
 </template>
 
 <script>

@@ -1,17 +1,19 @@
-<template lang="pug">
-.information-summary
-  .wrap
-    section.info-unit
-      h3.head Live Schedule
-      p.lead(
-        v-for="live in liveDetails"
-      )
-        | {{ $dayjs(live.date).format('YYYY/M/D (ddd)') }}
-        br
-        | {{live.place}}
-      p.lead(
-        v-if="!liveDetails.length"
-      ) 現在予定しているライブはありません。
+<template>
+  <div class="information-summary">
+    <div class="wrap">
+      <section class="info-unit">
+        <h3 class="head">
+          Live Schedule
+        </h3>
+        <p v-for="live in liveDetails" :key="live.date" class="lead">
+          {{ $dayjs(live.date).format('YYYY/M/D (ddd)') }}<br />{{ live.place }}
+        </p>
+        <p v-if="!liveDetails.length" class="lead">
+          現在予定しているライブはありません。
+        </p>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>

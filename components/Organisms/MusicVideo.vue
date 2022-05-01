@@ -1,20 +1,18 @@
-<template lang="pug">
-section.music-video
-  heading(
-    text="Music"
-    color="blue"
-  )
-  .wrap-video(
-    v-for="video in videos"
-    :key="video.id"
-  )
-    .inner
-      iframe.yt-embed(
-        type="text/html"
-        :src="`https://www.youtube.com/embed/${video.id}`"
-        frameborder="0"
-        allowfullscreen
-      )
+<template>
+  <section class="music-video">
+    <heading text="Music" color="blue" />
+    <div v-for="video in videos" :key="video.id" class="wrap-video">
+      <div class="inner">
+        <iframe
+          class="yt-embed"
+          type="text/html"
+          :src="`https://www.youtube.com/embed/${video.id}`"
+          frameborder="0"
+          allowfullscreen
+        />
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>

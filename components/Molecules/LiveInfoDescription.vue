@@ -1,28 +1,8 @@
-<template lang="pug">
-div
-  p.lead(v-if="liveCnt")
-    | チケットのお取置きは
-    a.text-link(
-      :href="`#${anchorList.profile.id}`"
-      v-scroll-to="scrollTo(anchorList.contact)"
-    ) こちらのフォーム
-    | から。
-    br
-    a.text-link(
-      href="https://twitter.com/iyu_band"
-      target="_blank"
-    ) Twitter
-    | でも承っております。
-  p.lead(v-if="!liveCnt")
-    | 現在予定しているライブはありません。
-    br
-    | 発表をお待ち下さい！
-    br
-    a.text-link(
-      href="https://twitter.com/iyu_band"
-      target="_blank"
-    ) Twitter
-    | もぜひチェックしてくださいね。
+<template>  
+  <div>
+    <p class="lead" v-if="liveCnt">チケットのお取置きは<a class="text-link" :href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.contact)">こちらのフォーム</a>から。<br><a class="text-link" href="https://twitter.com/iyu_band" target="_blank">Twitter</a>でも承っております。</p>
+    <p class="lead" v-if="!liveCnt">現在予定しているライブはありません。<br>発表をお待ち下さい！<br><a class="text-link" href="https://twitter.com/iyu_band" target="_blank">Twitter</a>もぜひチェックしてくださいね。</p>
+  </div>
 </template>
 
 <script>

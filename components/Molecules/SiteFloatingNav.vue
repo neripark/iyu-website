@@ -1,9 +1,7 @@
-<template lang="pug">
-nav.site-floating-nav(
-  v-scroll='scrollHandler'
-  :class="{'is-scroll-start': isNavScrollStart, 'is-window-top': isNavWindowTop}"
-)
-  common-navigation
+<template>  
+  <nav class="site-floating-nav" v-scroll="scrollHandler" :class="{'is-scroll-start': isNavScrollStart, 'is-window-top': isNavWindowTop}">
+    <common-navigation></common-navigation>
+  </nav>
 </template>
 
 <script>

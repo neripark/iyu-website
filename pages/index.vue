@@ -1,24 +1,17 @@
-<template lang="pug">
-main.container
-  header
-    site-floating-nav
-    site-ham-menu
-  main-visual(
-    :id="anchorList.mainVisual.id"
-    :liveDetails="liveDetails"
-  )
-  profile( :id="anchorList.profile.id" )
-  music-video( :id="anchorList.music.id" )
-  Live(
-    :id="anchorList.live.id"
-    :liveDetails="liveDetails"
-  )
-  Gallery( :id="anchorList.gallery.id" )
-  Contact(
-    :id="anchorList.contact.id"
-    :liveDetails="liveDetails"
-  )
-  site-footer
+<template>  
+  <main class="container">
+    <header>
+      <site-floating-nav></site-floating-nav>
+      <site-ham-menu></site-ham-menu>
+    </header>
+    <main-visual :id="anchorList.mainVisual.id" :liveDetails="liveDetails"></main-visual>
+    <profile :id="anchorList.profile.id"></profile>
+    <music-video :id="anchorList.music.id"></music-video>
+    <Live :id="anchorList.live.id" :liveDetails="liveDetails"></Live>
+    <Gallery :id="anchorList.gallery.id"></Gallery>
+    <Contact :id="anchorList.contact.id" :liveDetails="liveDetails"></Contact>
+    <site-footer></site-footer>
+  </main>
 </template>
 
 <script>

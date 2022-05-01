@@ -1,10 +1,7 @@
-<template lang="pug">
-ul.live-cards
-  live-card(
-    v-for="live in liveDetails"
-    :key="live.date"
-    :detail="live"
-  )
+<template>  
+  <ul class="live-cards">
+    <live-card v-for="live in liveDetails" :key="live.date" :detail="live"></live-card>
+  </ul>
 </template>
 
 <script>

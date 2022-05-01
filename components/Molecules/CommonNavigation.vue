@@ -1,20 +1,11 @@
-<template lang="pug">
-ul.anchor-list
-  li.anchor-item
-    a.anchor(:href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.profile)")
-      span.string Profile
-  li.anchor-item
-    a.anchor(:href="`#${anchorList.music.id}`" v-scroll-to="scrollTo(anchorList.music)")
-      span.string Music
-  li.anchor-item
-    a.anchor(:href="`#${anchorList.live.id}`" v-scroll-to="scrollTo(anchorList.live)")
-      span.string Live
-  li.anchor-item
-    a.anchor(:href="`#${anchorList.gallery.id}`" v-scroll-to="scrollTo(anchorList.gallery)")
-      span.string Gallery
-  li.anchor-item
-    a.anchor(:href="`#${anchorList.contact.id}`" v-scroll-to="scrollTo(anchorList.contact)")
-      span.string Contact
+<template>  
+  <ul class="anchor-list">
+    <li class="anchor-item"><a class="anchor" :href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.profile)"><span class="string">Profile</span></a></li>
+    <li class="anchor-item"><a class="anchor" :href="`#${anchorList.music.id}`" v-scroll-to="scrollTo(anchorList.music)"><span class="string">Music</span></a></li>
+    <li class="anchor-item"><a class="anchor" :href="`#${anchorList.live.id}`" v-scroll-to="scrollTo(anchorList.live)"><span class="string">Live</span></a></li>
+    <li class="anchor-item"><a class="anchor" :href="`#${anchorList.gallery.id}`" v-scroll-to="scrollTo(anchorList.gallery)"><span class="string">Gallery</span></a></li>
+    <li class="anchor-item"><a class="anchor" :href="`#${anchorList.contact.id}`" v-scroll-to="scrollTo(anchorList.contact)"><span class="string">Contact</span></a></li>
+  </ul>
 </template>
 
 <script>

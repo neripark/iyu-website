@@ -1,29 +1,11 @@
-<template lang="pug">
-nav.site-ham-menu(
-  v-scroll='scrollHandler'
-  :class="{'is-scroll-top': isScrollTop}"
-)
-  p.wrap-img
-    a.anchor(
-      :href="`#${anchorList.profile.id}`"
-      v-scroll-to="scrollTo(anchorList.mainVisual)"
-    )
-      img.logo(
-        src="~assets/images/iyu-logo-White.svg"
-        alt="iyu-logo"
-      )
-  button.burger-button(
-    :class="{'is-open-menu': isOpen}"
-    :aria-label="isOpen ? `メニューを閉じる` : `メニューを開く`"
-    @click.prevent="toggleMenu()"
-  )
-    span.line
-    span.line
-    span.line
-  transition
-    common-navigation(
-      v-show="isOpen"
-    )
+<template>  
+  <nav class="site-ham-menu" v-scroll="scrollHandler" :class="{'is-scroll-top': isScrollTop}">
+    <p class="wrap-img"><a class="anchor" :href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.mainVisual)"><img class="logo" src="~assets/images/iyu-logo-White.svg" alt="iyu-logo"></a></p>
+    <button class="burger-button" :class="{'is-open-menu': isOpen}" :aria-label="isOpen ? `メニューを閉じる` : `メニューを開く`" @click.prevent="toggleMenu()"><span class="line"></span><span class="line"></span><span class="line"></span></button>
+    <transition>
+      <common-navigation v-show="isOpen"></common-navigation>
+    </transition>
+  </nav>
 </template>
 
 <script>

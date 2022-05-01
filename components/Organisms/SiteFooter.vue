@@ -1,14 +1,20 @@
-<template lang="pug">
-footer.site-footer
-  ul.contact-list
-    li.contact-item
-      TwitterLink
-    li.contact-item
-      YoutubeLink
-    li.contact-item
-      InstagramLink
-  .wrap-copyright
-    p.copyright-text ©iyumusic.tokyo All Rights Reserved.
+<template>  
+  <footer class="site-footer">
+    <ul class="contact-list">
+      <li class="contact-item">
+        <TwitterLink></TwitterLink>
+      </li>
+      <li class="contact-item">
+        <YoutubeLink></YoutubeLink>
+      </li>
+      <li class="contact-item">
+        <InstagramLink></InstagramLink>
+      </li>
+    </ul>
+    <div class="wrap-copyright">
+      <p class="copyright-text">©iyumusic.tokyo All Rights Reserved.</p>
+    </div>
+  </footer>
 </template>
 
 <script>

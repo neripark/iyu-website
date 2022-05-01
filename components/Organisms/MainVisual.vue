@@ -1,21 +1,11 @@
-<template lang="pug">
-section.main-visual
-  h1.iyu-logo
-    img(
-      src="~assets/images/iyu-logo-RGB.svg"
-      alt="iyu-logo"
-    )
-  information-summary(
-    :liveDetails="liveDetails"
-  )
-  client-only
-    video.bg-movie(
-      v-if="!isSp"
-      src="~assets/videos/200109_iyu-webtop-video.mp4"
-      muted
-      autoplay
-      loop
-    )
+<template>  
+  <section class="main-visual">
+    <h1 class="iyu-logo"><img src="~assets/images/iyu-logo-RGB.svg" alt="iyu-logo"></h1>
+    <information-summary :liveDetails="liveDetails"></information-summary>
+    <client-only>
+      <video class="bg-movie" v-if="!isSp" src="~assets/videos/200109_iyu-webtop-video.mp4" muted autoplay loop></video>
+    </client-only>
+  </section>
 </template>
 
 <script>

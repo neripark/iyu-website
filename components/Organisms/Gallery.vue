@@ -1,30 +1,14 @@
-<template lang="pug">
-section.gallery
-  heading(
-    text="Gallery"
-    color="blue"
-  )
-  client-only
-    carousel(
-      :center-mode="true"
-      :loop="true"
-      :per-page="1"
-      :navigation-enabled="true"
-      :navigateTo="[2, false]"
-      pagination-color="#ccc"
-      pagination-active-color="#36afca"
-      navigationPrevLabel="<image class=\"arrow\" src=\"/images/gallery-button-L.png\" alt=\"left\" />"
-      navigationNextLabel="<image class=\"arrow\" src=\"/images/gallery-button-R.png\" alt=\"left\" />"
-    )
-      slide(
-        v-for="image in images"
-        :key="image.src"
-      )
-        p.pic
-          img.image(
-            v-lazy="image"
-            :alt="image.alt"
-          )
+<template>  
+  <section class="gallery">
+    <heading text="Gallery" color="blue"></heading>
+    <client-only>
+      <carousel :center-mode="true" :loop="true" :per-page="1" :navigation-enabled="true" :navigateTo="[2, false]" pagination-color="#ccc" pagination-active-color="#36afca" navigationPrevLabel="&lt;image class=&quot;arrow&quot; src=&quot;/images/gallery-button-L.png&quot; alt=&quot;left&quot; /&gt;" navigationNextLabel="&lt;image class=&quot;arrow&quot; src=&quot;/images/gallery-button-R.png&quot; alt=&quot;left&quot; /&gt;">
+        <slide v-for="image in images" :key="image.src">
+          <p class="pic"><img class="image" v-lazy="image" :alt="image.alt"></p>
+        </slide>
+      </carousel>
+    </client-only>
+  </section>
 </template>
 
 <script>

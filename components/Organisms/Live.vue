@@ -1,8 +1,8 @@
-<template>  
+<template>
   <section class="live">
-    <heading text="Live" color="yellow"></heading>
-    <live-info-description :liveCount="liveDetails.length"></live-info-description>
-    <live-cards v-if="liveDetails.length" :liveDetails="liveDetails"></live-cards>
+    <heading text="Live" color="yellow" />
+    <live-info-description :live-count="liveDetails.length" />
+    <live-cards v-if="liveDetails.length" :live-details="liveDetails" />
   </section>
 </template>
 

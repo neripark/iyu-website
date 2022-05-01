@@ -1,6 +1,6 @@
-<template>  
+<template>
   <ul class="live-cards">
-    <live-card v-for="live in liveDetails" :key="live.date" :detail="live"></live-card>
+    <live-card v-for="live in liveDetails" :key="live.date" :detail="live" />
   </ul>
 </template>
 

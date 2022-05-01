@@ -1,9 +1,32 @@
-<template>  
-  <nav class="site-ham-menu" v-scroll="scrollHandler" :class="{'is-scroll-top': isScrollTop}">
-    <p class="wrap-img"><a class="anchor" :href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.mainVisual)"><img class="logo" src="~assets/images/iyu-logo-White.svg" alt="iyu-logo"></a></p>
-    <button class="burger-button" :class="{'is-open-menu': isOpen}" :aria-label="isOpen ? `メニューを閉じる` : `メニューを開く`" @click.prevent="toggleMenu()"><span class="line"></span><span class="line"></span><span class="line"></span></button>
+<template>
+  <nav
+    v-scroll="scrollHandler"
+    class="site-ham-menu"
+    :class="{ 'is-scroll-top': isScrollTop }"
+  >
+    <p class="wrap-img">
+      <a
+        v-scroll-to="scrollTo(anchorList.mainVisual)"
+        class="anchor"
+        :href="`#${anchorList.profile.id}`"
+      >
+        <img
+          class="logo"
+          src="~assets/images/iyu-logo-White.svg"
+          alt="iyu-logo"
+        />
+      </a>
+    </p>
+    <button
+      class="burger-button"
+      :class="{ 'is-open-menu': isOpen }"
+      :aria-label="isOpen ? `メニューを閉じる` : `メニューを開く`"
+      @click.prevent="toggleMenu()"
+    >
+      <span class="line" /><span class="line" /><span class="line" />
+    </button>
     <transition>
-      <common-navigation v-show="isOpen"></common-navigation>
+      <common-navigation v-show="isOpen" />
     </transition>
   </nav>
 </template>

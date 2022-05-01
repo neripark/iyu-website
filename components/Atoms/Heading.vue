@@ -1,5 +1,7 @@
 <template>
-  <h2 class="heading" :class="color">{{ text }}</h2>
+  <h2 class="heading" :class="color">
+    {{ text }}
+  </h2>
 </template>
 
 <script>

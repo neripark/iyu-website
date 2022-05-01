@@ -1,5 +1,13 @@
-<template>  
-  <div class="instagram"><a class="link" href="https://www.instagram.com/iyu_musictokyo/"><img class="icon" src="~assets/images/instagram_icon.svg" alt="iyu instagram account"></a></div>
+<template>
+  <div class="instagram">
+    <a class="link" href="https://www.instagram.com/iyu_musictokyo/">
+      <img
+        class="icon"
+        src="~assets/images/instagram_icon.svg"
+        alt="iyu instagram account"
+      />
+    </a>
+  </div>
 </template>
 
 <style lang="scss" scoped>

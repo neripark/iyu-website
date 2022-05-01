@@ -1,10 +1,50 @@
-<template>  
+<template>
   <ul class="anchor-list">
-    <li class="anchor-item"><a class="anchor" :href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.profile)"><span class="string">Profile</span></a></li>
-    <li class="anchor-item"><a class="anchor" :href="`#${anchorList.music.id}`" v-scroll-to="scrollTo(anchorList.music)"><span class="string">Music</span></a></li>
-    <li class="anchor-item"><a class="anchor" :href="`#${anchorList.live.id}`" v-scroll-to="scrollTo(anchorList.live)"><span class="string">Live</span></a></li>
-    <li class="anchor-item"><a class="anchor" :href="`#${anchorList.gallery.id}`" v-scroll-to="scrollTo(anchorList.gallery)"><span class="string">Gallery</span></a></li>
-    <li class="anchor-item"><a class="anchor" :href="`#${anchorList.contact.id}`" v-scroll-to="scrollTo(anchorList.contact)"><span class="string">Contact</span></a></li>
+    <li class="anchor-item">
+      <a
+        v-scroll-to="scrollTo(anchorList.profile)"
+        class="anchor"
+        :href="`#${anchorList.profile.id}`"
+      >
+        <span class="string">Profile</span>
+      </a>
+    </li>
+    <li class="anchor-item">
+      <a
+        v-scroll-to="scrollTo(anchorList.music)"
+        class="anchor"
+        :href="`#${anchorList.music.id}`"
+      >
+        <span class="string">Music</span>
+      </a>
+    </li>
+    <li class="anchor-item">
+      <a
+        v-scroll-to="scrollTo(anchorList.live)"
+        class="anchor"
+        :href="`#${anchorList.live.id}`"
+      >
+        <span class="string">Live</span>
+      </a>
+    </li>
+    <li class="anchor-item">
+      <a
+        v-scroll-to="scrollTo(anchorList.gallery)"
+        class="anchor"
+        :href="`#${anchorList.gallery.id}`"
+      >
+        <span class="string">Gallery</span>
+      </a>
+    </li>
+    <li class="anchor-item">
+      <a
+        v-scroll-to="scrollTo(anchorList.contact)"
+        class="anchor"
+        :href="`#${anchorList.contact.id}`"
+      >
+        <span class="string">Contact</span>
+      </a>
+    </li>
   </ul>
 </template>
 

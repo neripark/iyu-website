@@ -1,18 +1,20 @@
-<template>  
+<template>
   <footer class="site-footer">
     <ul class="contact-list">
       <li class="contact-item">
-        <TwitterLink></TwitterLink>
+        <TwitterLink />
       </li>
       <li class="contact-item">
-        <YoutubeLink></YoutubeLink>
+        <YoutubeLink />
       </li>
       <li class="contact-item">
-        <InstagramLink></InstagramLink>
+        <InstagramLink />
       </li>
     </ul>
     <div class="wrap-copyright">
-      <p class="copyright-text">©iyumusic.tokyo All Rights Reserved.</p>
+      <p class="copyright-text">
+        ©iyumusic.tokyo All Rights Reserved.
+      </p>
     </div>
   </footer>
 </template>

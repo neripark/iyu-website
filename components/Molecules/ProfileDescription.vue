@@ -1,28 +1,52 @@
-<template>  
+<template>
   <div class="profile-description">
     <ul class="member-list">
       <li class="member">
-        <p class="name">nagata</p>
-        <p class="part">(Ba)</p>
+        <p class="name">
+          nagata
+        </p>
+        <p class="part">
+          (Ba)
+        </p>
       </li>
       <li class="member">
-        <p class="name">koudai</p>
-        <p class="part">(Key)</p>
+        <p class="name">
+          koudai
+        </p>
+        <p class="part">
+          (Key)
+        </p>
       </li>
       <li class="member">
-        <p class="name">zun</p>
-        <p class="part">(Vo)</p>
+        <p class="name">
+          zun
+        </p>
+        <p class="part">
+          (Vo)
+        </p>
       </li>
       <li class="member">
-        <p class="name">kou</p>
-        <p class="part">(Dr)</p>
+        <p class="name">
+          kou
+        </p>
+        <p class="part">
+          (Dr)
+        </p>
       </li>
       <li class="member">
-        <p class="name">neri</p>
-        <p class="part">(Gt)</p>
+        <p class="name">
+          neri
+        </p>
+        <p class="part">
+          (Gt)
+        </p>
       </li>
     </ul>
-    <p class="description">2017年3月結成。都内を中心に活動中。<br>都市の雑踏、積み重ねの日々、<br class="break-sp">暮らしの中に等身大で身近な音楽。</p>
+    <p class="description">
+      2017年3月結成。都内を中心に活動中。<br />都市の雑踏、積み重ねの日々、<br
+        class="break-sp"
+      />暮らしの中に等身大で身近な音楽。
+    </p>
   </div>
 </template>
 

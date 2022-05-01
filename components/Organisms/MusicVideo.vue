@@ -1,9 +1,15 @@
-<template>  
+<template>
   <section class="music-video">
-    <heading text="Music" color="blue"></heading>
-    <div class="wrap-video" v-for="video in videos" :key="video.id">
+    <heading text="Music" color="blue" />
+    <div v-for="video in videos" :key="video.id" class="wrap-video">
       <div class="inner">
-        <iframe class="yt-embed" type="text/html" :src="`https://www.youtube.com/embed/${video.id}`" frameborder="0" allowfullscreen></iframe>
+        <iframe
+          class="yt-embed"
+          type="text/html"
+          :src="`https://www.youtube.com/embed/${video.id}`"
+          frameborder="0"
+          allowfullscreen
+        />
       </div>
     </div>
   </section>

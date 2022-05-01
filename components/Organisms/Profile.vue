@@ -1,8 +1,15 @@
-<template>  
+<template>
   <section class="profile">
-    <heading class="heading" text="Profile" color="blue"></heading>
-    <div class="wrap-photo" v-lazy-container="{selector: 'img'}"><img class="profile-photo" :data-src="require('~/assets/images/profile.jpg')" data-loading="/images/loading-spin.gif" alt="profile photo"></div>
-    <profile-description></profile-description>
+    <heading class="heading" text="Profile" color="blue" />
+    <div v-lazy-container="{ selector: 'img' }" class="wrap-photo">
+      <img
+        class="profile-photo"
+        :data-src="require('~/assets/images/profile.jpg')"
+        data-loading="/images/loading-spin.gif"
+        alt="profile photo"
+      />
+    </div>
+    <profile-description />
   </section>
 </template>
 

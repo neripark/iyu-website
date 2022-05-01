@@ -1,18 +1,28 @@
-<template>  
+<template>
   <li class="live-card">
     <div class="date">
-      <p class="ymd">{{ $dayjs(detail.date).format('YYYY/M/D (ddd)') }}</p>
+      <p class="ymd">
+        {{ $dayjs(detail.date).format('YYYY/M/D (ddd)') }}
+      </p>
     </div>
     <div class="detail">
-      <p class="title">{{ detail.title }}</p>
+      <p class="title">
+        {{ detail.title }}
+      </p>
       <p class="place">@{{ detail.place }}</p>
       <p class="time">
-        open {{ detail.timeOpen ? detail.timeOpen : "未定" }} /
-        start {{ detail.timeStart ? detail.timeStart : "未定"}}
+        open {{ detail.timeOpen ? detail.timeOpen : '未定' }} / start
+        {{ detail.timeStart ? detail.timeStart : '未定' }}
       </p>
-      <p class="iyu-time" v-if="detail.timeIyu">※iyuの出演は{{ detail.timeIyu }}頃の予定です。</p>
-      <p class="ticket">{{ detail.ticket }}</p>
-      <p class="with">w) {{ detail.with ? detail.with.join(' / ') : "未定"}}</p>
+      <p v-if="detail.timeIyu" class="iyu-time">
+        ※iyuの出演は{{ detail.timeIyu }}頃の予定です。
+      </p>
+      <p class="ticket">
+        {{ detail.ticket }}
+      </p>
+      <p class="with">
+        w) {{ detail.with ? detail.with.join(' / ') : '未定' }}
+      </p>
     </div>
   </li>
 </template>

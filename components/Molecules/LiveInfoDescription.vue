@@ -1,7 +1,27 @@
-<template>  
+<template>
   <div>
-    <p class="lead" v-if="liveCnt">チケットのお取置きは<a class="text-link" :href="`#${anchorList.profile.id}`" v-scroll-to="scrollTo(anchorList.contact)">こちらのフォーム</a>から。<br><a class="text-link" href="https://twitter.com/iyu_band" target="_blank">Twitter</a>でも承っております。</p>
-    <p class="lead" v-if="!liveCnt">現在予定しているライブはありません。<br>発表をお待ち下さい！<br><a class="text-link" href="https://twitter.com/iyu_band" target="_blank">Twitter</a>もぜひチェックしてくださいね。</p>
+    <p v-if="liveCnt" class="lead">
+      チケットのお取置きは
+      <a
+        v-scroll-to="scrollTo(anchorList.contact)"
+        class="text-link"
+        :href="`#${anchorList.profile.id}`"
+      >
+        こちらのフォーム</a
+      >
+      から。<br />
+      <a class="text-link" href="https://twitter.com/iyu_band" target="_blank">
+        Twitter
+      </a>
+      でも承っております。
+    </p>
+    <p v-if="!liveCnt" class="lead">
+      現在予定しているライブはありません。
+      <br />発表をお待ち下さい！<br />
+      <a class="text-link" href="https://twitter.com/iyu_band" target="_blank">
+        Twitter </a
+      >もぜひチェックしてくださいね。
+    </p>
   </div>
 </template>
 

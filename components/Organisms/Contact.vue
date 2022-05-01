@@ -1,30 +1,101 @@
-<template>  
+<template>
   <section class="contact">
-    <heading text="Contact" color="yellow"></heading>
+    <heading text="Contact" color="yellow" />
     <div class="wrap">
-      <p class="lead">ライブのチケットお取り置き、共演のお誘い、<br>メッセージなど、お気軽にご連絡ください。</p>
-      <form class="contact-form" name="iyu-form" method="POST" netlify-honeypot="bot-field" data-netlify="true" @submit.prevent="handleSubmit">
-        <input type="hidden" name="form-name" value="iyu-form">
-        <input name="name" type="text" placeholder="お名前" required v-model="formData.name">
-        <select class="category" name="category" required v-model="formData.category">
-          <option value="" disabled>- お問い合わせ種類 -</option>
-          <option value="live">ライブのチケットお取り置き</option>
-          <option value="together">共演のお誘い</option>
-          <option value="other">その他</option>
+      <p class="lead">
+        ライブのチケットお取り置き、共演のお誘い、<br />メッセージなど、お気軽にご連絡ください。
+      </p>
+      <form
+        class="contact-form"
+        name="iyu-form"
+        method="POST"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        @submit.prevent="handleSubmit"
+      >
+        <input type="hidden" name="form-name" value="iyu-form" />
+        <input
+          v-model="formData.name"
+          name="name"
+          type="text"
+          placeholder="お名前"
+          required
+        />
+        <select
+          v-model="formData.category"
+          class="category"
+          name="category"
+          required
+        >
+          <option value="" disabled>
+            - お問い合わせ種類 -
+          </option>
+          <option value="live">
+            ライブのチケットお取り置き
+          </option>
+          <option value="together">
+            共演のお誘い
+          </option>
+          <option value="other">
+            その他
+          </option>
         </select>
-        <div class="show-only-live" v-show="isSelectedTicketReserve">
-          <select class="is-small" name="reservedate" v-model="formData.reservedate">
-            <option value="" selected disabled>- お取り置き日程 -</option>
-            <option v-for="live in liveDetails" v-if="$dayjs().subtract(1, 'day').isBefore(live.date)" :key="live.date">{{ `${$dayjs(live.date).format('YYYY/M/D (ddd)')} - ${live.title}` }}</option>
+        <div v-show="isSelectedTicketReserve" class="show-only-live">
+          <select
+            v-model="formData.reservedate"
+            class="is-small"
+            name="reservedate"
+          >
+            <option value="" selected disabled>
+              - お取り置き日程 -
+            </option>
+            <option
+              v-for="live in liveDetails"
+              v-if="
+                $dayjs()
+                  .subtract(1, 'day')
+                  .isBefore(live.date)
+              "
+              :key="live.date"
+            >
+              {{
+                `${$dayjs(live.date).format('YYYY/M/D (ddd)')} - ${live.title}`
+              }}
+            </option>
           </select>
-          <select class="is-small" name="reservecount" v-model="formData.reservecount">
-            <option value="" selected disabled>- お取り置き枚数 -</option>
-            <option v-for="value in maxTicketNumber" :key="value" :value="`${value}枚`">{{ `${value}枚` }}</option>
+          <select
+            v-model="formData.reservecount"
+            class="is-small"
+            name="reservecount"
+          >
+            <option value="" selected disabled>
+              - お取り置き枚数 -
+            </option>
+            <option
+              v-for="value in maxTicketNumber"
+              :key="value"
+              :value="`${value}枚`"
+            >
+              {{ `${value}枚` }}
+            </option>
           </select>
         </div>
-        <input name="email" type="email" placeholder="ご連絡先メールアドレス" required v-model="formData.email">
-        <textarea name="message" placeholder="内容" required v-model="formData.message"></textarea>
-        <button class="send-button" :disabled="isFormDisabled" type="submit">{{isFormDisabled ? "送信中..." : "送信する"}}</button>
+        <input
+          v-model="formData.email"
+          name="email"
+          type="email"
+          placeholder="ご連絡先メールアドレス"
+          required
+        />
+        <textarea
+          v-model="formData.message"
+          name="message"
+          placeholder="内容"
+          required
+        />
+        <button class="send-button" :disabled="isFormDisabled" type="submit">
+          {{ isFormDisabled ? '送信中...' : '送信する' }}
+        </button>
       </form>
     </div>
   </section>

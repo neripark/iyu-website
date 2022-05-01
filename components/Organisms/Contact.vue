@@ -49,15 +49,7 @@
             <option value="" selected disabled>
               - お取り置き日程 -
             </option>
-            <option
-              v-for="live in liveDetails"
-              v-if="
-                $dayjs()
-                  .subtract(1, 'day')
-                  .isBefore(live.date)
-              "
-              :key="live.date"
-            >
+            <option v-for="live in filteredLiveDetail" :key="live.date">
               {{
                 `${$dayjs(live.date).format('YYYY/M/D (ddd)')} - ${live.title}`
               }}
@@ -134,6 +126,13 @@ export default {
   computed: {
     isSelectedTicketReserve() {
       return this.formData.category === 'live';
+    },
+    filteredLiveDetail() {
+      return this.liveDetails.filter(live =>
+        this.$dayjs()
+          .subtract(1, 'day')
+          .isBefore(live.date)
+      );
     }
   },
   methods: {

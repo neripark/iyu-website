@@ -15,5 +15,5 @@ jobs:
         with:
           node-version: "14.18.0"
       - run: node -v && npm -v
-      - run: yarn install
-      - run: yarn lint
+      - run: npm ci
+      - run: npm run lint

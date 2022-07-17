@@ -6,23 +6,23 @@ https://iyumusic.tokyo
 
 ``` bash
 # install dependencies
-$ yarn
+$ npm ci
 
 # serve with hot reload at localhost:3333
-$ yarn dev
+$ npm run dev
 
 # build and serve Netlify Function
-$ yarn lambda-serve
+$ npm run lambda-serve
 
 # only build Netlify Function
-$ yarn lambda-build
+$ npm run lambda-build
 
 # build for production and launch server
-$ yarn build
-$ yarn start
+$ npm run build
+$ npm run start
 
 # generate static project
-$ yarn gen
+$ npm run gen
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

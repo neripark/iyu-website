@@ -29,20 +29,20 @@
     </li>
     <li class="anchor-item">
       <a
-        v-scroll-to="scrollTo(anchorList.gallery)"
-        class="anchor"
-        :href="`#${anchorList.gallery.id}`"
-      >
-        <span class="string">Gallery</span>
-      </a>
-    </li>
-    <li class="anchor-item">
-      <a
         v-scroll-to="scrollTo(anchorList.goods)"
         class="anchor"
         :href="`#${anchorList.goods.id}`"
       >
         <span class="string">Goods</span>
+      </a>
+    </li>
+    <li class="anchor-item">
+      <a
+        v-scroll-to="scrollTo(anchorList.gallery)"
+        class="anchor"
+        :href="`#${anchorList.gallery.id}`"
+      >
+        <span class="string">Gallery</span>
       </a>
     </li>
     <li class="anchor-item">

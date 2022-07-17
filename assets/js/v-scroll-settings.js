@@ -20,6 +20,11 @@ export const anchorList = {
     offset: -60,
     offsetSp: -59
   },
+  goods: {
+    id: 'goods',
+    offset: -60,
+    offsetSp: -59
+  },
   gallery: {
     id: 'gallery',
     offset: -60,

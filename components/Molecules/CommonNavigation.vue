@@ -38,6 +38,15 @@
     </li>
     <li class="anchor-item">
       <a
+        v-scroll-to="scrollTo(anchorList.goods)"
+        class="anchor"
+        :href="`#${anchorList.goods.id}`"
+      >
+        <span class="string">Goods</span>
+      </a>
+    </li>
+    <li class="anchor-item">
+      <a
         v-scroll-to="scrollTo(anchorList.contact)"
         class="anchor"
         :href="`#${anchorList.contact.id}`"
